@@ -3,14 +3,17 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { MessageCircle } from 'lucide-react'
+import { useDictionary } from '@/components/DictionaryProvider'
 
 export default function FloatingWhatsApp() {
+    const dict = useDictionary()?.popups;
+
     return (
         <div className="fixed bottom-6 right-6 z-50">
             <div className="relative group">
                 {/* Tooltip */}
                 <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 px-4 py-2 bg-dark border border-white/10 rounded-lg text-sm font-medium text-white shadow-xl opacity-0 translate-x-4 invisible group-hover:opacity-100 group-hover:translate-x-0 group-hover:visible transition-all duration-300 pointer-events-none whitespace-nowrap">
-                    Discuter avec nous
+                    {dict?.whatsappTooltip || "Discuter avec nous"}
                 </div>
 
                 {/* Pulse effect */}

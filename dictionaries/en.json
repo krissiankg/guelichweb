@@ -1,0 +1,715 @@
+{
+    "navbar": {
+        "home": "Home",
+        "services": "Services",
+        "offers": "Offers",
+        "about": "About",
+        "startProject": "Start a Project",
+        "language": "Language"
+    },
+    "home": {
+        "hero": {
+            "badge": "Digital Transformation & AI Agency",
+            "title1": "We transform businesses into ",
+            "titleHighlight": "intelligent systems.",
+            "desc": "Strategic auditing, AI automation, and digital infrastructures to accelerate your growth.",
+            "ctaPrimary": "Request a Strategic Audit",
+            "ctaSecondary": "View Our Solutions",
+            "indicators": [
+                "Strategic Approach",
+                "Intelligent Automation",
+                "Measurable Results"
+            ],
+            "scroll": "Scroll"
+        },
+        "tech": {
+            "badge": "Our Tech Stack",
+            "title1": "We build with the best ",
+            "titleHighlight": "AI",
+            "title2": " technologies on the market",
+            "desc": "We combine artificial intelligence, automation, and modern development to create high-performance and scalable systems.",
+            "footerDesc": "These technologies power the solutions we deploy to automate, structure, and accelerate our clients' growth.",
+            "cta": "View Our Solutions"
+        },
+        "useCases": {
+            "title1": "How AI ",
+            "titleHighlight": "tangibly",
+            "title2": " transforms businesses",
+            "desc": "Real-world use cases to understand the immediate impact of automation on your business.",
+            "solutionLabel": "Solution",
+            "resultLabel": "Result",
+            "cases": [
+                {
+                    "problem": "Overwhelmed Customer Support",
+                    "solution": "AI agent connected to WhatsApp and Messenger.",
+                    "result": "Instant 24/7 answers and -60% tickets."
+                },
+                {
+                    "problem": "Manual Quote Errors",
+                    "solution": "Automated PDF generation via form.",
+                    "result": "Quotes sent in under 2 minutes."
+                },
+                {
+                    "problem": "Lost Prospects",
+                    "solution": "Automated CRM with AI tracking & follow-ups.",
+                    "result": "Increased conversion rate."
+                },
+                {
+                    "problem": "Scattered Documents",
+                    "solution": "Smart Document Management + AI classification.",
+                    "result": "Instant access to critical information."
+                },
+                {
+                    "problem": "Blind Management",
+                    "solution": "Dashboard connected to real-time data.",
+                    "result": "Real-time data-driven decisions."
+                },
+                {
+                    "problem": "Slow Processes",
+                    "solution": "Automated workflows via AI agents.",
+                    "result": "Immediate measurable productivity gain."
+                }
+            ],
+            "ctaTitle": "What if your business ran automatically?",
+            "ctaDesc": "We analyze your processes and build AI solutions adapted to your reality.",
+            "ctaButton": "Request a Strategic Audit"
+        },
+        "problem": {
+            "title1": "Your business is running…",
+            "title2": "but not optimally.",
+            "items": [
+                {
+                    "title": "Too Many Manual Tasks",
+                    "desc": "Your teams waste time on repetitive actions."
+                },
+                {
+                    "title": "Poorly Used Data",
+                    "desc": "Your information is scattered and unanalyzed."
+                },
+                {
+                    "title": "Scattered Tools",
+                    "desc": "A fragmented and inefficient software ecosystem."
+                },
+                {
+                    "title": "Lack of Visibility",
+                    "desc": "Flying blind without clear strategic indicators."
+                }
+            ]
+        },
+        "solution": {
+            "title1": "Guelichweb structures, ",
+            "titleHighlight": "automates",
+            "title2": " and optimizes.",
+            "desc": "We are not just developers. We analyze your processes, structure your data, and deploy intelligent systems to improve your overall performance and unlock your growth potential.",
+            "cta": "Discover Our Approach"
+        },
+        "offers": {
+            "recommended": "Recommended",
+            "cta": "View Offer",
+            "items": [
+                {
+                    "title": "Optimization & Automation Plan",
+                    "features": [
+                        "Process Analysis",
+                        "Time-Waste Audit",
+                        "Automation Plan",
+                        "Strategic Report"
+                    ]
+                },
+                {
+                    "title": "Intelligent Enterprise System",
+                    "features": [
+                        "AI Chatbot",
+                        "Automated CRM",
+                        "Quote Generation",
+                        "Dashboards"
+                    ]
+                },
+                {
+                    "title": "Digital Infrastructure",
+                    "features": [
+                        "High-Performance Website",
+                        "Database",
+                        "Global Automations",
+                        "Team Training"
+                    ]
+                }
+            ]
+        },
+        "expertise": {
+            "title": "A Complete Digital Ecosystem.",
+            "items": [
+                "Digitization & Document Management",
+                "Database Management",
+                "Web & App Development",
+                "Design & Visual Identity",
+                "Video Production",
+                "Printing & Media",
+                "Security & Data",
+                "Training & Support",
+                "Community Management",
+                "AI & Automation"
+            ]
+        },
+        "methodology": {
+            "title": "Our 4-Step Approach",
+            "badge": {
+                "title": "Continuous Optimization",
+                "desc": "24/7 Monitoring"
+            },
+            "steps": [
+                {
+                    "title": "Strategic Analysis",
+                    "desc": "Complete audit of your processes and needs."
+                },
+                {
+                    "title": "Structuring",
+                    "desc": "Organization of your data and tools."
+                },
+                {
+                    "title": "Automation",
+                    "desc": "Implementation of intelligent systems."
+                },
+                {
+                    "title": "Optimization",
+                    "desc": "Continuous monitoring and improvement."
+                }
+            ]
+        },
+        "results": {
+            "title": "Concrete Results",
+            "items": [
+                {
+                    "value": "+40%",
+                    "label": "Productivity",
+                    "desc": "Average gain observed among our clients"
+                },
+                {
+                    "value": "-30%",
+                    "label": "Administrative Time",
+                    "desc": "Reduction in manual tasks"
+                },
+                {
+                    "value": "+25%",
+                    "label": "Client Conversion",
+                    "desc": "Thanks to our follow-up systems"
+                }
+            ]
+        },
+        "cta": {
+            "title": "Ready to Structure Your Growth?",
+            "desc": "Stop letting operational tasks hinder your development. Move to the next level.",
+            "button": "Schedule a Strategic Call"
+        }
+    },
+    "about": {
+        "hero": {
+            "title1": "Transforming technological complexity into ",
+            "titleHighlight": "operational performance.",
+            "desc": "At Guelichweb, we help businesses structure their digital systems, leverage their data, and automate their processes to accelerate growth in the era of artificial intelligence.",
+            "badges": [
+                "Digital Transformation",
+                "AI Automation",
+                "Data Structuring"
+            ]
+        },
+        "founder": {
+            "title": "A hybrid expert blending technology, strategy, and operations.",
+            "p1": "Christian Guegueligue is a digital consultant and digital solutions architect specialized in structuring enterprise systems.",
+            "p2": "His approach combines scientific analysis, technical expertise, and strategic vision to transform complex organizations into efficient and scalable systems.",
+            "quote": "\"He doesn't just develop tools: he designs solutions that improve overall business performance.\""
+        },
+        "journey": {
+            "title1": "A journey built around ",
+            "titleHighlight": "solving complex problems.",
+            "box1": {
+                "title": "Analysis & Systemic Vision",
+                "desc": "An approach based on a comprehensive understanding of organizations and their operational flows.",
+                "bullets": [
+                    "Analysis of business processes",
+                    "Understanding information systems",
+                    "Performance-oriented strategic vision",
+                    "Identification of friction points"
+                ]
+            },
+            "box2": {
+                "title": "Digital Architecture & Automation",
+                "desc": "Designing and deploying digital solutions to optimize and automate operations.",
+                "tags": [
+                    "Databases",
+                    "Web Development",
+                    "AI Automation",
+                    "Connected Infrastructure",
+                    "API Integrations",
+                    "Intelligent Workflows"
+                ]
+            },
+            "conclusion": "Today, this expertise allows us to analyze a business as a living system, where data, processes, and tools work together to improve productivity, decision-making, and growth."
+        },
+        "challenges": {
+            "title": "The challenges we help businesses overcome",
+            "desc": "We transform your friction points into growth levers.",
+            "items": [
+                {
+                    "title": "Disorganized Processes",
+                    "desc": "Your teams waste time toggling between disconnected tools. We structure your workflows to build a smooth and efficient system."
+                },
+                {
+                    "title": "Repetitive Tasks",
+                    "desc": "Automating manual actions using intelligent workflows and AI agents."
+                },
+                {
+                    "title": "Underutilized Data",
+                    "desc": "Transforming raw data into actionable business dashboards."
+                },
+                {
+                    "title": "Weak Digital Presence",
+                    "desc": "Creating a cohesive, professional image that inspires trust and attracts clients."
+                },
+                {
+                    "title": "Lack of Visibility",
+                    "desc": "Setting up clear KPIs to manage your business with precision."
+                },
+                {
+                    "title": "Stunted Growth",
+                    "desc": "A complete modernization of your digital infrastructure to support your expansion."
+                }
+            ],
+            "cta": {
+                "title": "Let's turn your challenges into a competitive advantage",
+                "desc": "Every business has untapped potential. Our role is to structure, automate, and optimize your systems to unleash your growth.",
+                "button": "Request a Strategic Audit"
+            }
+        },
+        "methodology": {
+            "title": "The Guelichweb Method",
+            "steps": [
+                {
+                    "title": "Strategic Analysis",
+                    "desc": "Understanding flows and data."
+                },
+                {
+                    "title": "Structuring",
+                    "desc": "Organizing systems and information."
+                },
+                {
+                    "title": "Automation",
+                    "desc": "Deploying AI agents and workflows."
+                },
+                {
+                    "title": "Optimization",
+                    "desc": "Improvement based on results."
+                }
+            ]
+        },
+        "expertise": {
+            "title": "The technological building blocks we master",
+            "desc": "Not separate services, but integrated competencies.",
+            "skills": [
+                "Digitization & DMS",
+                "Database Management",
+                "Web & App Development",
+                "Design & Visual Identity",
+                "Video Production",
+                "Cybersecurity & Data",
+                "Training & Support",
+                "Community Management",
+                "AI & Automation"
+            ]
+        },
+        "whyUs": {
+            "title": "Why businesses choose to work with us",
+            "reasons": [
+                "Global Vision: Business + Technology",
+                "Custom Solutions, no generic templates",
+                "Focus on results and Return on Investment",
+                "Human and pedagogical support",
+                "Sustainable and scalable approach"
+            ]
+        },
+        "ctaFinal": {
+            "title1": "Let's build a digital system ",
+            "title2": "that matches your ambitions.",
+            "button": "Schedule a Strategic Call"
+        }
+    },
+    "services": {
+        "title": "Our Areas of Expertise",
+        "desc": "Comprehensive solutions to support your digital transformation at every stage.",
+        "items": [
+            {
+                "title": "Digitization & Document Management",
+                "desc": "Paperless transition and intelligent archiving of your documents for fast and secure access."
+            },
+            {
+                "title": "Database Management",
+                "desc": "Architecture, optimization, and security of your data for high-performance operation."
+            },
+            {
+                "title": "Software Development Solutions",
+                "desc": "Custom software tailored to your company's specific needs."
+            },
+            {
+                "title": "Custom Website Creation",
+                "desc": "Modern, high-performance showcase and e-commerce websites optimized for SEO."
+            },
+            {
+                "title": "Graphic Design & Visual Identity",
+                "desc": "Creation of impactful logos, brand guidelines, and visual media."
+            },
+            {
+                "title": "Video Editing & Multimedia Production",
+                "desc": "Engaging video content for your digital communication."
+            },
+            {
+                "title": "Printing & Physical Media",
+                "desc": "Professional printing solutions for all your marketing materials."
+            },
+            {
+                "title": "Security & Data Protection",
+                "desc": "Audits and compliance to protect your digital assets."
+            },
+            {
+                "title": "Training & Technical Support",
+                "desc": "Guiding your teams to master new digital tools."
+            },
+            {
+                "title": "Community Management & Digital Strategy",
+                "desc": "Management of your social media presence and engagement strategy."
+            },
+            {
+                "title": "Artificial Intelligence & Automation",
+                "desc": "Integration of AI agents and automation of business processes for greater efficiency."
+            }
+        ]
+    },
+    "pageOffers": {
+        "title": "Choose your acceleration level",
+        "desc": "Three levels to structure, automate and evolve your business.",
+        "recommended": "RECOMMENDED",
+        "mainOffers": [
+            {
+                "title": "Optimization & Automation Plan",
+                "hook": "Precisely identify where you lose time and how to automate intelligently.",
+                "features": [
+                    "Full internal process analysis",
+                    "Time-loss identification",
+                    "Digital maturity score",
+                    "Prioritized automation plan",
+                    "Actionable strategic report"
+                ],
+                "result": "Total clarity + concrete roadmap.",
+                "cta": "Request a diagnostic"
+            },
+            {
+                "title": "Intelligent Enterprise System",
+                "hook": "Automate your repetitive tasks and gain up to 40% in productivity.",
+                "features": [
+                    "WhatsApp / Web Chatbot",
+                    "Automated CRM",
+                    "Automatic quote generation",
+                    "Automated client follow-ups",
+                    "Decision-making dashboards"
+                ],
+                "result": "Less effort. More sales.",
+                "cta": "Automate my business"
+            },
+            {
+                "title": "Digital Infrastructure & Growth",
+                "hook": "Structure your business for sustainable scaling.",
+                "features": [
+                    "High-performance website",
+                    "Secure database",
+                    "Global AI automations",
+                    "Strategic dashboard",
+                    "Team training",
+                    "Priority support"
+                ],
+                "result": "Modern, scalable, controllable business.",
+                "cta": "Transform my business"
+            }
+        ],
+        "commStudio": {
+            "title": "Communication & Growth Studio",
+            "desc": "We combine strategy, creativity, and artificial intelligence to boost your visibility and accelerate your digital growth.",
+            "offers": [
+                {
+                    "title": "Community Management & Social Strategy",
+                    "subtitle": "Professional digital presence",
+                    "hook": "We create and manage your social ecosystem to attract, engage and convert your audience.",
+                    "features": [
+                        "Creation/optimisation of Facebook, LinkedIn, Instagram pages",
+                        "Monthly editorial strategy",
+                        "Publication calendar",
+                        "Visual content creation",
+                        "Messages & comments management",
+                        "Performance reporting"
+                    ],
+                    "cta": "Develop my online presence"
+                },
+                {
+                    "title": "Graphic Design & Visual Identity",
+                    "subtitle": "Strategic branding",
+                    "hook": "A strong identity that inspires trust and deeply differentiates your business.",
+                    "features": [
+                        "Professional logo creation",
+                        "Complete brand guidelines",
+                        "Marketing materials (flyers, brochures, banners)",
+                        "Social media design",
+                        "Digital & print templates"
+                    ],
+                    "cta": "Create my visual identity"
+                },
+                {
+                    "title": "Video Marketing & AI Advertising",
+                    "subtitle": "Video content that converts",
+                    "hook": "Production of modern videos combining storytelling and AI to maximize marketing impact.",
+                    "features": [
+                        "Promotional videos",
+                        "Social media ads",
+                        "Professional editing",
+                        "Generative AI videos",
+                        "Motion design",
+                        "Optimized Ad formats"
+                    ],
+                    "cta": "Create my marketing video"
+                },
+                {
+                    "title": "UGC & AI Marketing Content",
+                    "subtitle": "Next-generation authentic content",
+                    "hook": "Creation of AI-augmented UGC content to improve engagement and ad conversions.",
+                    "features": [
+                        "AI marketing scripts",
+                        "AI UGC video creation",
+                        "Conversion-optimized Ad contents",
+                        "Creative A/B testing variations",
+                        "Multi-platform adaptation"
+                    ],
+                    "cta": "Boost my marketing campaigns"
+                }
+            ]
+        },
+        "whyUs": {
+            "title": "Why choose Guelichweb?",
+            "points": [
+                {
+                    "title": "Strategic approach",
+                    "desc": "We analyze before we act."
+                },
+                {
+                    "title": "Intelligent automation",
+                    "desc": "We build systems, not gadgets."
+                },
+                {
+                    "title": "Long-term vision",
+                    "desc": "We structure for growth."
+                }
+            ]
+        },
+        "finalCta": {
+            "title": "From visibility to digital performance",
+            "desc": "Guelichweb combines technology, creativity, and automation to support your business at every stage of its growth.",
+            "button": "👉 Discuss my project"
+        }
+    },
+    "projectDetail": {
+        "back": "Back to Works",
+        "client": "Client",
+        "confidential": "Confidential /",
+        "servicesTitle": "Services",
+        "servicesList": [
+            "UI/UX Design",
+            "Web Development",
+            "Brand Identity"
+        ],
+        "challengeTitle": "The Challenge",
+        "challengeDesc": "The goal was to redefine the digital presence of {title} to match their evolving market position. We faced the challenge of integrating legacy systems with a modern frontend architecture while ensuring a seamless user experience across all devices. The brand needed a refresh that spoke to a younger demographic without alienating existing loyal customers.",
+        "approachTitle": "Our Approach",
+        "approachDesc": "We started with an immersive discovery phase, analyzing competitor landscapes and user behaviors. By utilizing a component-driven design system, we ensured consistency and scalability.",
+        "resultTitle": "The Result",
+        "resultDesc": "The launch resulted in a 40% increase in user engagement and a 25% uplift in conversion rates within the first three months. The new identity has positioned {title} as a leader in their industry.",
+        "projects": {
+            "1": {
+                "title": "Pegipegi Rebrand",
+                "category": "Mobile App • Branding",
+                "description": "Complete rebranding of a leading travel booking application."
+            },
+            "2": {
+                "title": "FinTech Dashboard",
+                "category": "UI/UX • Web Design",
+                "description": "Design of an intuitive financial dashboard for SMEs."
+            },
+            "3": {
+                "title": "Lumina Fashion",
+                "category": "E-commerce • Strategy",
+                "description": "E-commerce strategy for an emerging fashion brand."
+            },
+            "4": {
+                "title": "EcoEnergy",
+                "category": "Identity • Website",
+                "description": "Visual identity and website for a green energy company."
+            }
+        }
+    },
+    "contact": {
+        "badge": "Contact Us",
+        "title1": "Ready to turn your ",
+        "titleHighlight": "vision into reality?",
+        "desc": "For any professional service request, please fill out our detailed form. This will allow us to better analyze your needs for a targeted initial discussion.",
+        "cta": "Start a Project",
+        "emailLabel": "Email",
+        "phoneLabel": "Call us",
+        "visitLabel": "Visit us",
+        "location": "Abomey-Calavi, Benin",
+        "followUs": "Follow us:"
+    },
+    "legal": {
+        "mentions": {
+            "title": "Legal Notice",
+            "sections": [
+                {
+                    "title": "Site Publisher",
+                    "content": "<ul class='space-y-2'><li><strong>Name:</strong> GUELICHWEB</li><li><strong>Activity:</strong> Digital agency specialized in digital transformation, AI automation, and digital communication</li><li><strong>Location:</strong> Abomey-Calavi, Benin</li><li><strong>Email:</strong> <a href='mailto:christ@guelichweb.online' class='text-primary hover:underline'>christ@guelichweb.online</a></li><li><strong>Phone:</strong> <a href='https://wa.me/2290166368705' class='text-primary hover:underline'>+229 01 66 36 87 05</a></li></ul>"
+                },
+                {
+                    "title": "Director of Publication",
+                    "content": "<p><strong>Christian GUEGUELIGUE</strong> — Founder & CEO of Guelichweb.</p>"
+                },
+                {
+                    "title": "Hosting",
+                    "content": "<p>This site is hosted via a modern and secure cloud infrastructure provided by Vercel Inc. (or equivalent), ensuring optimal availability and performance worldwide.</p>"
+                },
+                {
+                    "title": "Intellectual Property",
+                    "content": "<p>The general structure of the site as well as texts, animated or non-animated images, videos, know-how, and all other elements composing the site are the exclusive property of Guelichweb, unless otherwise stated.</p><p class='mt-4'>Any total or partial representation of this site by any person whatsoever, without the express permission of Guelichweb, is prohibited and would constitute an infringement sanctioned by applicable laws.</p>"
+                },
+                {
+                    "title": "Liability",
+                    "content": "<p>Guelichweb strives to provide its site with information as accurate as possible. However, the agency cannot be held responsible for omissions, inaccuracies, and deficiencies in updating, whether by its own doing or by third-party partners who provide this information.</p><p class='mt-4'>The information provided on the site is for informational purposes only. The use of information and content available on the entire site cannot under any circumstances engage the responsibility of Guelichweb, in any capacity whatsoever.</p>"
+                }
+            ]
+        },
+        "privacy": {
+            "title": "Privacy Policy",
+            "intro": "<p>At Guelichweb, we place fundamental importance on respecting privacy and protecting the personal data of our clients and visitors. This policy describes how we collect, use, and protect your data.</p>",
+            "sections": [
+                {
+                    "title": "1. Collected Data",
+                    "content": "<p>We only collect the information necessary for the proper functioning of our services. When using our contact forms, the following data may be collected:</p><ul class='list-disc pl-6 mt-4 space-y-2'><li>Full name</li><li>Email address</li><li>Phone number (if applicable)</li><li>Content of the message or expressed needs</li></ul>"
+                },
+                {
+                    "title": "2. Purpose of Collection",
+                    "content": "<p>The information entered is recorded and processed exclusively to:</p><ul class='list-disc pl-6 mt-4 space-y-2'><li>Respond to your contact requests and prepare quotes.</li><li>Ensure commercial follow-up and management of our customer relationship.</li><li>Improve the quality of our services and our website.</li></ul>"
+                },
+                {
+                    "title": "3. No Resale of Data",
+                    "content": "<p><strong>Guelichweb formaly commits to never reselling, renting, or transferring your personal data to third parties.</strong> Your data remains strictly confidential and reserved for the exclusive use of our agency.</p>"
+                },
+                {
+                    "title": "4. Retention Period",
+                    "content": "<p>Data is kept for a reasonable duration necessary for the purposes for which it was collected, in accordance with current legislation:</p><ul class='list-disc pl-6 mt-4 space-y-2'><li><strong>Prospect data:</strong> Maximum 3 years after the last contact.</li><li><strong>Client data:</strong> For the duration of the commercial relationship, plus legal prescription periods.</li></ul>"
+                },
+                {
+                    "title": "5. Data Security",
+                    "content": "<p>We implement all appropriate technical and organizational measures to protect your data against alteration, accidental loss, or unauthorized access.</p>"
+                },
+                {
+                    "title": "6. Analytical Tools",
+                    "content": "<p>We may use traffic analysis tools (anonymized statistics) to measure our site's audience and understand navigation paths, in order to optimize the user experience.</p>"
+                },
+                {
+                    "title": "7. Your Rights",
+                    "content": "<p>In accordance with international data protection regulations (including GDPR), you have the right at any time to:</p><ul class='list-disc pl-6 mt-4 space-y-2'><li>Access your data</li><li>Rectify or modify</li><li>Delete (right to be forgotten)</li><li>Limit processing</li></ul>"
+                }
+            ],
+            "contactBoxTitle": "Personal Data Contact",
+            "contactBoxText": "<p class='mb-4'>For any questions regarding this policy or to exercise your rights, you can contact us directly at the following address:</p><a href='mailto:christ@guelichweb.online' class='text-xl font-bold text-primary hover:text-white transition-colors'>christ@guelichweb.online</a>"
+        },
+        "terms": {
+            "title": "General Terms of Service",
+            "intro": "<p>These General Terms of Service (hereinafter \"GTS\") govern the contractual relationship between the Digital Agency GUELICHWEB (hereinafter \"The Agency\") and any professional wishing to benefit from the services offered (hereinafter \"The Client\").</p>",
+            "sections": [
+                {
+                    "title": "1. Nature of Digital Services",
+                    "content": "<p>Guelichweb provides intellectual and technical services in the following areas:</p><ul class='list-disc pl-6 mt-4 space-y-2'><li>Audit and consulting in digital transformation.</li><li>Development of showcase websites and custom business platforms.</li><li>Design, development, and integration of AI automations (chatbots, CRM...).</li><li>Brand design, digital content creation, and communication (Growth Studio).</li></ul>"
+                },
+                {
+                    "title": "2. Best Efforts Obligation",
+                    "content": "<p>The Agency is subject to a best efforts obligation and not to a result obligation. Guelichweb commits to bringing all the care, expertise, and rigor necessary for the execution of the missions entrusted to it, in compliance with the rules of the art of the profession.</p>"
+                },
+                {
+                    "title": "3. Indicative Deadlines",
+                    "content": "<p>The delivery times indicated on the quotes are provided for indicative purposes, unless expressly stated otherwise in writing. A delay in realization, if justified by the unexpected technical complexity of the project or the Client's delay in providing the required elements (content, access), cannot result in penalties, deductions, or cancellation of the order.</p>"
+                },
+                {
+                    "title": "4. Payment Terms",
+                    "content": "<p>Any quote acceptance must be accompanied by the payment of a deposit determined during the commercial proposal (generally 30% to 50% of the total amount including VAT). The balance is due upon final delivery of the project or on a jointly agreed due date. Payments must be made by bank transfer or secure online payment method. Payment delays may result in immediate suspension of services.</p>"
+                },
+                {
+                    "title": "5. Intellectual Property",
+                    "content": "<p><strong>Ownership of deliverables after payment:</strong> Guelichweb exclusively assigns to the Client all exploitation rights (reproduction, representation, adaptation) relating to the final ordered deliverable, for the legal duration of copyright and worldwide, <strong>only from the full and effective payment</strong> of the sums due by the Client.</p><p class='mt-4'>The Agency authorizes itself to mention the Client and the deliverable as a reference in its portfolio, on its website and its social networks in an anonymized manner or not, unless explicit confidentiality is requested before signing the quote.</p>"
+                },
+                {
+                    "title": "6. Limitation of Liability",
+                    "content": "<p>The Agency cannot be held responsible for indirect damages suffered by the Client (including, but not limited to, data loss, damages suffered by the Client's equipment, loss of profit, loss of market, commercial disruption) related to the realization or use of the deliverable. The amount of compensation due by Guelichweb for a project, for whatever reason, will be strictly limited to the amount billed and collected for said project.</p>"
+                },
+                {
+                    "title": "7. Applicable Law and Competent Jurisdiction",
+                    "content": "<p>These General Terms will be governed by the Law applicable in the Republic of Benin and interpreted in the light of international conventions on commercial and digital law. In the event of a dispute not resolved amicably, the Commercial Court of Cotonou (or equivalent jurisdiction) will have exclusive competence to examine the case.</p>"
+                }
+            ]
+        },
+        "cookies": {
+            "title": "Cookie Policy",
+            "intro": "<p>During your navigation on the Guelichweb agency website (<strong>guelichweb.online</strong>), information may be recorded in \"cookie\" files installed on your computer, tablet, or mobile phone. This page explains what cookies are, how we use them, and how you can control them.</p>",
+            "sections": [
+                {
+                    "title": "1. What is a cookie?",
+                    "content": "<p>A cookie is a small harmless text file deposited on your terminal when visiting a site or viewing an advertisement. Their aim is notably to collect information relating to your navigation and to provide you with personalized services and improve your user experience.</p>"
+                },
+                {
+                    "title": "2. The cookies we use",
+                    "content": "<div class='space-y-8 mt-6'><div><h3 class='text-xl font-bold text-white mb-2'>A. Strictly technical and functional cookies</h3><p>These cookies are essential for the proper direct functioning of the site and the fluidity of navigation. They notably allow the use of main functionalities, the maintenance of your preference choices, and the routing of requests. These cookies cannot be deactivated.</p></div><div><h3 class='text-xl font-bold text-white mb-2'>B. Analytical and performance cookies</h3><p>We use audience analysis tools to understand how visitors navigate our site, measure the bounce rate, and identify potential display bugs. The data collected by these trackers is anonymous (it is not attached to your name or your email) and is only used to produce global statistics so that Guelichweb can continuously improve the quality of its interfaces.</p></div></div>"
+                },
+                {
+                    "title": "3. Improving the User Experience",
+                    "content": "<p>We are committed to minimizing the use of trackers. All data collected via potential cookies is exploited for the sole purpose of improving the customer experience – for example by understanding which offers interest our clients most to show you more relevant content, as well as for the security of our platform.</p>"
+                },
+                {
+                    "title": "4. Cookie management and browser opt-out",
+                    "content": "<p>In accordance with European and international regulations, you have the full freedom to accept or refuse cookies (with the exception of strictly technical cookies).</p><p class='mt-4'>You can configure your browser settings at any time (Chrome, Firefox, Safari, Edge, etc.) to systematically reject cookies or ask for your permission every time a site attempts to place one.</p><p class='mt-4 italic text-sm text-gray-400'>Note: If you choose to block all cookies, including technical ones, access to certain pages and functions of the web platform may be severely altered or blocked.</p>"
+                }
+            ]
+        }
+    },
+    "footer": {
+        "about": "Digital agency specialized in digital transformation, artificial intelligence, and automation to propel your business into the future.",
+        "servicesTitle": "Services",
+        "servicesLinks": {
+            "audit": "Audit & Consulting",
+            "web": "Web Development",
+            "ai": "AI Automation",
+            "design": "Design & Branding"
+        },
+        "legalTitle": "Legal",
+        "legalLinks": {
+            "mentions": "Legal Notice",
+            "privacy": "Privacy Policy",
+            "terms": "Terms of Service",
+            "cookies": "Cookie Policy"
+        },
+        "contactTitle": "Contact",
+        "location": "Abomey-Calavi, Benin",
+        "rights": "All rights reserved.",
+        "bottomLinks": {
+            "terms": "ToS",
+            "privacy": "Privacy",
+            "cookies": "Cookies"
+        }
+    },
+    "popups": {
+        "whatsappTooltip": "Chat with us",
+        "smartPopupText": "Looking to automate your business?",
+        "smartPopupCta": "Get a free diagnosis"
+    }
+}

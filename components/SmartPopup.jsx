@@ -3,10 +3,12 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, ArrowRight, Zap } from 'lucide-react'
+import { useDictionary } from '@/components/DictionaryProvider'
 
 export default function SmartPopup() {
     const [isVisible, setIsVisible] = useState(false)
     const [isMounted, setIsMounted] = useState(false)
+    const dict = useDictionary()?.popups;
 
     useEffect(() => {
         setIsMounted(true)
@@ -76,7 +78,7 @@ export default function SmartPopup() {
                         </div>
                         <div>
                             <h3 className="text-xl font-display font-bold text-white leading-tight">
-                                Vous cherchez à automatiser votre entreprise ?
+                                {dict?.smartPopupText || "Vous cherchez à automatiser votre entreprise ?"}
                             </h3>
                         </div>
                     </div>
@@ -88,7 +90,7 @@ export default function SmartPopup() {
                         onClick={handleConversion}
                         className="group relative w-full py-3.5 px-4 bg-primary text-white font-bold rounded-xl flex items-center justify-center gap-2 overflow-hidden shadow-[0_0_20px_rgba(37,99,235,0.2)] transition-all hover:shadow-[0_0_30px_rgba(37,99,235,0.4)] hover:-translate-y-0.5"
                     >
-                        <span className="relative z-10">Recevoir un diagnostic gratuit</span>
+                        <span className="relative z-10">{dict?.smartPopupCta || "Recevoir un diagnostic gratuit"}</span>
                         <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform" />
                         <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-primary opacity-0 group-hover:opacity-100 transition-opacity" />
                     </a>

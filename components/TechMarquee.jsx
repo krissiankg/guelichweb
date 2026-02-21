@@ -2,7 +2,9 @@
 
 import React from 'react'
 import Link from 'next/link'
+import { useParams } from 'next/navigation'
 import { ArrowRight } from 'lucide-react'
+import { useDictionary } from '@/components/DictionaryProvider'
 import {
     SiOpenai,
     SiGoogle,
@@ -81,18 +83,22 @@ const TechCard = ({ tech }) => (
 )
 
 export default function TechMarquee() {
+    const dict = useDictionary()
+    const params = useParams()
+    const lang = params?.lang || 'fr'
+
     return (
         <section className="py-20 bg-dark/50 border-b border-white/5 relative overflow-hidden">
             {/* Title */}
             <div className="text-center mb-12 px-4 relative z-10">
                 <div className="inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-primary mb-4 tracking-wider uppercase">
-                    Notre Stack Technologique
+                    {dict?.home?.tech?.badge}
                 </div>
                 <h2 className="text-3xl md:text-5xl font-bold font-display mb-4 max-w-4xl mx-auto leading-tight">
-                    Nous construisons avec les meilleures technologies <span className="text-primary">IA</span> du marché
+                    {dict?.home?.tech?.title1} <span className="text-primary">{dict?.home?.tech?.titleHighlight}</span>{dict?.home?.tech?.title2}
                 </h2>
                 <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
-                    Nous combinons intelligence artificielle, automatisation et développement moderne pour créer des systèmes performants et évolutifs.
+                    {dict?.home?.tech?.desc}
                 </p>
             </div>
 
@@ -110,7 +116,6 @@ export default function TechMarquee() {
                 </div>
             </div>
 
-            {/* Marquee Wrapper Row 2 (Reverse Scroll or just offset?) - User asked for simple infinite scroll. Let's keep same direction or reverse? User didn't specify direction. Same direction is cleaner usually, or reverse for visual interest. I'll stick to 'same' for consistency unless requested, or maybe make it slower/offset. I'll just use same direction for simplicity and clean look. */}
             <div className="relative w-full overflow-hidden mask-linear-fade mb-16">
                 <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-dark to-transparent z-10"></div>
                 <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-dark to-transparent z-10"></div>
@@ -125,13 +130,13 @@ export default function TechMarquee() {
             {/* Social Proof & CTA */}
             <div className="text-center relative z-10 px-6">
                 <p className="text-gray-400 mb-8 max-w-2xl mx-auto text-lg">
-                    Ces technologies alimentent les solutions que nous déployons pour automatiser, structurer et accélérer la croissance de nos clients.
+                    {dict?.home?.tech?.footerDesc}
                 </p>
                 <Link
-                    href="/offres"
+                    href={`/${lang}/offres`}
                     className="inline-flex items-center gap-2 px-8 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-white font-medium transition-all group"
                 >
-                    Voir nos solutions
+                    {dict?.home?.tech?.cta}
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
             </div>

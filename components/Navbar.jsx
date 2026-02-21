@@ -4,12 +4,14 @@ import { useState, useEffect } from "react";
 import { Menu, X, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import LanguageSwitcher from "./LanguageSwitcher";
 import { usePathname } from "next/navigation";
 
-export default function Navbar() {
+export default function Navbar({ dict }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const currentLang = pathname.split('/')[1] || 'fr';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,9 +22,9 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Services", href: "/services" },
-    { name: "Offres", href: "/offres" },
-    { name: "À propos", href: "/about" },
+    { name: dict?.services || "Services", href: `/${currentLang}/services` },
+    { name: dict?.offers || "Offres", href: `/${currentLang}/offres` },
+    { name: dict?.about || "À propos", href: `/${currentLang}/about` },
   ];
 
   return (
@@ -34,7 +36,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <Link
-          href="/"
+          href={`/${currentLang}`}
           className="text-2xl font-display font-bold tracking-tighter flex items-center gap-2 text-white"
         >
           <div className="relative w-10 h-10">
@@ -44,11 +46,11 @@ export default function Navbar() {
         </Link>
         <div className="hidden md:flex items-center gap-8">
           <Link
-            href="/"
-            className={`text-sm uppercase tracking-wider font-medium transition-colors ${pathname === "/" ? "text-primary" : "text-gray-300 hover:text-white"
+            href={`/${currentLang}`}
+            className={`text-sm uppercase tracking-wider font-medium transition-colors ${pathname === `/${currentLang}` ? "text-primary" : "text-gray-300 hover:text-white"
               }`}
           >
-            Accueil
+            {dict?.home || "Accueil"}
           </Link>
           {navLinks.map((link) => (
             <Link
@@ -64,12 +66,13 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center gap-4">
+          <LanguageSwitcher />
           <Link
-            href="/contact"
+            href={`/${currentLang}/contact`}
             className="bg-primary hover:bg-secondary text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-colors inline-block"
           >
-            Démarrer un projet
+            {dict?.startProject || "Démarrer un projet"}
           </Link>
         </div>
 
@@ -91,12 +94,12 @@ export default function Navbar() {
           >
             <div className="flex flex-col gap-6">
               <Link
-                href="/"
+                href={`/${currentLang}`}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`text-lg font-display font-medium text-left ${pathname === "/" ? "text-primary" : "text-white"
+                className={`text-lg font-display font-medium text-left ${pathname === `/${currentLang}` ? "text-primary" : "text-white"
                   }`}
               >
-                Home
+                {dict?.home || "Accueil"}
               </Link>
               {navLinks.map((link) => (
                 <Link
@@ -110,12 +113,17 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href="/contact"
+                href={`/${currentLang}/contact`}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-full text-center font-semibold mt-2"
               >
-                Démarrer un projet
+                {dict?.startProject || "Démarrer un projet"}
               </Link>
+
+              <div className="flex flex-col items-start mt-2 border-t border-white/10 pt-4">
+                <span className="text-gray-400 text-sm mb-2 uppercase tracking-wider">{dict?.language || "Langue"}</span>
+                <LanguageSwitcher />
+              </div>
 
               {/* Réseaux sociaux Mobile */}
               <div className="flex items-center justify-center gap-6 mt-4 pt-6 border-t border-white/10">

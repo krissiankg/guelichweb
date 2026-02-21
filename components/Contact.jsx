@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, ArrowRight, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
+import { useDictionary } from '@/components/DictionaryProvider'
 
 const ContactInfoCard = ({ icon: Icon, title, content, delay }) => (
   <motion.div
@@ -20,6 +21,8 @@ const ContactInfoCard = ({ icon: Icon, title, content, delay }) => (
 );
 
 const Contact = () => {
+  const dict = useDictionary()?.contact;
+
   return (
     <div className="pt-32 pb-24 min-h-screen bg-dark relative overflow-hidden flex flex-col justify-center">
       {/* Background gradients */}
@@ -32,7 +35,7 @@ const Contact = () => {
           animate={{ y: 0, opacity: 1 }}
           className="text-primary font-bold tracking-widest uppercase text-sm mb-6 block"
         >
-          Contactez-nous
+          {dict?.badge}
         </motion.span>
 
         <motion.h1
@@ -41,8 +44,8 @@ const Contact = () => {
           transition={{ delay: 0.1 }}
           className="text-5xl md:text-7xl font-display font-bold mb-8 text-center"
         >
-          Prêt à transformer votre <br />
-          <span className="text-gradient">vision en réalité ?</span>
+          {dict?.title1} <br />
+          <span className="text-gradient">{dict?.titleHighlight}</span>
         </motion.h1>
 
         <motion.p
@@ -51,7 +54,7 @@ const Contact = () => {
           transition={{ delay: 0.2 }}
           className="text-gray-400 text-lg md:text-xl mb-16 max-w-2xl text-center leading-relaxed"
         >
-          Pour toute demande de prestation professionnelle, nous vous invitons à remplir notre formulaire détaillé. Cela nous permettra de mieux analyser vos besoins pour un premier échange ciblé.
+          {dict?.desc}
         </motion.p>
 
         <motion.div
@@ -66,7 +69,7 @@ const Contact = () => {
             rel="noopener noreferrer"
             className="group relative inline-flex items-center justify-center gap-4 px-10 py-5 bg-gradient-to-r from-primary to-blue-600 text-white font-bold text-lg md:text-xl rounded-full overflow-hidden shadow-[0_0_40px_rgba(37,99,235,0.3)] transition-all hover:shadow-[0_0_60px_rgba(37,99,235,0.5)] hover:scale-105"
           >
-            <span>Démarrer un projet</span>
+            <span>{dict?.cta}</span>
             <span className="bg-white/20 p-2.5 rounded-full group-hover:bg-white/30 transition-colors flex items-center justify-center">
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
             </span>
@@ -76,20 +79,20 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
           <ContactInfoCard
             icon={Mail}
-            title="Email"
+            title={dict?.emailLabel}
             content="christ@guelichweb.online"
             delay={0.4}
           />
           <ContactInfoCard
             icon={Phone}
-            title="Appelez-nous"
+            title={dict?.phoneLabel}
             content="+229 01 66 36 87 05"
             delay={0.5}
           />
           <ContactInfoCard
             icon={MapPin}
-            title="Rendez-nous visite"
-            content="Abomey-Calavi, Bénin"
+            title={dict?.visitLabel}
+            content={dict?.location}
             delay={0.6}
           />
         </div>
@@ -101,7 +104,7 @@ const Contact = () => {
           transition={{ delay: 0.7 }}
           className="mt-16 flex items-center justify-center gap-6"
         >
-          <p className="text-gray-400 font-medium mr-4 hidden sm:block">Suivez-nous :</p>
+          <p className="text-gray-400 font-medium mr-4 hidden sm:block">{dict?.followUs}</p>
           <a href="https://www.linkedin.com/company/guelichweb" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:-translate-y-1 transition-all duration-300">
             <Linkedin size={20} />
           </a>

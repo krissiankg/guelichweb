@@ -19,7 +19,7 @@ export function middleware(request) {
 
 export const config = {
     matcher: [
-        // Skip all internal paths (_next, api) and public files like images
-        '/((?!api|_next/static|_next/image|favicon.ico|logo.png|.*\\.png|.*\\.jpg|.*\\.svg).*)',
+        // Skip all internal paths (_next, api, studio) and public files like images
+        '/((?!api|studio|_next/static|_next/image|favicon.ico|logo.png|.*\\.png|.*\\.jpg|.*\\.svg).*)',
     ],
 }

@@ -3,6 +3,9 @@ import { urlForImage } from '@/sanity/lib/image'
 import { PortableText } from '@portabletext/react'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
+import { getDictionary } from '@/dictionaries'
 
 export const revalidate = 60
 
@@ -74,77 +77,86 @@ const components = {
 
 export default async function BlogPostPage({ params }) {
   const { lang, slug } = params
+  const dict = await getDictionary(lang)
   const post = await getPost(slug, lang)
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-dark flex flex-col items-center justify-center pt-32 pb-20 px-6 text-center">
-        <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">Article introuvable</h1>
-        <p className="text-xl text-gray-400 mb-8 max-w-lg">
-          L'article que vous recherchez n'existe pas ou n'est pas disponible dans cette langue ({lang === 'fr' ? 'Français' : 'English'}).
-        </p>
-        <Link 
-          href={`/${lang}/blog`}
-          className="bg-primary hover:bg-secondary text-white px-8 py-4 rounded-full font-bold text-lg transition-colors flex items-center justify-center gap-2"
-        >
-          <ArrowLeft size={20} />
-          {lang === 'fr' ? 'Retour au blog' : 'Back to blog'}
-        </Link>
-      </div>
+      <main className="min-h-screen bg-dark flex flex-col">
+        <Navbar dict={dict?.navbar} />
+        <div className="flex-grow flex flex-col items-center justify-center py-32 px-6 text-center">
+          <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">Article introuvable</h1>
+          <p className="text-xl text-gray-400 mb-8 max-w-lg">
+            L'article que vous recherchez n'existe pas ou n'est pas disponible dans cette langue ({lang === 'fr' ? 'Français' : 'English'}).
+          </p>
+          <Link 
+            href={`/${lang}/blog`}
+            className="bg-primary hover:bg-secondary text-white px-8 py-4 rounded-full font-bold text-lg transition-colors flex items-center justify-center gap-2"
+          >
+            <ArrowLeft size={20} />
+            {lang === 'fr' ? 'Retour au blog' : 'Back to blog'}
+          </Link>
+        </div>
+        <Footer dict={dict?.footer} />
+      </main>
     )
   }
 
   const date = new Date(post.publishedAt || new Date()).toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-US', { day: 'numeric', month: 'long', year: 'numeric' })
 
   return (
-    <article className="min-h-screen bg-dark pt-32 pb-20">
-      <div className="max-w-4xl mx-auto px-6">
-        <Link href={`/${lang}/blog`} className="inline-flex items-center gap-2 text-primary hover:text-white transition-colors font-medium mb-12">
-          <ArrowLeft size={20} /> Retour au blog
-        </Link>
-        
-        <header className="mb-12">
-          {post.categories && post.categories.length > 0 && (
-            <div className="flex flex-wrap gap-2 mb-6">
-              {post.categories.map((category) => (
-                <span key={category} className="px-3 py-1 bg-primary/20 text-primary rounded-full text-xs font-semibold tracking-wider uppercase">
-                  {category}
-                </span>
-              ))}
-            </div>
-          )}
-          <h1 className="text-4xl md:text-6xl font-display font-bold text-white leading-tight mb-8">
-            {post.title}
-          </h1>
-          <div className="flex items-center gap-4 text-gray-400 pb-8 border-b border-white/10">
-            {post.authorImage && (
-              <img src={urlForImage(post.authorImage)} alt={post.authorName} className="w-12 h-12 rounded-full object-cover" />
+    <main className="min-h-screen bg-dark flex flex-col">
+      <Navbar dict={dict?.navbar} />
+      <article className="flex-grow pt-32 pb-20">
+        <div className="max-w-4xl mx-auto px-6">
+          <Link href={`/${lang}/blog`} className="inline-flex items-center gap-2 text-primary hover:text-white transition-colors font-medium mb-12">
+            <ArrowLeft size={20} /> Retour au blog
+          </Link>
+          
+          <header className="mb-12">
+            {post.categories && post.categories.length > 0 && (
+              <div className="flex flex-wrap gap-2 mb-6">
+                {post.categories.map((category) => (
+                  <span key={category} className="px-3 py-1 bg-primary/20 text-primary rounded-full text-xs font-semibold tracking-wider uppercase">
+                    {category}
+                  </span>
+                ))}
+              </div>
             )}
-            <div>
-              <p className="font-medium text-white">{post.authorName || 'Équipe Guelichweb'}</p>
-              <p className="text-sm">Publié le {date}</p>
+            <h1 className="text-4xl md:text-6xl font-display font-bold text-white leading-tight mb-8">
+              {post.title}
+            </h1>
+            <div className="flex items-center gap-4 text-gray-400 pb-8 border-b border-white/10">
+              {post.authorImage && (
+                <img src={urlForImage(post.authorImage)} alt={post.authorName} className="w-12 h-12 rounded-full object-cover" />
+              )}
+              <div>
+                <p className="font-medium text-white">{post.authorName || 'Équipe Guelichweb'}</p>
+                <p className="text-sm">Publié le {date}</p>
+              </div>
             </div>
-          </div>
-        </header>
+          </header>
 
-        {post.mainImage && (
-          <div className="w-full h-auto md:h-[500px] mb-16 rounded-3xl overflow-hidden shadow-2xl">
-            <img 
-              src={urlForImage(post.mainImage)} 
-              alt={post.title}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        )}
-
-        <div className="prose-container max-w-3xl mx-auto">
-          {post.body ? (
-             <PortableText value={post.body} components={components} />
-          ) : (
-            <p className="text-xl text-gray-400 italic">Le contenu de cet article arrivera bientôt.</p>
+          {post.mainImage && (
+            <div className="w-full h-auto md:h-[500px] mb-16 rounded-3xl overflow-hidden shadow-2xl">
+              <img 
+                src={urlForImage(post.mainImage)} 
+                alt={post.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
           )}
+
+          <div className="prose-container max-w-3xl mx-auto">
+            {post.body ? (
+               <PortableText value={post.body} components={components} />
+            ) : (
+              <p className="text-xl text-gray-400 italic">Le contenu de cet article arrivera bientôt.</p>
+            )}
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
+      <Footer dict={dict?.footer} />
+    </main>
   )
 }

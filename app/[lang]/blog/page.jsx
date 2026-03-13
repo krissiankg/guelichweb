@@ -2,6 +2,9 @@ import { client } from '@/sanity/lib/client'
 import { urlForImage } from '@/sanity/lib/image'
 import Link from 'next/link'
 import Image from 'next/image'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
+import { getDictionary } from '@/dictionaries'
 
 export const revalidate = 60 // Revalidate every 60 seconds
 
@@ -16,11 +19,14 @@ async function getPosts(lang) {
 
 export default async function BlogIndexPage({ params }) {
   const lang = params?.lang || 'fr'
+  const dict = await getDictionary(lang)
   const posts = await getPosts(lang)
 
   return (
-    <div className="min-h-screen bg-dark pt-32 pb-20">
-      <div className="max-w-7xl mx-auto px-6">
+    <main className="min-h-screen bg-dark flex flex-col">
+      <Navbar dict={dict?.navbar} />
+      <div className="flex-grow pt-32 pb-20">
+        <div className="max-w-7xl mx-auto px-6">
         <div className="mb-16">
           <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 text-white tracking-tight">
             Notre <span className="text-gradient">Blog</span>
@@ -73,7 +79,9 @@ export default async function BlogIndexPage({ params }) {
             ))}
           </div>
         )}
+        </div>
       </div>
-    </div>
+      <Footer dict={dict?.footer} />
+    </main>
   )
 }

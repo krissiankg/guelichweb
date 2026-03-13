@@ -25,6 +25,7 @@ export default function Navbar({ dict }) {
     { name: dict?.services || "Services", href: `/${currentLang}/services` },
     { name: dict?.offers || "Offres", href: `/${currentLang}/offres` },
     { name: dict?.about || "À propos", href: `/${currentLang}/about` },
+    { name: dict?.blog || "Blog", href: `/${currentLang}/blog` },
   ];
 
   return (
@@ -69,6 +70,14 @@ export default function Navbar({ dict }) {
         <div className="hidden md:flex items-center gap-4">
           <LanguageSwitcher />
           <Link
+            href="https://offre.guelichweb.online/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-white/20 hover:bg-white/5 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-colors inline-block"
+          >
+            {dict?.portfolio || "Portfolio"}
+          </Link>
+          <Link
             href={`/${currentLang}/contact`}
             className="bg-primary hover:bg-secondary text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-colors inline-block"
           >
@@ -112,6 +121,15 @@ export default function Navbar({ dict }) {
                   {link.name}
                 </Link>
               ))}
+              <Link
+                href="https://offre.guelichweb.online/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="border border-white/20 text-white hover:bg-white/5 px-6 py-3 rounded-full text-center font-semibold mt-4 transition-colors"
+              >
+                {dict?.portfolio || "Portfolio"}
+              </Link>
               <Link
                 href={`/${currentLang}/contact`}
                 onClick={() => setIsMobileMenuOpen(false)}

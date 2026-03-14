@@ -72,7 +72,7 @@ export default async function BlogIndexPage({ params }) {
                   </p>
                   <div className="flex items-center justify-between text-sm text-gray-500 border-t border-white/10 pt-6">
                     <span>{post.authorName || 'Équipe Guelichweb'}</span>
-                    <span>{new Date(post.publishedAt).toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-US', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+                    <span>{new Date(post.publishedAt || new Date()).toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-US', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
                   </div>
                 </div>
               </Link>

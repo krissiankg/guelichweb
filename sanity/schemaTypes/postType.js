@@ -10,6 +10,9 @@ export const postType = {
       name: 'title',
       title: 'Title',
       type: 'string',
+      options: {
+        aiAssist: {translateAction: true},
+      },
     },
     {
       name: 'language',
@@ -63,8 +66,16 @@ export const postType = {
       name: 'body',
       title: 'Body',
       type: 'array',
+      options: {
+        aiAssist: {translateAction: true},
+      },
       of: [
-        {type: 'block'},
+        {
+          type: 'block',
+          options: {
+            aiAssist: {translateAction: true},
+          },
+        },
         {
           type: 'image',
           options: {hotspot: true},
@@ -90,6 +101,9 @@ export const postType = {
       title: 'Excerpt',
       type: 'text',
       rows: 4,
+      options: {
+        aiAssist: {translateAction: true},
+      },
     }
   ],
   preview: {

@@ -68,6 +68,20 @@ export const postType = {
         {
           type: 'image',
           options: {hotspot: true},
+          fields: [
+            {
+              name: 'alt',
+              type: 'string',
+              title: 'Alternative text',
+              description: 'Important for SEO and accessiblity.',
+            },
+            {
+              name: 'link',
+              type: 'url',
+              title: 'Lien (URL Affiliation / Externe)',
+              description: 'Ajoutez un lien pour rendre l\'image cliquable.',
+            }
+          ]
         },
       ],
     },

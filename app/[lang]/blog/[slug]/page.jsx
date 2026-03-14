@@ -39,14 +39,25 @@ const components = {
       if (!value?.asset?._ref) {
         return null
       }
+      
+      const ImgElement = (
+        <img
+          alt={value.alt || ' '}
+          loading="lazy"
+          src={urlForImage(value)}
+          className="w-full h-auto object-cover"
+        />
+      )
+
       return (
         <div className="my-8 rounded-3xl overflow-hidden border border-white/10">
-          <img
-            alt={value.alt || ' '}
-            loading="lazy"
-            src={urlForImage(value)}
-            className="w-full h-auto object-cover"
-          />
+          {value.link ? (
+            <a href={value.link} target="_blank" rel="noopener noreferrer" className="block hover:opacity-90 transition-opacity">
+              {ImgElement}
+            </a>
+          ) : (
+            ImgElement
+          )}
         </div>
       )
     },

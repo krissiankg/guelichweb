@@ -19,6 +19,17 @@ export function GenerateAction(props) {
     // Add color/tone logic to signify it's a special AI action
     tone: 'primary',
     onHandle: async () => {
+      // Demander des instructions supplémentaires à l'utilisateur
+      const userInstruction = window.prompt(
+        "Souhaitez-vous donner des consignes spécifiques pour cet article ?\n(Exemple : 'Parle du SEO, utilise un ton humoristique, fais 3 paragraphes')\n\nVous pouvez laisser vide pour une génération standard basée uniquement sur le titre."
+      )
+
+      // Si l'utilisateur clique sur "Annuler"
+      if (userInstruction === null) {
+        onComplete()
+        return
+      }
+
       setIsGenerating(true)
       
       try {
@@ -27,7 +38,10 @@ export function GenerateAction(props) {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ documentId }),
+          body: JSON.stringify({ 
+            documentId,
+            instruction: userInstruction // Envoi des directives
+          }),
         })
 
         if (!response.ok) {
@@ -35,9 +49,8 @@ export function GenerateAction(props) {
           throw new Error(errorData.error || 'Failed to trigger AI generation')
         }
 
-        // We show an alert so the user knows it's happening in the background
         window.alert(
-          "L'Intelligence Artificielle de Sanity a commencé à rédiger votre article ! \nCela peut prendre quelques instants. Le texte apparaîtra tout seul dans ce document."
+          "L'Intelligence Artificielle de Sanity a commencé à rédiger votre article ! \nCela peut prendre quelques instants. Le texte apparaîtra tout seul dans le corps du document."
         )
 
       } catch (err) {

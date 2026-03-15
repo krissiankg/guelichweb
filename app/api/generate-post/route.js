@@ -13,7 +13,7 @@ const client = createClient({
 export async function POST(req) {
   try {
     const body = await req.json()
-    const { documentId } = body
+    const { documentId, instruction } = body
 
     if (!documentId) {
       return NextResponse.json({ error: 'Missing documentId' }, { status: 400 })
@@ -21,17 +21,16 @@ export async function POST(req) {
 
     // The deployed Sanity schema ID
     const schemaId = "_.schemas.default" 
+    
+    // Default instruction if none provided
+    const baseInstruction = "Focus on writing a comprehensive and engaging article suitable for a professional blog. Format the body using rich text blocks. Do not overwrite the title or slug."
+    const fullInstruction = instruction ? `${instruction}. ${baseInstruction}` : baseInstruction
 
     // Trigger the generative agent
     const result = await client.agent.action.generate({
       schemaId: schemaId,
       documentId: documentId,
-      // Target document operation 'update' modifies the document directly
-      targetDocument: {
-        operation: 'update',
-      },
-      // Generate prompt for the Sanity AI Agent
-      prompt: "Generate a comprehensive and engaging blog post body (and an excerpt if it's missing) based on this document's title. Keep the tone professional but accessible. Format the body using rich text blocks. Do not overwrite the title or slug.",
+      instruction: fullInstruction
     })
 
     return NextResponse.json({ success: true, result })

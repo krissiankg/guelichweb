@@ -5,6 +5,9 @@ import { htmlToBlocks } from '@sanity/block-tools'
 import { JSDOM } from 'jsdom'
 import { Schema } from '@sanity/schema'
 
+export const maxDuration = 60; // Increase timeout for Pro+ plans (60s)
+export const dynamic = 'force-dynamic';
+
 // Create a dummy schema to feed block-tools so it knows how to parse text
 const defaultSchema = Schema.compile({
   name: 'default',

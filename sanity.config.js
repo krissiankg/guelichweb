@@ -4,7 +4,7 @@ import { visionTool } from '@sanity/vision'
 import { schema } from './sanity/schemaTypes'
 import { TranslateAction } from './sanity/actions/TranslateAction'
 import { GenerateAction } from './sanity/actions/GenerateAction'
-import { assetSourceDallE } from 'sanity-plugin-asset-source-dall-e'
+import { dallEAssetSourcePlugin } from 'sanity-plugin-asset-source-dall-e'
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET
@@ -17,9 +17,7 @@ export default defineConfig({
   plugins: [
     structureTool(),
     visionTool(),
-    assetSourceDallE({
-      apiKey: process.env.OPENAI_API_KEY,
-    }),
+    dallEAssetSourcePlugin(),
   ],
   document: {
     actions: (prev, context) => {

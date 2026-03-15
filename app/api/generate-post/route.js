@@ -19,12 +19,22 @@ export async function POST(req) {
       return NextResponse.json({ error: 'Missing documentId' }, { status: 400 })
     }
 
+    // Fetch the current document to know its title before generating
+    const existingDoc = await client.getDocument(documentId)
+    const articleTitle = existingDoc?.title || "Article sans titre"
+
     // The deployed Sanity schema ID
     const schemaId = "_.schemas.default" 
     
     // Default instruction if none provided
-    const baseInstruction = "Focus on writing a comprehensive and engaging article suitable for a professional blog. Format the body using rich text blocks. Do not overwrite the title or slug."
-    const fullInstruction = instruction ? `${instruction}. ${baseInstruction}` : baseInstruction
+    const baseInstruction = `
+      You are an expert copywriter. Your ONLY task is to write the 'body' (and 'excerpt' if empty) of a blog article. 
+      The actual title of the article is EXACTLY: "${articleTitle}". 
+      You MUST NOT change or translate the 'title' or 'slug' fields. They must remain exactly as they are.
+      Write a comprehensive, engaging, and professional article focusing strictly on the subject of the title.
+      Format the body using rich text blocks.
+    `
+    const fullInstruction = instruction ? `${instruction}\n\n${baseInstruction}` : baseInstruction
 
     // Trigger the generative agent
     const result = await client.agent.action.generate({

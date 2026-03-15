@@ -21,7 +21,7 @@ export async function POST(req) {
 
     // According to docs, we need the schema ID.
     // In typical Sanity v3 projects, the default workspace/schema name is "default"
-    const schemaId = "default" 
+    const schemaId = "_.schemas.default" 
 
     // Trigger the translation agent
     // We are requesting from French (fr) to English (en)

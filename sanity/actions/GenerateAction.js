@@ -32,8 +32,14 @@ export function GenerateAction(props) {
       })
 
       if (!response.ok) {
-        const errorData = await response.json()
-        throw new Error(errorData.error || 'Failed to trigger AI generation')
+        const contentType = response.headers.get("content-type");
+        if (contentType && contentType.indexOf("application/json") !== -1) {
+          const errorData = await response.json();
+          throw new Error(errorData.error || 'Failed to trigger AI generation');
+        } else {
+          const errorText = await response.text();
+          throw new Error(`Erreur Serveur (HTML): ${errorText.substring(0, 200)}...`);
+        }
       }
 
       window.alert(

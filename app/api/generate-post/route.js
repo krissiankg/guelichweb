@@ -76,23 +76,43 @@ export async function POST(req) {
     });
 
     const htmlOutput = completion.choices[0].message.content
+    console.log("OpenAI output length: ", htmlOutput?.length)
+
+    if (!htmlOutput) {
+      throw new Error("L'IA n'a retourné aucun contenu.")
+    }
 
     // Convert HTML to Sanity Blocks
+    console.log("Converting HTML to Blocks...")
     const rawHtml = htmlOutput.trim().replace(/^```html|```$/g, '')
-    const blocks = htmlToBlocks(rawHtml, blockContentType, {
-      parseHtml: (html) => new JSDOM(html).window.document,
-    })
+    
+    try {
+      const blocks = htmlToBlocks(rawHtml, blockContentType, {
+        parseHtml: (html) => new JSDOM(html).window.document,
+      })
 
-    // Patch the document in Sanity with the new blocks
-    await sanityClient
-      .patch(documentId)
-      .set({ body: blocks })
-      .commit()
+      console.log("Saving blocks to Sanity...")
+      // Patch the document in Sanity with the new blocks
+      await sanityClient
+        .patch(documentId)
+        .set({ body: blocks })
+        .commit()
 
-    return NextResponse.json({ success: true })
+      console.log("Generation and save successful!")
+      return NextResponse.json({ success: true })
+    } catch (parseError) {
+      console.error("Conversion/Save error:", parseError)
+      return NextResponse.json({ 
+        error: "Erreur lors de la conversion du texte : " + parseError.message,
+        details: parseError.stack 
+      }, { status: 500 })
+    }
 
   } catch (error) {
-    console.error('OpenAI Generation error:', error)
-    return NextResponse.json({ error: error.message }, { status: 500 })
+    console.error('OpenAI Global Route error:', error)
+    return NextResponse.json({ 
+      error: error.message,
+      stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
+    }, { status: 500 })
   }
 }

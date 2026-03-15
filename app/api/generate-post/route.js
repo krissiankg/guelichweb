@@ -1,11 +1,7 @@
 import { createClient } from 'next-sanity'
 import { NextResponse } from 'next/server'
-import { GoogleGenerativeAI } from "@google/generative-ai"
 
-export const maxDuration = 60;
-export const dynamic = 'force-dynamic';
-
-// Initialize Sanity Client
+// Use the secure token and standard Sanity client
 const sanityClient = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
@@ -13,10 +9,6 @@ const sanityClient = createClient({
   useCdn: false,
   token: process.env.SANITY_API_TOKEN,
 })
-
-// Initialize Gemini AI
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
 
 export async function POST(req) {
   try {
@@ -31,64 +23,40 @@ export async function POST(req) {
     const existingDoc = await sanityClient.getDocument(documentId)
     const articleTitle = existingDoc?.title || "Article sans titre"
 
-    console.log("Generating with Gemini for: ", articleTitle)
+    // Sanity typical schema ID
+    const schemaId = "_.schemas.default" 
 
-    // Construct the prompt for Gemini
-    const systemPrompt = `
+    // Build the high-quality instructional prompt for Sanity's Agent
+    const baseAIInstruction = `
       Tu es un expert mondial en rédaction web et en SEO.
       Ta mission est de rédiger un article complet, engageant, et optimisé pour le référencement (SEO) pour "guelichweb.online".
       
       RÈGLES CRITIQUES:
-      1. L'article DOIT être très détaillé et dépasser les 2000 mots.
-      2. Le titre exact est : "${articleTitle}".
-      3. Utilise des sous-titres H2 et H3 pour structurer.
-      4. RÉPONDS UNIQUEMENT AU FORMAT JSON "Portable Text" de Sanity.
-      
-      STRUCTURE DU JSON ATTENDUE (exemple) :
-      [
-        {
-          "_type": "block",
-          "style": "normal",
-          "children": [{ "_type": "span", "text": "Introduction..." }]
-        },
-        {
-          "_type": "block",
-          "style": "h2",
-          "children": [{ "_type": "span", "text": "Premier titre important" }]
-        }
-      ]
-      
-      Ne mets aucun texte avant ou après le JSON. Pas de backticks markdown. Juste le tableau JSON.
+      1. L'article DOIT être très détaillé et faire au total plus de 2000 mots. Développe chaque point avec précision.
+      2. Le titre précis de l'article est : "${articleTitle}".
+      3. Rédige uniquement le contenu du champ 'body'.
+      4. Utilise des balises de titres (H2, H3), des listes à puces et du gras pour le SEO.
     `
 
-    const userPrompt = instruction 
-      ? `Instructions spécifiques : "${instruction}"` 
-      : `Rédige l'article le plus complet possible sur : "${articleTitle}"`
+    // Combine system rules with user instructions
+    const fullInstruction = instruction 
+      ? `${baseAIInstruction}\n\nCONSIGNES SPÉCIFIQUES DE L'UTILISATEUR :\n${instruction}` 
+      : `${baseAIInstruction}\n\nRédige cet article maintenant.`
 
-    const result = await model.generateContent([systemPrompt, userPrompt]);
-    const responseText = result.response.text();
-    
-    // Clean the response in case Gemini adds markdown code blocks
-    const cleanJson = responseText.replace(/```json|```/g, '').trim();
-    
-    let blocks;
-    try {
-      blocks = JSON.parse(cleanJson);
-    } catch (e) {
-      console.error("Failed to parse Gemini JSON:", cleanJson);
-      throw new Error("L'IA n'a pas renvoyé un format JSON valide. Veuillez réessayer.");
-    }
+    console.log("Triggering Sanity Agent Action for: ", articleTitle)
 
-    console.log("Saving generated blocks to Sanity...");
-    await sanityClient
-      .patch(documentId)
-      .set({ body: blocks })
-      .commit()
+    // Call Sanity's programmatic Agent Action
+    // IMPORTANT: Only use allowed keys to avoid validation errors
+    const result = await sanityClient.agent.action.generate({
+      schemaId: schemaId,
+      documentId: documentId,
+      instruction: fullInstruction,
+    })
 
-    return NextResponse.json({ success: true })
+    return NextResponse.json({ success: true, result })
 
   } catch (error) {
-    console.error('Gemini Generation error:', error)
+    console.error('Sanity Agent Generation error:', error)
     return NextResponse.json({ error: error.message }, { status: 500 })
   }
 }

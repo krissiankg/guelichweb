@@ -69,12 +69,12 @@ export function GenerateAction(props) {
         setIsDialogOpen(false)
         onComplete()
       },
-      header: 'Intelligence Artificielle (Google Gemini)',
+      header: 'Intelligence Artificielle (Sanity AI)',
       content: (
         <Box padding={4}>
           <Stack space={4}>
             <Text>
-              Notre IA (Gemini 1.5 Pro) est programmée pour rédiger un article de <strong>plus de 2000 mots</strong>, optimisé SEO pour le site <em>guelichweb.online</em>, en se basant sur le Titre de ce document.
+              Notre Assistant IA est programmé pour rédiger un article complet de <strong>plus de 2000 mots</strong>, optimisé SEO pour le site <em>guelichweb.online</em>, en se basant sur le Titre de ce document.
             </Text>
             <Text>
               Souhaitez-vous donner des consignes spécifiques supplémentaires ?

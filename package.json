@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.24.1",
     "@portabletext/block-tools": "^5.1.0",
     "@portabletext/react": "^3.0.0",
     "@sanity/icons": "^3.0.0",

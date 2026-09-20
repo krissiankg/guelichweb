@@ -47,3 +47,5 @@ next-env.d.ts
 # Build and logs
 /dist/
 /build.log
+/dev.log
+/dev.err.log

@@ -1,11 +1,566 @@
 {
+    "localPages": {
+        "abomeyCalavi": {
+            "meta": {
+                "title": "Agence web à Abomey-Calavi — sites, automatisation et IA",
+                "description": "Guelichweb est une agence web installée à Abomey-Calavi : création de sites, automatisation IA, chatbots WhatsApp et CRM pour les entreprises, commerces et ONG du Grand Nokoué. Diagnostic gratuit."
+            },
+            "breadcrumb": "Agence web Abomey-Calavi",
+            "hero": {
+                "badge": "Abomey-Calavi • Godomey • Calavi Centre",
+                "title1": "Agence web à ",
+                "titleHighlight": "Abomey-Calavi",
+                "title2": "",
+                "desc": "Notre bureau est à Abomey-Calavi. Nous concevons des sites web et des systèmes d'automatisation pour les entreprises de la commune et du Grand Nokoué — avec des réunions en présentiel et un devis en FCFA.",
+                "highlights": [
+                    "Bureau à Abomey-Calavi",
+                    "Déplacements à Godomey, Calavi centre et Cotonou",
+                    "Devis en FCFA, sans frais de change"
+                ]
+            },
+            "intro": {
+                "title": "Une agence installée dans la commune, pas à 6 000 kilomètres",
+                "p1": "Beaucoup d'entreprises d'Abomey-Calavi travaillent avec des prestataires joignables uniquement par messages, sur un autre fuseau horaire, et facturant en euros ou en dollars. Quand un problème survient sur le site un lundi matin, personne ne répond.",
+                "p2": "Guelichweb est dirigée par Christian Guegueligue depuis Abomey-Calavi. Nous nous déplaçons chez vous, nous travaillons aux heures de bureau béninoises et nous facturons en FCFA. Et nous ne livrons pas seulement un site : nous connectons WhatsApp, votre CRM et vos automatisations pour que les demandes arrivent et soient suivies."
+            },
+            "offers": {
+                "title": "Ce que nous faisons pour les entreprises d'Abomey-Calavi",
+                "desc": "Quatre prestations que nous déployons le plus souvent dans la commune.",
+                "items": [
+                    {
+                        "title": "Création de site web",
+                        "desc": "Un site rapide, lisible sur mobile et trouvable sur Google.",
+                        "features": [
+                            "Site vitrine ou catalogue",
+                            "Version française et anglaise",
+                            "Optimisation pour les recherches locales",
+                            "Vous modifiez vos textes vous-même"
+                        ]
+                    },
+                    {
+                        "title": "Chatbot WhatsApp",
+                        "desc": "Un assistant qui répond à vos clients même la nuit et le dimanche.",
+                        "features": [
+                            "Réponse immédiate 24/7",
+                            "Qualification des demandes",
+                            "Transmission des prospects sérieux",
+                            "Historique conservé"
+                        ]
+                    },
+                    {
+                        "title": "Automatisation & CRM",
+                        "desc": "Vos contacts, devis et relances centralisés au lieu d'être éparpillés.",
+                        "features": [
+                            "CRM alimenté automatiquement",
+                            "Devis générés sans ressaisie",
+                            "Relances programmées",
+                            "Scénarios n8n ou Make"
+                        ]
+                    },
+                    {
+                        "title": "Identité visuelle & contenu",
+                        "desc": "Une image cohérente sur votre site, vos réseaux et vos supports imprimés.",
+                        "features": [
+                            "Logo et charte graphique",
+                            "Visuels réseaux sociaux",
+                            "Flyers et brochures",
+                            "Photos et vidéos de présentation"
+                        ]
+                    }
+                ]
+            },
+            "process": {
+                "title": "Comment se passe un projet",
+                "desc": "Quatre étapes, un livrable à chaque fois.",
+                "steps": [
+                    {
+                        "title": "On se rencontre",
+                        "desc": "Chez vous à Abomey-Calavi ou dans nos bureaux, pour comprendre votre activité."
+                    },
+                    {
+                        "title": "Diagnostic",
+                        "desc": "Nous cartographions vos processus et identifions où vous perdez du temps et des clients."
+                    },
+                    {
+                        "title": "Devis puis déploiement",
+                        "desc": "Un devis détaillé en FCFA, puis la construction par étapes courtes que vous validez."
+                    },
+                    {
+                        "title": "Formation et suivi",
+                        "desc": "Nous formons votre équipe et restons joignables après la mise en ligne."
+                    }
+                ]
+            },
+            "whyLocal": {
+                "title": "Pourquoi choisir une agence d'Abomey-Calavi",
+                "points": [
+                    {
+                        "title": "On se voit en vrai",
+                        "desc": "Les projets avancent plus vite quand on peut s'asseoir une heure autour d'une table."
+                    },
+                    {
+                        "title": "On connaît votre marché",
+                        "desc": "Mobile money, usages WhatsApp, coupures de connexion : nous concevons pour ces réalités."
+                    },
+                    {
+                        "title": "Facturation en FCFA",
+                        "desc": "Pas de conversion, pas de frais bancaires, pas de surprise sur la facture."
+                    },
+                    {
+                        "title": "Joignables aux heures de bureau",
+                        "desc": "Même fuseau horaire, échanges en français, réponse sous 24 h ouvrées."
+                    }
+                ]
+            },
+            "faq": {
+                "title": "Questions fréquentes",
+                "items": [
+                    {
+                        "q": "Intervenez-vous à Godomey et à Calavi centre ?",
+                        "a": "Oui. Nous sommes basés à Abomey-Calavi et nous nous déplaçons dans toute la commune, notamment à Godomey, Calavi centre, Zogbadjè et Akassato, ainsi qu'à Cotonou et dans le reste du Grand Nokoué."
+                    },
+                    {
+                        "q": "Combien coûte un site web à Abomey-Calavi ?",
+                        "a": "Le prix dépend du nombre de pages, du fait que vous vendiez en ligne ou non, et des automatisations à connecter. Nous commençons par un diagnostic gratuit, puis nous remettons un devis détaillé en FCFA sans engagement. Nous n'affichons pas de tarif unique parce qu'un site vitrine et un système connecté à un CRM n'ont pas le même coût."
+                    },
+                    {
+                        "q": "Travaillez-vous avec les petites entreprises et les commerces ?",
+                        "a": "Oui. Une part importante de notre travail concerne des entrepreneurs seuls ou des commerces de quelques personnes. Dans ce cas, nous commençons souvent par le minimum utile : un site simple et une réponse automatique WhatsApp, puis nous ajoutons le reste quand l'activité le justifie."
+                    },
+                    {
+                        "q": "Peut-on se rencontrer avant de s'engager ?",
+                        "a": "Oui, et nous le recommandons. Le premier rendez-vous et le diagnostic sont gratuits et sans engagement. Vous repartez avec une vision claire de ce qui peut être amélioré, même si vous décidez de ne pas travailler avec nous."
+                    },
+                    {
+                        "q": "Gérez-vous le nom de domaine et l'hébergement ?",
+                        "a": "Oui. Nous pouvons enregistrer votre nom de domaine, configurer l'hébergement et mettre en place vos adresses e-mail professionnelles. Les accès restent à votre nom : vous gardez la propriété de tout."
+                    }
+                ]
+            },
+            "cta": {
+                "title": "Discutons de votre projet à Abomey-Calavi",
+                "desc": "Un premier échange, un diagnostic gratuit, puis un devis clair en FCFA. Sans engagement.",
+                "button": "Demander un diagnostic gratuit"
+            }
+        },
+        "cotonou": {
+            "meta": {
+                "title": "Création de site web et automatisation IA à Cotonou",
+                "description": "Création de sites web, chatbots WhatsApp et automatisations IA pour les entreprises de Cotonou. Guelichweb intervient à Cotonou depuis Abomey-Calavi : diagnostic gratuit et devis en FCFA."
+            },
+            "breadcrumb": "Création site web Cotonou",
+            "hero": {
+                "badge": "Cotonou • Grand Nokoué • Bénin",
+                "title1": "Création de site web et ",
+                "titleHighlight": "automatisation IA",
+                "title2": " à Cotonou",
+                "desc": "À Cotonou, la concurrence se joue sur la vitesse de réponse. Nous construisons des sites qui captent les demandes et des automatisations qui y répondent avant vos concurrents.",
+                "highlights": [
+                    "Interventions à Cotonou depuis Abomey-Calavi",
+                    "Réponse sous 24 h ouvrées",
+                    "Devis détaillé en FCFA"
+                ]
+            },
+            "intro": {
+                "title": "À Cotonou, le problème n'est pas la visibilité : c'est le suivi",
+                "p1": "La plupart des entreprises de Cotonou reçoivent déjà des demandes — par WhatsApp, par téléphone, sur Facebook ou en boutique. Le problème est ailleurs : les messages s'accumulent, les devis partent avec trois jours de retard, et personne ne relance. Le client va voir ailleurs.",
+                "p2": "Nous traitons la chaîne complète : un site qui explique clairement votre offre, un assistant WhatsApp qui répond immédiatement et qualifie la demande, un CRM qui garde l'historique, et des relances automatiques jusqu'à la décision. Vous arrêtez de perdre des ventes par manque de suivi."
+            },
+            "offers": {
+                "title": "Nos prestations pour les entreprises de Cotonou",
+                "desc": "Du site seul au système complet, selon votre niveau de maturité.",
+                "items": [
+                    {
+                        "title": "Site web professionnel",
+                        "desc": "Pour les entreprises qui n'ont pas de site ou dont le site ne rapporte rien.",
+                        "features": [
+                            "Site vitrine, catalogue ou e-commerce",
+                            "Chargement rapide même en connexion faible",
+                            "Bouton WhatsApp sur chaque page",
+                            "Référencement local sur Cotonou"
+                        ]
+                    },
+                    {
+                        "title": "Automatisation commerciale",
+                        "desc": "Pour celles qui reçoivent des demandes mais n'arrivent pas à les traiter toutes.",
+                        "features": [
+                            "Qualification automatique des prospects",
+                            "Devis générés et envoyés automatiquement",
+                            "Relances programmées",
+                            "Alertes pour votre équipe commerciale"
+                        ]
+                    },
+                    {
+                        "title": "CRM et pilotage",
+                        "desc": "Pour celles qui ont plusieurs commerciaux et aucune vision d'ensemble.",
+                        "features": [
+                            "Base clients centralisée",
+                            "Suivi du pipeline commercial",
+                            "Tableaux de bord à jour",
+                            "Rapports automatiques"
+                        ]
+                    },
+                    {
+                        "title": "Refonte et reprise",
+                        "desc": "Pour celles qui ont déjà un site lent, daté ou abandonné.",
+                        "features": [
+                            "Audit technique et SEO",
+                            "Reprise sans perdre votre référencement",
+                            "Migration du contenu existant",
+                            "Ajout des automatisations manquantes"
+                        ]
+                    }
+                ]
+            },
+            "process": {
+                "title": "Comment nous travaillons avec les entreprises de Cotonou",
+                "desc": "Nous venons à vous, puis nous avançons par étapes validées.",
+                "steps": [
+                    {
+                        "title": "Rendez-vous à Cotonou",
+                        "desc": "Nous nous déplaçons dans vos locaux, à Cotonou ou ailleurs dans le Grand Nokoué."
+                    },
+                    {
+                        "title": "Diagnostic gratuit",
+                        "desc": "Nous suivons le trajet d'une demande client chez vous pour repérer où elle se perd."
+                    },
+                    {
+                        "title": "Construction par étapes",
+                        "desc": "Nous livrons par morceaux utilisables, pas en un seul bloc six mois plus tard."
+                    },
+                    {
+                        "title": "Transfert et suivi",
+                        "desc": "Documentation, formation de votre équipe et surveillance des automatisations."
+                    }
+                ]
+            },
+            "whyLocal": {
+                "title": "Une agence béninoise pour un marché béninois",
+                "points": [
+                    {
+                        "title": "Présents sur place",
+                        "desc": "Nous sommes à Abomey-Calavi et intervenons à Cotonou toutes les semaines."
+                    },
+                    {
+                        "title": "Conçu pour vos clients",
+                        "desc": "WhatsApp d'abord, mobile d'abord, mobile money : c'est ainsi que vos clients achètent."
+                    },
+                    {
+                        "title": "Pas de dépendance",
+                        "desc": "Outils standards et documentés : vous pouvez reprendre la main ou changer de prestataire."
+                    },
+                    {
+                        "title": "Tout en FCFA",
+                        "desc": "Devis, factures et abonnements présentés dans votre monnaie."
+                    }
+                ]
+            },
+            "faq": {
+                "title": "Questions fréquentes",
+                "items": [
+                    {
+                        "q": "Avez-vous un bureau à Cotonou ?",
+                        "a": "Notre bureau est à Abomey-Calavi, à proximité immédiate de Cotonou. Nous intervenons à Cotonou chaque semaine et nous nous déplaçons dans vos locaux pour les réunions de cadrage, de validation et de formation."
+                    },
+                    {
+                        "q": "Combien de temps faut-il pour créer un site web ?",
+                        "a": "Comptez 2 à 4 semaines pour un site vitrine connecté à WhatsApp, à partir du moment où nous avons vos textes et vos images. Un site catalogue ou e-commerce demande davantage, et un système complet avec CRM et automatisations prend 6 à 10 semaines selon le nombre de processus."
+                    },
+                    {
+                        "q": "Gérez-vous le nom de domaine, l'hébergement et les e-mails ?",
+                        "a": "Oui, nous prenons en charge l'ensemble : nom de domaine, hébergement, certificat de sécurité et adresses e-mail professionnelles à votre nom de domaine. Tous les accès restent votre propriété."
+                    },
+                    {
+                        "q": "Mon site actuel est lent et mal référencé, faut-il tout refaire ?",
+                        "a": "Pas forcément. Nous commençons par un audit technique. Si la base est saine, nous corrigeons les performances et greffons les automatisations manquantes, ce qui coûte moins cher qu'une refonte. Si le site est bloquant, nous le reconstruisons en préservant votre référencement existant."
+                    },
+                    {
+                        "q": "Travaillez-vous avec les ONG et les institutions présentes à Cotonou ?",
+                        "a": "Oui. Nous livrons des sites bilingues français / anglais, des formulaires de collecte de données terrain et des rapports automatisés, ce qui correspond aux exigences de reporting des bailleurs et des administrations."
+                    }
+                ]
+            },
+            "cta": {
+                "title": "Votre projet digital à Cotonou commence par un diagnostic",
+                "desc": "Décrivez-nous votre situation. Nous revenons sous 24 h ouvrées avec les premières pistes concrètes.",
+                "button": "Demander un diagnostic gratuit"
+            }
+        },
+        "whatsappN8n": {
+            "meta": {
+                "title": "Chatbot WhatsApp et automatisation n8n / Make au Bénin",
+                "description": "Nous installons des chatbots WhatsApp qui qualifient vos prospects et des automatisations n8n ou Make connectées à votre CRM, pour les entreprises du Bénin. Depuis Abomey-Calavi et Cotonou."
+            },
+            "breadcrumb": "Chatbot WhatsApp & n8n",
+            "hero": {
+                "badge": "WhatsApp • n8n • Make • OpenAI",
+                "title1": "Chatbot WhatsApp et ",
+                "titleHighlight": "automatisation n8n",
+                "title2": " au Bénin",
+                "desc": "Vos clients vous écrivent déjà sur WhatsApp. Nous y installons un assistant qui répond immédiatement, qualifie la demande, puis transmet tout à votre CRM via n8n ou Make.",
+                "highlights": [
+                    "Réponse automatique 24/7, y compris la nuit",
+                    "n8n auto-hébergé ou Make, selon vos contraintes",
+                    "Connexion à votre CRM et à vos outils existants"
+                ]
+            },
+            "intro": {
+                "title": "Au Bénin, la vente se joue sur WhatsApp",
+                "p1": "Vos clients ne remplissent pas de formulaire de contact : ils envoient un message WhatsApp. Et ils attendent une réponse en quelques minutes, pas le lendemain. Une entreprise qui répond en dix minutes gagne le client d'une entreprise qui répond en deux jours, même si celle-ci est meilleure.",
+                "p2": "Un chatbot WhatsApp ne remplace pas vos commerciaux. Il prend le premier contact : il accuse réception, pose les trois ou quatre questions utiles, écarte les demandes hors sujet, puis passe la main à un humain avec un dossier déjà rempli. Le reste — création de la fiche client, envoi du devis, relance — est traité par n8n ou Make."
+            },
+            "offers": {
+                "title": "Ce que nous installons concrètement",
+                "desc": "Quatre briques que l'on peut déployer séparément ou ensemble.",
+                "items": [
+                    {
+                        "title": "Assistant WhatsApp de qualification",
+                        "desc": "Le premier contact, automatisé et cadré par vos règles.",
+                        "features": [
+                            "Accusé de réception immédiat",
+                            "Questions de qualification adaptées à votre métier",
+                            "Passage à un humain au bon moment",
+                            "Réponses aux questions récurrentes"
+                        ]
+                    },
+                    {
+                        "title": "Scénarios n8n ou Make",
+                        "desc": "La plomberie qui relie WhatsApp, vos outils et votre base de données.",
+                        "features": [
+                            "Création automatique des fiches clients",
+                            "Génération et envoi de devis",
+                            "Notifications à votre équipe",
+                            "Synchronisation entre vos outils"
+                        ]
+                    },
+                    {
+                        "title": "Relances automatiques",
+                        "desc": "Le suivi que personne n'a le temps de faire à la main.",
+                        "features": [
+                            "Séquences programmées après un devis",
+                            "Rappels de rendez-vous",
+                            "Réactivation des anciens contacts",
+                            "Arrêt automatique dès que le client répond"
+                        ]
+                    },
+                    {
+                        "title": "Tableaux de bord",
+                        "desc": "Pour savoir ce que tout cela produit réellement.",
+                        "features": [
+                            "Nombre de demandes reçues et qualifiées",
+                            "Taux de réponse et délais",
+                            "Suivi du pipeline commercial",
+                            "Rapports envoyés automatiquement"
+                        ]
+                    }
+                ]
+            },
+            "comparison": {
+                "title": "n8n ou Make : lequel choisir ?",
+                "desc": "Les deux fonctionnent. Le choix dépend de votre budget, de votre volume et de la sensibilité de vos données.",
+                "headers": {
+                    "criteria": "Critère",
+                    "n8n": "n8n",
+                    "make": "Make"
+                },
+                "rows": [
+                    {
+                        "criteria": "Hébergement",
+                        "n8n": "Auto-hébergeable sur votre serveur, ou en version cloud.",
+                        "make": "Uniquement en cloud, sur les serveurs de l'éditeur."
+                    },
+                    {
+                        "criteria": "Confidentialité des données",
+                        "n8n": "Vos données peuvent ne jamais quitter votre infrastructure.",
+                        "make": "Les données transitent par la plateforme."
+                    },
+                    {
+                        "criteria": "Coût à fort volume",
+                        "n8n": "Coût fixe d'hébergement, indépendant du nombre d'opérations.",
+                        "make": "Facturation à l'opération : le coût grimpe avec le volume."
+                    },
+                    {
+                        "criteria": "Rapidité de mise en place",
+                        "n8n": "Un peu plus longue, surtout en auto-hébergé.",
+                        "make": "Très rapide pour connecter des outils courants."
+                    },
+                    {
+                        "criteria": "Logique complexe",
+                        "n8n": "Très souple, on peut écrire du code quand c'est nécessaire.",
+                        "make": "Suffisant dans la majorité des cas, plus limité aux extrêmes."
+                    },
+                    {
+                        "criteria": "Reprise par votre équipe",
+                        "n8n": "Demande un profil un peu technique.",
+                        "make": "Interface plus accessible pour un non-technicien."
+                    }
+                ],
+                "conclusion": "En pratique, nous partons souvent sur Make pour valider rapidement un scénario, puis nous basculons sur n8n quand le volume augmente ou quand les données sont sensibles. Nous vous disons lequel choisir pendant le diagnostic, en fonction de vos chiffres réels."
+            },
+            "process": {
+                "title": "Comment se déroule la mise en place",
+                "desc": "Quatre à six semaines en général, selon le nombre de scénarios.",
+                "steps": [
+                    {
+                        "title": "Cartographie",
+                        "desc": "Nous écoutons comment une demande arrive chez vous aujourd'hui, et ce qui se perd en route."
+                    },
+                    {
+                        "title": "Scénario de conversation",
+                        "desc": "Nous rédigeons avec vous les questions de qualification et les règles de passage à un humain."
+                    },
+                    {
+                        "title": "Connexion des outils",
+                        "desc": "Nous branchons WhatsApp, n8n ou Make, votre CRM et vos outils de devis."
+                    },
+                    {
+                        "title": "Test puis mise en service",
+                        "desc": "Nous testons sur de vraies demandes, nous ajustons, puis nous ouvrons à tout le trafic."
+                    }
+                ]
+            },
+            "whyLocal": {
+                "title": "Pourquoi passer par nous",
+                "points": [
+                    {
+                        "title": "Nous parlons métier, pas outil",
+                        "desc": "Le but n'est pas d'installer n8n, c'est que vous ne perdiez plus de demandes."
+                    },
+                    {
+                        "title": "Conçu pour le contexte béninois",
+                        "desc": "WhatsApp comme canal principal, connexions instables, paiement mobile."
+                    },
+                    {
+                        "title": "Vous restez propriétaire",
+                        "desc": "Comptes, scénarios et données à votre nom, documentation fournie."
+                    },
+                    {
+                        "title": "Support joignable",
+                        "desc": "Même fuseau horaire, en français, réponse sous 24 h ouvrées."
+                    }
+                ]
+            },
+            "faq": {
+                "title": "Questions fréquentes",
+                "items": [
+                    {
+                        "q": "Faut-il un compte WhatsApp Business API ?",
+                        "a": "Pour un usage professionnel automatisé et fiable, oui. Nous vous accompagnons dans la création et la validation du compte, et nous configurons le numéro. Pour des besoins plus simples, il existe des solutions intermédiaires que nous évaluons pendant le diagnostic."
+                    },
+                    {
+                        "q": "Le chatbot va-t-il remplacer mon équipe ?",
+                        "a": "Non, et ce n'est pas le but. Il traite le premier contact et les questions répétitives, ce qui représente souvent la majorité des messages. Votre équipe récupère les demandes déjà qualifiées et passe son temps sur celles qui valent une conversation humaine."
+                    },
+                    {
+                        "q": "Mes clients vont-ils se rendre compte que c'est un robot ?",
+                        "a": "Nous recommandons de l'annoncer clairement dès le premier message : c'est plus honnête et mieux accepté. L'assistant explique qu'il prépare le dossier avant qu'un conseiller prenne le relais, et il passe la main dès que le client le demande."
+                    },
+                    {
+                        "q": "Combien coûte une automatisation IA au Bénin ?",
+                        "a": "Le coût se décompose en deux parties : la mise en place, qui dépend du nombre de scénarios et d'outils à connecter, et l'usage mensuel, qui dépend du volume de messages et de la plateforme choisie. Nous chiffrons les deux dans le devis remis après le diagnostic, en FCFA, afin que vous puissiez comparer avec ce que vous coûtent aujourd'hui les demandes perdues."
+                    },
+                    {
+                        "q": "Ça marche avec quel CRM ?",
+                        "a": "Avec la plupart. Nous connectons aussi bien un CRM du marché qu'une base Airtable ou Notion si vous n'avez pas encore de CRM. Si vous travaillez aujourd'hui sur Excel ou sur cahier, nous commençons par une base simple et nous l'ouvrons progressivement."
+                    },
+                    {
+                        "q": "Que se passe-t-il si une automatisation tombe en panne ?",
+                        "a": "Les scénarios sont surveillés et nous recevons une alerte en cas d'échec. Les messages ne sont pas perdus : ils restent dans WhatsApp et sont retraités une fois le scénario rétabli. La procédure de reprise fait partie de la documentation que nous vous remettons."
+                    }
+                ]
+            },
+            "cta": {
+                "title": "Voyons si l'automatisation est rentable chez vous",
+                "desc": "Le diagnostic chiffre ce que vous coûtent les demandes non traitées. C'est gratuit et sans engagement.",
+                "button": "Demander un diagnostic gratuit"
+            }
+        }
+    },
+    "seo": {
+        "home": {
+            "title": "Agence de transformation digitale & IA au Bénin",
+            "description": "Guelichweb, agence digitale à Abomey-Calavi et Cotonou : sites web, automatisation IA, chatbots WhatsApp, CRM et tableaux de bord pour les PME, ONG et institutions du Bénin."
+        },
+        "services": {
+            "title": "Services : sites web, automatisation IA et données",
+            "description": "Audit digital, développement web, automatisation n8n et Make, chatbots WhatsApp, design et formation. Les services de Guelichweb pour les entreprises et organisations à Abomey-Calavi et Cotonou."
+        },
+        "portfolio": {
+            "title": "Réalisations : sites web, applications et plateformes IA",
+            "description": "Les projets livrés par Guelichweb au Bénin et en Afrique de l'Ouest : sites institutionnels, plateformes événementielles, applications éducatives, e-commerce et outils SaaS propulsés par l'IA."
+        },
+        "about": {
+            "title": "À propos de Guelichweb et de Christian Guegueligue",
+            "description": "Guelichweb est une agence de transformation digitale basée à Abomey-Calavi, fondée par Christian Guegueligue. Notre approche : analyser, automatiser et structurer pour la croissance."
+        },
+        "contact": {
+            "title": "Contact — demander un diagnostic digital gratuit",
+            "description": "Contactez Guelichweb à Abomey-Calavi et Cotonou : WhatsApp +229 01 66 36 87 05, christ@guelichweb.online. Diagnostic gratuit et devis détaillé sans engagement."
+        },
+        "blog": {
+            "title": "Blog — transformation digitale, IA et automatisation au Bénin",
+            "description": "Guides et retours d'expérience sur la transformation digitale, l'automatisation avec n8n et Make, les chatbots WhatsApp et l'intelligence artificielle appliquée aux entreprises béninoises."
+        },
+        "project": {
+            "description": "Étude de cas Guelichweb : contexte du projet, solution digitale déployée et résultats obtenus."
+        },
+        "legal": {
+            "mentions": {
+                "title": "Mentions légales",
+                "description": "Mentions légales du site Guelichweb, agence de transformation digitale et intelligence artificielle basée à Abomey-Calavi, Bénin."
+            },
+            "privacy": {
+                "title": "Politique de confidentialité",
+                "description": "Comment Guelichweb collecte, utilise et protège vos données personnelles, et comment exercer vos droits."
+            },
+            "terms": {
+                "title": "Conditions générales",
+                "description": "Conditions générales de vente et d'utilisation des services de Guelichweb : prestations, tarifs, délais et responsabilités."
+            },
+            "cookies": {
+                "title": "Politique cookies",
+                "description": "Politique d'utilisation des cookies sur le site de Guelichweb : finalités, durées de conservation et gestion de vos préférences."
+            }
+        }
+    },
     "navbar": {
         "home": "Accueil",
         "services": "Services",
         "offers": "Offres",
+        "portfolio": "Réalisations",
         "about": "À propos",
+        "blog": "Blog",
         "startProject": "Démarrer un projet",
         "language": "Langue"
+    },
+    "pagePortfolio": {
+        "hero": {
+            "badge": "Réalisations",
+            "title": "Les projets que nous avons livrés",
+            "desc": "Sites institutionnels, plateformes événementielles, applications éducatives, boutiques en ligne et outils SaaS propulsés par l'IA, conçus depuis Abomey-Calavi pour des organisations au Bénin et en Afrique de l'Ouest."
+        },
+        "filters": {
+            "all": "Tous les projets",
+            "sites": "Sites institutionnels",
+            "apps": "Applications web",
+            "saas": "SaaS & IA",
+            "ecommerce": "E-commerce"
+        },
+        "card": {
+            "sector": "Secteur",
+            "stack": "Stack",
+            "visit": "Voir le site en ligne",
+            "detail": "Détails du projet"
+        },
+        "count": {
+            "one": "1 projet",
+            "other": "{count} projets"
+        },
+        "cta": {
+            "title": "Votre projet peut rejoindre cette liste",
+            "desc": "Décrivez-nous votre besoin : nous vous répondons sous 24 h avec un premier cadrage et une estimation.",
+            "button": "Demander un diagnostic gratuit"
+        }
     },
     "home": {
         "hero": {
@@ -20,7 +575,14 @@
                 "Automatisation intelligente",
                 "Résultats mesurables"
             ],
+            "portfolio": "Découvrir nos réalisations",
             "scroll": "Défiler"
+        },
+        "work": {
+            "title": "Réalisations sélectionnées",
+            "desc": "Quelques projets livrés pour des institutions, centres de formation et porteurs de projets au Bénin et en Afrique de l'Ouest.",
+            "viewCase": "Voir le projet",
+            "viewAll": "Voir toutes les réalisations"
         },
         "tech": {
             "badge": "Notre Stack Technologique",
@@ -384,6 +946,129 @@
         ]
     },
     "pageOffers": {
+        "meta": {
+            "title": "Sites web, automatisation IA & transformation digitale au Bénin",
+            "description": "Guelichweb conçoit sites web, chatbots WhatsApp et automatisations IA (n8n, Make, OpenAI) pour entrepreneurs, PME, ONG et institutions à Abomey-Calavi, Cotonou et partout au Bénin. Diagnostic gratuit."
+        },
+        "hero": {
+            "badge": "Abomey-Calavi • Cotonou • Tout le Bénin",
+            "title1": "Sites web, automatisation IA et ",
+            "titleHighlight": "transformation digitale",
+            "title2": " au Bénin",
+            "desc": "Nous ne livrons pas seulement un site. Nous installons un système qui capte vos prospects, les qualifie sur WhatsApp, alimente votre CRM et relance automatiquement — pour que vous arrêtiez de perdre des clients faute de suivi.",
+            "ctaPrimary": "Demander un diagnostic gratuit",
+            "ctaSecondary": "Écrire sur WhatsApp",
+            "highlights": [
+                "Basés à Abomey-Calavi, interventions à Cotonou et dans tout le Bénin",
+                "Réponse sous 24 h ouvrées",
+                "Devis détaillé après diagnostic, sans engagement"
+            ]
+        },
+        "who": {
+            "label": "Qui est Guelichweb",
+            "title": "Une agence qui construit des systèmes, pas des vitrines",
+            "p1": "Guelichweb est dirigée par Christian Guegueligue, depuis Abomey-Calavi. Notre conviction est simple : un site qui se contente de « présenter » l'entreprise coûte de l'argent. Un site connecté à WhatsApp, à un CRM et à des automatisations en rapporte.",
+            "p2": "Nous intervenons sur toute la chaîne : audit des processus, conception du site, chatbot de qualification, automatisations n8n et Make, tableaux de bord de pilotage et formation de vos équipes.",
+            "name": "Christian Guegueligue",
+            "role": "Fondateur & consultant en transformation digitale",
+            "location": "Abomey-Calavi, Bénin",
+            "points": [
+                {
+                    "title": "Diagnostic avant devis",
+                    "desc": "Nous cartographions vos processus avant de proposer la moindre solution technique."
+                },
+                {
+                    "title": "Systèmes connectés",
+                    "desc": "Site, WhatsApp, CRM et automatisations communiquent entre eux, pas en silos."
+                },
+                {
+                    "title": "Transfert de compétences",
+                    "desc": "Vos équipes reprennent la main : documentation et formation incluses."
+                }
+            ]
+        },
+        "audience": {
+            "title": "Pour qui nous travaillons",
+            "desc": "Quatre profils, un même problème de fond : trop de tâches manuelles et des opportunités perdues en route.",
+            "items": [
+                {
+                    "title": "Entrepreneurs & indépendants",
+                    "desc": "Vous vendez déjà, mais tout passe par vous : messages, devis, relances.",
+                    "needs": [
+                        "Site vitrine crédible",
+                        "Réponse automatique WhatsApp",
+                        "Devis générés en un clic"
+                    ]
+                },
+                {
+                    "title": "PME & commerces",
+                    "desc": "Plusieurs collaborateurs, aucun outil commun : l'information se perd entre Excel, WhatsApp et le papier.",
+                    "needs": [
+                        "CRM centralisé",
+                        "Suivi des commandes et devis",
+                        "Tableau de bord d'activité"
+                    ]
+                },
+                {
+                    "title": "ONG & associations",
+                    "desc": "Vous devez rendre des comptes à vos bailleurs avec des données fiables et à jour.",
+                    "needs": [
+                        "Collecte de données terrain",
+                        "Rapports automatisés",
+                        "Site bilingue FR / EN"
+                    ]
+                },
+                {
+                    "title": "Institutions & administrations",
+                    "desc": "Des procédures lourdes, des usagers qui attendent, des dossiers encore sur papier.",
+                    "needs": [
+                        "Dématérialisation des formulaires",
+                        "Portail usagers",
+                        "Traçabilité et archivage"
+                    ]
+                }
+            ]
+        },
+        "journey": {
+            "label": "Le parcours que nous installons",
+            "title": "Du visiteur inconnu au client suivi, sans intervention manuelle",
+            "desc": "C'est le cœur de notre travail : chaque étape est automatisée, traçable et mesurable.",
+            "summary": "Prospect → Site → WhatsApp → Qualification IA → n8n / Make → CRM → Relance → Dashboard",
+            "steps": [
+                {
+                    "title": "Prospect",
+                    "desc": "Il vous trouve sur Google, sur les réseaux sociaux ou par recommandation."
+                },
+                {
+                    "title": "Site web",
+                    "desc": "Une page claire qui explique ce que vous faites et pousse au contact."
+                },
+                {
+                    "title": "WhatsApp",
+                    "desc": "Un clic et il vous écrit sur le canal qu'il utilise déjà chaque jour."
+                },
+                {
+                    "title": "Qualification IA",
+                    "desc": "Un assistant pose les bonnes questions : besoin, budget, délai, localisation."
+                },
+                {
+                    "title": "n8n / Make",
+                    "desc": "Le scénario d'automatisation route l'information vers les bons outils."
+                },
+                {
+                    "title": "CRM",
+                    "desc": "La fiche client est créée, qualifiée et assignée automatiquement."
+                },
+                {
+                    "title": "Relance",
+                    "desc": "Des messages de suivi programmés jusqu'à la décision du client."
+                },
+                {
+                    "title": "Dashboard",
+                    "desc": "Vous voyez enfin combien de demandes arrivent, ce qu'elles coûtent et ce qu'elles rapportent."
+                }
+            ]
+        },
         "title": "Choisissez votre niveau d’accélération",
         "desc": "Trois niveaux pour structurer, automatiser et faire évoluer votre entreprise.",
         "recommended": "RECOMMANDÉ",
@@ -429,6 +1114,268 @@
                 "cta": "Transformer mon entreprise"
             }
         ],
+        "pricingNote": {
+            "title": "Et le budget ?",
+            "desc": "Nous n'affichons pas de tarif figé : le coût dépend du nombre de processus à automatiser et des outils déjà en place chez vous. Le diagnostic aboutit à un devis chiffré en FCFA, détaillé et sans engagement.",
+            "cta": "Obtenir mon devis après diagnostic"
+        },
+        "scenarios": {
+            "label": "Cas concrets",
+            "title": "Ce que nous automatisons le plus souvent",
+            "desc": "Quatre scénarios que nous déployons régulièrement pour des entreprises et organisations béninoises.",
+            "problemLabel": "Problème",
+            "solutionLabel": "Solution",
+            "resultLabel": "Résultat",
+            "stackLabel": "Stack",
+            "items": [
+                {
+                    "title": "Chatbot WhatsApp de qualification",
+                    "problem": "Des dizaines de messages par jour, dont la plupart restent sans suite faute de temps.",
+                    "solution": "Un assistant répond 24/7, qualifie la demande et ne transmet à un humain que les prospects sérieux.",
+                    "result": "Aucune demande sans réponse, et un tri automatique des priorités.",
+                    "stack": "WhatsApp Business API • OpenAI • n8n"
+                },
+                {
+                    "title": "Devis générés automatiquement",
+                    "problem": "Chaque devis est retapé à la main, avec des erreurs et des délais qui font perdre des ventes.",
+                    "solution": "Un formulaire ou une conversation alimente un modèle de devis PDF envoyé automatiquement au client.",
+                    "result": "Un devis part en quelques minutes au lieu de plusieurs jours.",
+                    "stack": "Make • Google Workspace • PDF"
+                },
+                {
+                    "title": "CRM et suivi client centralisés",
+                    "problem": "Les contacts sont éparpillés entre téléphones, cahiers et fichiers Excel.",
+                    "solution": "Un CRM unique, alimenté automatiquement depuis le site, WhatsApp et les réseaux sociaux.",
+                    "result": "Un historique complet par client, accessible à toute l'équipe.",
+                    "stack": "CRM • n8n • Airtable / Notion"
+                },
+                {
+                    "title": "Relances et reporting automatiques",
+                    "problem": "Les devis envoyés restent sans relance et personne ne sait où en est le pipeline commercial.",
+                    "solution": "Des séquences de relance programmées et un tableau de bord mis à jour en continu.",
+                    "result": "Un pipeline visible et des opportunités qui ne dorment plus.",
+                    "stack": "n8n • Make • Looker Studio"
+                }
+            ]
+        },
+        "stack": {
+            "label": "Stack technique",
+            "title": "Les technologies que nous utilisons",
+            "desc": "Des outils standards du marché, documentés, que vos équipes peuvent reprendre sans dépendre de nous.",
+            "headers": {
+                "tool": "Outil",
+                "role": "Rôle",
+                "usage": "Ce que ça vous apporte"
+            },
+            "rows": [
+                {
+                    "tool": "Next.js",
+                    "role": "Sites & applications web",
+                    "usage": "Des pages rapides, bien référencées et faciles à héberger."
+                },
+                {
+                    "tool": "n8n",
+                    "role": "Automatisation auto-hébergeable",
+                    "usage": "Des scénarios sur mesure et des données qui restent chez vous."
+                },
+                {
+                    "tool": "Make",
+                    "role": "Automatisation no-code",
+                    "usage": "Une connexion rapide entre vos outils existants."
+                },
+                {
+                    "tool": "OpenAI",
+                    "role": "Assistants & génération de contenu",
+                    "usage": "La qualification des demandes et la rédaction assistée."
+                },
+                {
+                    "tool": "WhatsApp Business API",
+                    "role": "Canal de conversation",
+                    "usage": "Vos clients vous écrivent là où ils sont déjà."
+                },
+                {
+                    "tool": "Sanity",
+                    "role": "Gestion de contenu",
+                    "usage": "Vous modifiez vos textes et vos articles sans développeur."
+                },
+                {
+                    "tool": "Airtable / Notion",
+                    "role": "Base de données métier",
+                    "usage": "Vos données structurées, partagées et exploitables."
+                },
+                {
+                    "tool": "Looker Studio",
+                    "role": "Tableaux de bord",
+                    "usage": "Des chiffres à jour pour décider sans tableur."
+                }
+            ]
+        },
+        "work": {
+            "label": "Réalisations",
+            "title": "Nos formats de mission",
+            "desc": "Voici les missions types que nous déployons, présentées par secteur. Les références nominatives sont publiées au fur et à mesure des accords clients.",
+            "badge": "Mission type",
+            "problemLabel": "Contexte",
+            "solutionLabel": "Ce que nous avons mis en place",
+            "resultLabel": "Effet attendu",
+            "note": "Vous voulez une référence vérifiable dans votre secteur ? Demandez-la pendant le diagnostic, nous vous mettons en relation directe.",
+            "cta": "Voir si c'est applicable chez moi",
+            "projects": [
+                {
+                    "name": "Distributeur agroalimentaire",
+                    "sector": "Commerce & distribution",
+                    "location": "Cotonou",
+                    "problem": "Commandes reçues sur trois canaux différents, avec des ruptures de suivi fréquentes.",
+                    "solution": "Site catalogue, chatbot WhatsApp de prise de commande et CRM alimenté automatiquement.",
+                    "result": "Toutes les commandes centralisées dans un seul tableau de suivi.",
+                    "stack": "Next.js • WhatsApp • n8n"
+                },
+                {
+                    "name": "Cabinet de services B2B",
+                    "sector": "Services professionnels",
+                    "location": "Abomey-Calavi",
+                    "problem": "Devis rédigés manuellement et délais de réponse trop longs face à la concurrence.",
+                    "solution": "Formulaire de qualification connecté à un générateur de devis PDF automatique.",
+                    "result": "Une réponse chiffrée envoyée le jour même de la demande.",
+                    "stack": "Make • Google Workspace • CRM"
+                },
+                {
+                    "name": "ONG de développement local",
+                    "sector": "ONG & associations",
+                    "location": "Bénin",
+                    "problem": "Collecte de données terrain sur papier et rapports bailleurs longs à produire.",
+                    "solution": "Formulaires mobiles, base de données centralisée et rapports générés automatiquement.",
+                    "result": "Des rapports bailleurs produits à partir de données consolidées.",
+                    "stack": "Airtable • n8n • Looker Studio"
+                },
+                {
+                    "name": "Établissement de formation",
+                    "sector": "Éducation & formation",
+                    "location": "Cotonou",
+                    "problem": "Inscriptions traitées à la main et relances de candidats régulièrement oubliées.",
+                    "solution": "Portail d'inscription en ligne, séquences de relance et tableau de bord des cohortes.",
+                    "result": "Un parcours d'inscription suivi de bout en bout.",
+                    "stack": "Next.js • n8n • WhatsApp"
+                }
+            ]
+        },
+        "method": {
+            "label": "Méthode",
+            "title": "Notre méthode en 4 étapes",
+            "desc": "Un cadre clair, avec un livrable à la fin de chaque étape.",
+            "deliverableLabel": "Livrable",
+            "steps": [
+                {
+                    "step": "01",
+                    "title": "Diagnostic",
+                    "desc": "Nous cartographions vos processus, vos outils et vos points de perte.",
+                    "deliverable": "Rapport de diagnostic + plan d'automatisation priorisé"
+                },
+                {
+                    "step": "02",
+                    "title": "Conception",
+                    "desc": "Nous définissons le système cible : parcours client, automatisations, données.",
+                    "deliverable": "Architecture validée + devis détaillé"
+                },
+                {
+                    "step": "03",
+                    "title": "Déploiement",
+                    "desc": "Nous construisons le site, les scénarios et les connexions, par itérations courtes.",
+                    "deliverable": "Système en production + tests de bout en bout"
+                },
+                {
+                    "step": "04",
+                    "title": "Formation & suivi",
+                    "desc": "Nous formons vos équipes et ajustons les scénarios selon les premiers résultats.",
+                    "deliverable": "Documentation + session de formation"
+                }
+            ]
+        },
+        "local": {
+            "label": "Ancrage local",
+            "title": "Une équipe sur place, à Abomey-Calavi et Cotonou",
+            "desc": "Travailler avec une agence locale change concrètement le déroulé d'un projet digital.",
+            "citiesLabel": "Zones d'intervention",
+            "cities": [
+                "Abomey-Calavi",
+                "Cotonou",
+                "Godomey",
+                "Porto-Novo",
+                "Grand Nokoué",
+                "Tout le Bénin"
+            ],
+            "points": [
+                {
+                    "title": "Réunions en présentiel",
+                    "desc": "Nous nous déplaçons à Cotonou, Abomey-Calavi et dans tout le Grand Nokoué."
+                },
+                {
+                    "title": "Contexte local maîtrisé",
+                    "desc": "Moyens de paiement mobile, usages WhatsApp, contraintes de connexion : nous concevons pour la réalité du terrain."
+                },
+                {
+                    "title": "Même fuseau, même langue",
+                    "desc": "Échanges en français et disponibilité aux heures de bureau béninoises."
+                },
+                {
+                    "title": "Facturation locale",
+                    "desc": "Devis et factures en FCFA, sans frais de change ni intermédiaire."
+                }
+            ]
+        },
+        "faq": {
+            "label": "FAQ",
+            "title": "Questions fréquentes",
+            "desc": "Les questions que l'on nous pose avant de démarrer un projet.",
+            "items": [
+                {
+                    "q": "Où êtes-vous basés et intervenez-vous à Cotonou ?",
+                    "a": "Guelichweb est basée à Abomey-Calavi, au Bénin, et intervient quotidiennement à Cotonou, dans le Grand Nokoué, ainsi qu'à distance partout au Bénin et à l'international."
+                },
+                {
+                    "q": "Combien coûte un site web ou une automatisation IA au Bénin ?",
+                    "a": "Le budget dépend du périmètre : nombre de pages, processus à automatiser et outils déjà en place. Nous commençons toujours par un diagnostic gratuit, puis nous remettons un devis détaillé en FCFA, sans engagement."
+                },
+                {
+                    "q": "Qu'est-ce qu'un chatbot WhatsApp de qualification ?",
+                    "a": "C'est un assistant connecté à votre numéro WhatsApp Business. Il répond immédiatement, pose les questions utiles (besoin, budget, délai, localisation), puis transmet la demande qualifiée à votre équipe ou à votre CRM via n8n ou Make."
+                },
+                {
+                    "q": "Quelle est la différence entre n8n et Make ?",
+                    "a": "Make est une plateforme no-code rapide à mettre en place pour connecter des outils existants. n8n peut être auto-hébergé : vos données restent sur votre infrastructure et les scénarios complexes coûtent moins cher à l'usage. Nous choisissons selon vos contraintes de budget et de confidentialité."
+                },
+                {
+                    "q": "Combien de temps prend un projet ?",
+                    "a": "Le diagnostic prend environ une semaine. Un site connecté à WhatsApp se déploie généralement en 2 à 4 semaines. Un système complet avec CRM, automatisations et tableaux de bord demande 6 à 10 semaines selon le nombre de processus."
+                },
+                {
+                    "q": "Faut-il refaire mon site existant ?",
+                    "a": "Pas nécessairement. Si votre site est sain techniquement, nous pouvons y greffer la qualification WhatsApp, les automatisations et le CRM. Le diagnostic tranche cette question avant toute dépense."
+                },
+                {
+                    "q": "Travaillez-vous en anglais ?",
+                    "a": "Oui. Nous livrons des sites bilingues français / anglais et nous échangeons en anglais avec les organisations internationales, les ONG et les bailleurs."
+                },
+                {
+                    "q": "Que se passe-t-il après la mise en production ?",
+                    "a": "Vous recevez la documentation et une session de formation. Les automatisations sont surveillées et nous ajustons les scénarios après les premières semaines d'usage réel."
+                }
+            ]
+        },
+        "contact": {
+            "label": "Parlons de votre projet",
+            "title": "Un diagnostic gratuit, puis un devis clair",
+            "desc": "Décrivez votre situation en quelques lignes. Nous revenons sous 24 h ouvrées avec les premières pistes d'automatisation.",
+            "whatsappLabel": "WhatsApp",
+            "phoneLabel": "Téléphone",
+            "emailLabel": "E-mail",
+            "locationLabel": "Bureau",
+            "locationValue": "Abomey-Calavi & Cotonou, Bénin",
+            "hoursLabel": "Disponibilité",
+            "hoursValue": "Lundi – Samedi, 8 h – 19 h (GMT+1)",
+            "ctaWhatsapp": "Écrire sur WhatsApp",
+            "ctaForm": "Remplir le formulaire de diagnostic"
+        },
         "commStudio": {
             "title": "Communication & Growth Studio",
             "desc": "Nous combinons stratégie, créativité et intelligence artificielle pour développer votre visibilité et accélérer votre croissance digitale.",
@@ -513,43 +1460,21 @@
         }
     },
     "projectDetail": {
-        "back": "Retour aux Réalisations",
-        "client": "Client",
-        "confidential": "Confidentiel /",
-        "servicesTitle": "Services",
-        "servicesList": [
-            "Design UI/UX",
-            "Développement Web",
-            "Identité de Marque"
-        ],
-        "challengeTitle": "Le Défi",
-        "challengeDesc": "L'objectif était de redéfinir la présence digitale de {title} pour correspondre à sa nouvelle position sur le marché. Le défi consistait à intégrer des systèmes existants avec une architecture front-end moderne tout en assurant une expérience utilisateur fluide sur tous les appareils. La marque avait besoin d'un rafraîchissement pertinent pour un public plus jeune sans aliéner ses clients fidèles.",
-        "approachTitle": "Notre Approche",
-        "approachDesc": "Nous avons commencé par une phase de découverte immersive, analysant le paysage concurrentiel et les comportements des utilisateurs. En utilisant un 'design system' orienté composants, nous avons assuré la cohérence et l'évolutivité.",
-        "resultTitle": "Le Résultat",
-        "resultDesc": "Le lancement a entraîné une augmentation de 40% de l'engagement utilisateur et une hausse de 25% des taux de conversion dans les trois premiers mois. La nouvelle identité a positionné {title} comme un leader dans son secteur.",
-        "projects": {
-            "1": {
-                "title": "Pegipegi Rebrand",
-                "category": "App Mobile • Branding",
-                "description": "Rebranding complet d'une application leader de réservation de voyages."
-            },
-            "2": {
-                "title": "Tableau de Bord FinTech",
-                "category": "UI/UX • Web Design",
-                "description": "Conception d'un tableau de bord financier intuitif pour les PME."
-            },
-            "3": {
-                "title": "Lumina Fashion",
-                "category": "E-commerce • Stratégie",
-                "description": "Stratégie e-commerce pour une marque de mode émergente."
-            },
-            "4": {
-                "title": "EcoEnergy",
-                "category": "Identité • Site Web",
-                "description": "Identité visuelle et site web pour une entreprise d'énergie verte."
-            }
-        }
+        "back": "Retour aux réalisations",
+        "infoTitle": "Fiche projet",
+        "categoryLabel": "Type de projet",
+        "sectorLabel": "Secteur",
+        "locationLabel": "Localisation",
+        "stackLabel": "Technologies",
+        "visit": "Voir le site en ligne",
+        "overviewTitle": "Le projet",
+        "approachTitle": "Notre approche",
+        "approachDesc": "Chaque projet démarre par un cadrage : comprendre l'organisation, ses utilisateurs et les tâches qui lui coûtent le plus de temps. Nous concevons ensuite l'architecture et les parcours, nous développons par itérations courtes avec des points de validation réguliers, et nous formons les équipes avant la mise en ligne pour qu'elles restent autonomes.",
+        "resultTitle": "Les résultats",
+        "otherTitle": "Autres réalisations",
+        "ctaTitle": "Un projet de ce type ?",
+        "ctaDesc": "Parlons de votre besoin : nous vous répondons sous 24 h avec un premier cadrage et une estimation.",
+        "ctaButton": "Demander un diagnostic gratuit"
     },
     "contact": {
         "badge": "Contactez-nous",
@@ -560,7 +1485,7 @@
         "emailLabel": "Email",
         "phoneLabel": "Appelez-nous",
         "visitLabel": "Rendez-nous visite",
-        "location": "Abomey-Calavi, Bénin",
+        "location": "Abomey-Calavi & Cotonou, Bénin",
         "followUs": "Suivez-nous :"
     },
     "legal": {
@@ -686,10 +1611,11 @@
         "about": "Agence digitale spécialisée en transformation numérique, intelligence artificielle et automatisation pour propulser votre entreprise vers le futur.",
         "servicesTitle": "Services",
         "servicesLinks": {
-            "audit": "Audit & Conseil",
-            "web": "Développement Web",
-            "ai": "Automatisation IA",
-            "design": "Design & Branding"
+            "all": "Tous nos services",
+            "offers": "Nos offres",
+            "abomeyCalavi": "Agence web Abomey-Calavi",
+            "cotonou": "Création site web Cotonou",
+            "whatsapp": "Chatbot WhatsApp & n8n"
         },
         "legalTitle": "Légal",
         "legalLinks": {
@@ -699,7 +1625,7 @@
             "cookies": "Politique cookies"
         },
         "contactTitle": "Contact",
-        "location": "Abomey-Calavi, Bénin",
+        "location": "Abomey-Calavi & Cotonou, Bénin",
         "rights": "Tous droits réservés.",
         "bottomLinks": {
             "terms": "CGV",

@@ -2,14 +2,26 @@ import '../globals.css'
 import FloatingWhatsApp from '@/components/FloatingWhatsApp'
 import SmartPopup from '@/components/SmartPopup'
 import DictionaryProvider from '@/components/DictionaryProvider'
+import JsonLd from '@/components/JsonLd'
 import { getDictionary } from '@/dictionaries'
+import { LOCALES, SITE_URL } from '@/lib/site'
+import { buildMetadata } from '@/lib/seo'
+import { organizationGraph } from '@/lib/schema'
 
-export const metadata = {
-  title: 'Agence Transformation Digitale & IA – Guelichweb',
-  description: 'Guelichweb accompagne les entreprises et institutions dans leur transformation numérique, automatisation et gestion de données avec des solutions IA sur mesure.',
-  icons: {
-    icon: '/logo.png',
-  },
+export async function generateStaticParams() {
+  return LOCALES.map((lang) => ({ lang }))
+}
+
+// Home page metadata. Child segments override it with their own.
+export async function generateMetadata({ params: { lang } }) {
+  const dict = await getDictionary(lang)
+  const seo = dict?.seo?.home
+
+  return {
+    metadataBase: new URL(SITE_URL),
+    icons: { icon: '/logo.png' },
+    ...buildMetadata({ lang, title: seo?.title, description: seo?.description }),
+  }
 }
 
 export default async function RootLayout({ children, params: { lang } }) {
@@ -18,6 +30,7 @@ export default async function RootLayout({ children, params: { lang } }) {
   return (
     <html lang={lang} className="scroll-smooth">
       <body className="antialiased">
+        <JsonLd data={organizationGraph(dictionary, lang)} />
         <DictionaryProvider dictionary={dictionary}>
           {children}
           <FloatingWhatsApp />

@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "blog:export": "node --env-file=.env.local scripts/seed-blog-posts.mjs --export",
+    "blog:seed": "node --env-file=.env.local scripts/seed-blog-posts.mjs --write",
+    "sanity:check": "node --env-file=.env.local scripts/check-sanity.mjs"
   },
   "dependencies": {
     "@portabletext/block-tools": "^5.1.0",

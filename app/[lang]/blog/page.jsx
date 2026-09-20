@@ -4,9 +4,21 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import JsonLd from '@/components/JsonLd'
 import { getDictionary } from '@/dictionaries'
+import { buildMetadata } from '@/lib/seo'
+import { webPageGraph } from '@/lib/schema'
 
 export const revalidate = 60 // Revalidate every 60 seconds
+
+const PATH = '/blog'
+
+export async function generateMetadata({ params: { lang } }) {
+  const dict = await getDictionary(lang)
+  const seo = dict?.seo?.blog
+
+  return buildMetadata({ lang, path: PATH, title: seo?.title, description: seo?.description })
+}
 
 async function getPosts(lang) {
   const query = `*[_type == "post" && language == $lang] | order(publishedAt desc) {
@@ -22,8 +34,19 @@ export default async function BlogIndexPage({ params }) {
   const dict = await getDictionary(lang)
   const posts = await getPosts(lang)
 
+  const seo = dict?.seo?.blog
+
   return (
     <main className="min-h-screen bg-dark flex flex-col">
+      <JsonLd
+        data={webPageGraph({
+          lang,
+          path: PATH,
+          name: seo?.title,
+          description: seo?.description,
+          breadcrumb: [{ name: 'Blog', path: PATH }],
+        })}
+      />
       <Navbar dict={dict?.navbar} />
       <div className="flex-grow pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-6">

@@ -1,13 +1,35 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import { useDictionary } from '@/components/DictionaryProvider'
+import JsonLd from '@/components/JsonLd'
+import { getDictionary } from '@/dictionaries'
+import { buildMetadata } from '@/lib/seo'
+import { webPageGraph } from '@/lib/schema'
 
-export default function ConditionsGenerales() {
-    const dict = useDictionary()
+const PATH = '/conditions-generales'
+
+export async function generateMetadata({ params: { lang } }) {
+    const dict = await getDictionary(lang)
+    const seo = dict?.seo?.legal?.terms
+
+    return buildMetadata({ lang, path: PATH, title: seo?.title, description: seo?.description })
+}
+
+export default async function ConditionsGenerales({ params: { lang } }) {
+    const dict = await getDictionary(lang)
     const content = dict?.legal?.terms
+    const seo = dict?.seo?.legal?.terms
 
     return (
         <div className="bg-dark text-white min-h-screen flex flex-col font-sans">
+            <JsonLd
+                data={webPageGraph({
+                    lang,
+                    path: PATH,
+                    name: seo?.title,
+                    description: seo?.description,
+                    breadcrumb: [{ name: seo?.title, path: PATH }],
+                })}
+            />
             <Navbar dict={dict?.navbar} />
 
             <main className="flex-grow pt-32 pb-20 px-6">

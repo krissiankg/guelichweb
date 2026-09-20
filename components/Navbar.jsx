@@ -24,6 +24,7 @@ export default function Navbar({ dict }) {
   const navLinks = [
     { name: dict?.services || "Services", href: `/${currentLang}/services` },
     { name: dict?.offers || "Offres", href: `/${currentLang}/offres` },
+    { name: dict?.portfolio || "Réalisations", href: `/${currentLang}/portfolio` },
     { name: dict?.about || "À propos", href: `/${currentLang}/about` },
     { name: dict?.blog || "Blog", href: `/${currentLang}/blog` },
   ];
@@ -35,20 +36,20 @@ export default function Navbar({ dict }) {
         : "bg-transparent py-6"
         }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-nowrap justify-between items-center gap-4">
         <Link
           href={`/${currentLang}`}
-          className="text-2xl font-display font-bold tracking-tighter flex items-center gap-2 text-white"
+          className="text-lg xl:text-2xl font-display font-bold tracking-tighter flex items-center gap-2 text-white shrink-0"
         >
-          <div className="relative w-10 h-10">
+          <div className="relative w-9 h-9 xl:w-10 xl:h-10 shrink-0">
             <img src="/logo.png" alt="Guelichweb Logo" className="object-contain w-full h-full" />
           </div>
-          GUELICHWEB
+          <span className="whitespace-nowrap">GUELICHWEB</span>
         </Link>
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-4 xl:gap-8 min-w-0">
           <Link
             href={`/${currentLang}`}
-            className={`text-sm uppercase tracking-wider font-medium transition-colors ${pathname === `/${currentLang}` ? "text-primary" : "text-gray-300 hover:text-white"
+            className={`text-sm uppercase tracking-wide xl:tracking-wider font-medium whitespace-nowrap transition-colors ${pathname === `/${currentLang}` ? "text-primary" : "text-gray-300 hover:text-white"
               }`}
           >
             {dict?.home || "Accueil"}
@@ -57,7 +58,7 @@ export default function Navbar({ dict }) {
             <Link
               key={link.name}
               href={link.href}
-              className={`text-sm uppercase tracking-wider font-medium transition-colors ${pathname === link.href
+              className={`text-sm uppercase tracking-wide xl:tracking-wider font-medium whitespace-nowrap transition-colors ${pathname === link.href
                 ? "text-primary"
                 : "text-gray-300 hover:text-white"
                 }`}
@@ -67,26 +68,21 @@ export default function Navbar({ dict }) {
           ))}
         </div>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-3 xl:gap-4 shrink-0">
           <LanguageSwitcher />
           <Link
-            href="https://offre.guelichweb.online/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border border-white/20 hover:bg-white/5 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-colors inline-block"
-          >
-            {dict?.portfolio || "Portfolio"}
-          </Link>
-          <Link
             href={`/${currentLang}/contact`}
-            className="bg-primary hover:bg-secondary text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-colors inline-block"
+            className="bg-primary hover:bg-secondary text-white px-4 xl:px-6 py-2.5 rounded-full text-sm font-semibold transition-colors inline-block whitespace-nowrap"
           >
             {dict?.startProject || "Démarrer un projet"}
           </Link>
         </div>
 
         <button
-          className="md:hidden text-white"
+          type="button"
+          className="lg:hidden text-white shrink-0 p-1"
+          aria-expanded={isMobileMenuOpen}
+          aria-label={isMobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -99,7 +95,7 @@ export default function Navbar({ dict }) {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 w-full bg-dark border-b border-white/10 p-6 md:hidden shadow-2xl"
+            className="absolute top-full left-0 w-full bg-dark border-b border-white/10 p-6 lg:hidden shadow-2xl"
           >
             <div className="flex flex-col gap-6">
               <Link
@@ -122,18 +118,9 @@ export default function Navbar({ dict }) {
                 </Link>
               ))}
               <Link
-                href="https://offre.guelichweb.online/"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="border border-white/20 text-white hover:bg-white/5 px-6 py-3 rounded-full text-center font-semibold mt-4 transition-colors"
-              >
-                {dict?.portfolio || "Portfolio"}
-              </Link>
-              <Link
                 href={`/${currentLang}/contact`}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-full text-center font-semibold mt-2"
+                className="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-full text-center font-semibold mt-4"
               >
                 {dict?.startProject || "Démarrer un projet"}
               </Link>

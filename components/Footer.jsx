@@ -48,10 +48,11 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-6 text-lg">{dict?.servicesTitle}</h4>
             <ul className="space-y-4">
-              <li><Link href={`/${lang}/services`} className="text-gray-400 hover:text-primary transition-colors">{dict?.servicesLinks?.audit}</Link></li>
-              <li><Link href={`/${lang}/services`} className="text-gray-400 hover:text-primary transition-colors">{dict?.servicesLinks?.web}</Link></li>
-              <li><Link href={`/${lang}/services`} className="text-gray-400 hover:text-primary transition-colors">{dict?.servicesLinks?.ai}</Link></li>
-              <li><Link href={`/${lang}/services`} className="text-gray-400 hover:text-primary transition-colors">{dict?.servicesLinks?.design}</Link></li>
+              <li><Link href={`/${lang}/services`} className="text-gray-400 hover:text-primary transition-colors">{dict?.servicesLinks?.all}</Link></li>
+              <li><Link href={`/${lang}/offres`} className="text-gray-400 hover:text-primary transition-colors">{dict?.servicesLinks?.offers}</Link></li>
+              <li><Link href={`/${lang}/agence-web-abomey-calavi`} className="text-gray-400 hover:text-primary transition-colors">{dict?.servicesLinks?.abomeyCalavi}</Link></li>
+              <li><Link href={`/${lang}/creation-site-web-cotonou`} className="text-gray-400 hover:text-primary transition-colors">{dict?.servicesLinks?.cotonou}</Link></li>
+              <li><Link href={`/${lang}/chatbot-whatsapp-n8n-benin`} className="text-gray-400 hover:text-primary transition-colors">{dict?.servicesLinks?.whatsapp}</Link></li>
             </ul>
           </div>
 

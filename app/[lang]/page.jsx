@@ -3,6 +3,7 @@
 import Hero from '@/components/Hero'
 import TechMarquee from '@/components/TechMarquee'
 import UseCases from '@/components/UseCases'
+import Work from '@/components/Work'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { motion } from 'framer-motion'
@@ -225,6 +226,8 @@ export default function Home({ params: { lang } }) {
           </div>
         </div>
       </section>
+
+      <Work />
 
       {/* RESULTS SECTION */}
       <section className="py-24 px-6 border-b border-white/5">

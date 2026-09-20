@@ -77,9 +77,7 @@ export default function Hero() {
             className="mb-16"
           >
              <Link
-                href="https://offre.guelichweb.online/"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`/${lang}/portfolio`}
                 className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors group text-sm font-medium uppercase tracking-wider"
               >
                 <div className="w-8 h-[1px] bg-gray-600 group-hover:bg-primary transition-colors" />

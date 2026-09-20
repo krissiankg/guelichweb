@@ -6,6 +6,7 @@ import { ArrowLeft } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { getDictionary } from '@/dictionaries'
+import { buildMetadata } from '@/lib/seo'
 
 export const revalidate = 60
 
@@ -21,15 +22,16 @@ async function getPost(slug, lang) {
 
 export async function generateMetadata({ params }) {
   const post = await getPost(params.slug, params.lang)
-  if (!post) return { title: 'Article Introuvable - Guelichweb' }
+  if (!post) return { title: 'Article introuvable | Guelichweb' }
 
-  return {
-    title: `${post.title} | Blog Guelichweb`,
+  return buildMetadata({
+    lang: params.lang,
+    path: `/blog/${params.slug}`,
+    title: post.title,
     description: post.excerpt,
-    openGraph: {
-      images: post.mainImage ? [urlForImage(post.mainImage)] : [],
-    },
-  }
+    image: post.mainImage ? urlForImage(post.mainImage) : undefined,
+    type: 'article',
+  })
 }
 
 // Custom components for PortableText to match the theme

@@ -35,7 +35,7 @@ const SiN8n = (props) => (
 const row1 = [
     // IA
     { name: 'OpenAI', icon: SiOpenai, color: '#412991', desc: 'Modèles IA avancés pour automatisation intelligente' },
-    { name: 'Claude', icon: SiAnthropic, color: '#D97757', desc: 'IA conversaionnelle éthique et performante' },
+    { name: 'Claude', icon: SiAnthropic, color: '#D97757', desc: 'IA conversationnelle éthique et performante' },
     { name: 'LangChain', icon: SiLangchain, color: '#1C3C3C', desc: 'Orchestration de chaînes LLM complexes' },
     { name: 'Gemini', icon: SiGoogle, color: '#4285F4', desc: 'Solutions IA multimodales Google' },
 
@@ -54,7 +54,7 @@ const row2 = [
 
     // Cloud & Infra
     { name: 'Vercel', icon: SiVercel, color: '#ffffff', desc: 'Déploiement global et edge computing' },
-    { name: 'GitHub', icon: SiGithub, color: '#ffffff', desc: 'Versionning et collaboration code' },
+    { name: 'GitHub', icon: SiGithub, color: '#ffffff', desc: 'Versioning et collaboration code' },
     { name: 'Docker', icon: SiDocker, color: '#2496ED', desc: 'Conteneurisation pour déploiement fiable' },
     { name: 'AWS', icon: SiAmazon, color: '#FF9900', desc: 'Infrastructure cloud leader mondial' },
 ]

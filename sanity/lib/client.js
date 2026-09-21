@@ -8,3 +8,10 @@ export const client = createClient({
   projectId,
   useCdn,
 })
+
+export function sanityFetch(query, params = {}, tags = ['posts']) {
+  return client.fetch(query, params, {
+    cache: 'no-store',
+    next: { tags },
+  })
+}

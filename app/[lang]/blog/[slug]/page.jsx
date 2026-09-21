@@ -1,4 +1,4 @@
-import { client } from '@/sanity/lib/client'
+import { sanityFetch } from '@/sanity/lib/client'
 import { urlForImage } from '@/sanity/lib/image'
 import { PortableText } from '@portabletext/react'
 import Link from 'next/link'
@@ -8,7 +8,7 @@ import Footer from '@/components/Footer'
 import { getDictionary } from '@/dictionaries'
 import { buildMetadata } from '@/lib/seo'
 
-export const revalidate = 60
+export const dynamic = 'force-dynamic'
 
 async function getPost(slug, lang) {
   const query = `*[_type == "post" && slug.current == $slug && language == $lang][0]{
@@ -17,7 +17,7 @@ async function getPost(slug, lang) {
     "authorImage": author->image,
     "categories": categories[]->title
   }`
-  return client.fetch(query, { slug, lang })
+  return sanityFetch(query, { slug, lang })
 }
 
 export async function generateMetadata({ params }) {

@@ -1,4 +1,4 @@
-import { client } from '@/sanity/lib/client'
+import { sanityFetch } from '@/sanity/lib/client'
 import { projects } from '@/lib/projectsData'
 import { LOCALES, SITE_URL } from '@/lib/site'
 
@@ -34,7 +34,7 @@ const entry = ({ path, priority, changeFrequency, lastModified }) =>
 
 async function getPostRoutes() {
     try {
-        const posts = await client.fetch(
+        const posts = await sanityFetch(
             `*[_type == "post" && defined(slug.current)]{ "slug": slug.current, language, _updatedAt }`
         )
 

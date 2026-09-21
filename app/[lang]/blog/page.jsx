@@ -1,4 +1,4 @@
-import { client } from '@/sanity/lib/client'
+import { sanityFetch } from '@/sanity/lib/client'
 import { urlForImage } from '@/sanity/lib/image'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -9,7 +9,7 @@ import { getDictionary } from '@/dictionaries'
 import { buildMetadata } from '@/lib/seo'
 import { webPageGraph } from '@/lib/schema'
 
-export const revalidate = 60 // Revalidate every 60 seconds
+export const dynamic = 'force-dynamic'
 
 const PATH = '/blog'
 
@@ -26,7 +26,7 @@ async function getPosts(lang) {
     "authorName": author->name,
     "categories": categories[]->title
   }`
-  return client.fetch(query, { lang })
+  return sanityFetch(query, { lang })
 }
 
 export default async function BlogIndexPage({ params }) {

@@ -1,7 +1,7 @@
 // Source content for the blog seed script.
 // Deliberately free of invented figures: no fake client results, no made-up price tags.
 
-const SITE = 'https://www.guelichweb.online'
+const SITE = 'https://guelichweb.online'
 
 export const categories = [
     { title: 'Automatisation', description: "Automatiser les tâches répétitives d'une entreprise." },

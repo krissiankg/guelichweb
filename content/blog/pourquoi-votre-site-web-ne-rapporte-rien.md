@@ -63,4 +63,4 @@ L'ordre compte, parce que certaines corrections sont gratuites et immédiates :
 
 Notez que refaire le site n'apparaît pas dans cette liste. Dans la majorité des cas, ce n'est pas nécessaire : une base saine peut être corrigée et complétée pour bien moins cher qu'une refonte. La refonte se justifie quand la technique est bloquante, pas quand le design a trois ans.
 
-C'est exactement ce que nous regardons pendant notre diagnostic : nous mesurons, nous listons ce qui bloque et nous vous disons ce qui se corrige sans reconstruire. Vous pouvez [voir nos offres](https://www.guelichweb.online/fr/offres) ou [demander un diagnostic gratuit](https://www.guelichweb.online/fr/contact).
+C'est exactement ce que nous regardons pendant notre diagnostic : nous mesurons, nous listons ce qui bloque et nous vous disons ce qui se corrige sans reconstruire. Vous pouvez [voir nos offres](https://guelichweb.online/fr/offres) ou [demander un diagnostic gratuit](https://guelichweb.online/fr/contact).

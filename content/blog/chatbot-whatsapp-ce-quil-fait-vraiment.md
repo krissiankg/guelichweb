@@ -53,10 +53,10 @@ Chaque échange crée une trace : une fiche dans votre base, avec la demande et 
 
 Pour un usage professionnel fiable, il faut un compte WhatsApp Business API : c'est ce qui autorise l'envoi automatisé et évite le blocage de votre numéro. L'assistant s'appuie ensuite sur un modèle de langage pour comprendre les messages, et sur une plateforme d'automatisation comme n8n ou Make pour créer les fiches, envoyer les devis et déclencher les relances.
 
-Le point de vigilance est le coût récurrent : les conversations WhatsApp et les appels au modèle sont facturés à l'usage. Ce n'est pas un obstacle, mais cela doit figurer dans votre budget dès le départ, comme nous l'expliquons dans notre article sur [le budget d'une automatisation IA](https://www.guelichweb.online/fr/blog/combien-coute-une-automatisation-ia-au-benin).
+Le point de vigilance est le coût récurrent : les conversations WhatsApp et les appels au modèle sont facturés à l'usage. Ce n'est pas un obstacle, mais cela doit figurer dans votre budget dès le départ, comme nous l'expliquons dans notre article sur [le budget d'une automatisation IA](https://guelichweb.online/fr/blog/combien-coute-une-automatisation-ia-au-benin).
 
 ## Par quoi commencer
 
 Commencez par le plus simple : un accusé de réception automatique et trois réponses aux questions les plus fréquentes. Vous mesurerez immédiatement l'effet sur votre délai de réponse. La qualification, la génération de devis et les relances viennent ensuite, une brique à la fois.
 
-Nous installons ces assistants pour des entreprises du Bénin depuis Abomey-Calavi et Cotonou. Notre page [chatbot WhatsApp et automatisation n8n](https://www.guelichweb.online/fr/chatbot-whatsapp-n8n-benin) détaille ce que nous mettons en place, et le [diagnostic](https://www.guelichweb.online/fr/contact) vous dira si c'est rentable dans votre cas.
+Nous installons ces assistants pour des entreprises du Bénin depuis Abomey-Calavi et Cotonou. Notre page [chatbot WhatsApp et automatisation n8n](https://guelichweb.online/fr/chatbot-whatsapp-n8n-benin) détaille ce que nous mettons en place, et le [diagnostic](https://guelichweb.online/fr/contact) vous dira si c'est rentable dans votre cas.

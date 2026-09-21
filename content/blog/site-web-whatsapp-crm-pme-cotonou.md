@@ -57,4 +57,4 @@ L'ordre compte plus que les outils. Nous conseillons celui-ci, parce qu'il produ
 
 Commencer par le site, comme on le fait habituellement, revient à installer une vitrine avant d'avoir une caisse. Cela fonctionne, mais l'argent arrive plus tard.
 
-Nous déployons cet enchaînement pour des entreprises de Cotonou et d'Abomey-Calavi. Si vous voulez savoir par quelle étape commencer dans votre cas, regardez notre page [création de site web et automatisation à Cotonou](https://www.guelichweb.online/fr/creation-site-web-cotonou), ou [demandez un diagnostic gratuit](https://www.guelichweb.online/fr/contact) : nous suivons le trajet d'une demande client chez vous et nous vous montrons où elle se perd.
+Nous déployons cet enchaînement pour des entreprises de Cotonou et d'Abomey-Calavi. Si vous voulez savoir par quelle étape commencer dans votre cas, regardez notre page [création de site web et automatisation à Cotonou](https://guelichweb.online/fr/creation-site-web-cotonou), ou [demandez un diagnostic gratuit](https://guelichweb.online/fr/contact) : nous suivons le trajet d'une demande client chez vous et nous vous montrons où elle se perd.

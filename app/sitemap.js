@@ -35,7 +35,9 @@ const entry = ({ path, priority, changeFrequency, lastModified }) =>
 async function getPostRoutes() {
     try {
         const posts = await sanityFetch(
-            `*[_type == "post" && defined(slug.current)]{ "slug": slug.current, language, _updatedAt }`
+            `*[_type == "post" && defined(slug.current)]{ "slug": slug.current, language, _updatedAt }`,
+            {},
+            { revalidate: 60 }
         )
 
         return posts

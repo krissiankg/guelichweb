@@ -5,4 +5,5 @@ const strip = (value) => (value || '').replace(/^["']|["']$/g, '').trim()
 
 export const dataset = strip(process.env.NEXT_PUBLIC_SANITY_DATASET)
 export const projectId = strip(process.env.NEXT_PUBLIC_SANITY_PROJECT_ID)
+export const token = strip(process.env.SANITY_API_TOKEN || process.env.SANITY_API_READ_TOKEN)
 export const useCdn = false

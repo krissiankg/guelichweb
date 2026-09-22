@@ -4,6 +4,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import { translateBlogPathname } from "@/lib/blogTranslations";
 
 export default function LanguageSwitcher() {
     const pathname = usePathname();
@@ -11,7 +12,6 @@ export default function LanguageSwitcher() {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
 
-    // Ex: '/fr/about' -> 'fr'
     const currentLang = pathname.split('/')[1] || 'fr';
 
     useEffect(() => {
@@ -26,9 +26,7 @@ export default function LanguageSwitcher() {
 
     const switchLang = (lang) => {
         if (lang === currentLang) return;
-        const pathParts = pathname.split('/');
-        pathParts[1] = lang;
-        router.push(pathParts.join('/') || '/');
+        router.push(translateBlogPathname(pathname, lang));
         setIsOpen(false);
     };
 

@@ -521,6 +521,19 @@
             }
         }
     },
+    "blogPage": {
+        "title1": "Our ",
+        "titleHighlight": "Blog",
+        "desc": "Guides and notes on digital transformation, AI automation, WhatsApp chatbots and practical systems for businesses in Benin.",
+        "emptyTitle": "No articles published yet.",
+        "emptyDesc": "Check back soon for new publications.",
+        "back": "Back to blog",
+        "publishedOn": "Published on",
+        "authorFallback": "Guelichweb team",
+        "comingSoon": "This article body will be available soon.",
+        "notFoundTitle": "Post not found",
+        "notFoundDesc": "The article you are looking for does not exist or is not available in this language."
+    },
     "seo": {
         "home": {
             "title": "Digital transformation & AI agency in Benin",

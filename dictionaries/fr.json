@@ -521,6 +521,19 @@
             }
         }
     },
+    "blogPage": {
+        "title1": "Notre ",
+        "titleHighlight": "Blog",
+        "desc": "Découvrez nos derniers articles, actualités et réflexions sur la transformation digitale et l'intelligence artificielle.",
+        "emptyTitle": "Aucun article publié pour le moment.",
+        "emptyDesc": "Revenez bientôt pour lire nos publications.",
+        "back": "Retour au blog",
+        "publishedOn": "Publié le",
+        "authorFallback": "Équipe Guelichweb",
+        "comingSoon": "Le contenu de cet article arrivera bientôt.",
+        "notFoundTitle": "Article introuvable",
+        "notFoundDesc": "L'article que vous recherchez n'existe pas ou n'est pas disponible dans cette langue."
+    },
     "seo": {
         "home": {
             "title": "Agence de transformation digitale & IA au Bénin",

@@ -1,3 +1,4 @@
+import { notFound } from 'next/navigation'
 import { sanityFetch } from '@/sanity/lib/client'
 import { urlForImage } from '@/sanity/lib/image'
 import { PortableText } from '@portabletext/react'
@@ -5,14 +6,17 @@ import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import JsonLd from '@/components/JsonLd'
 import { getDictionary } from '@/dictionaries'
+import { getBlogLanguagePaths } from '@/lib/blogTranslations'
 import { buildMetadata } from '@/lib/seo'
+import { blogPostingGraph } from '@/lib/schema'
 
 export const dynamic = 'force-dynamic'
 
 async function getPost(slug, lang) {
   const query = `*[_type == "post" && slug.current == $slug && language == $lang][0]{
-    _id, title, mainImage, publishedAt, body, excerpt,
+    _id, title, slug, mainImage, publishedAt, body, excerpt,
     "authorName": author->name,
     "authorImage": author->image,
     "categories": categories[]->title
@@ -22,7 +26,9 @@ async function getPost(slug, lang) {
 
 export async function generateMetadata({ params }) {
   const post = await getPost(params.slug, params.lang)
-  if (!post) return { title: 'Article introuvable | Guelichweb' }
+  if (!post) {
+    return { title: 'Not found | Guelichweb', robots: { index: false, follow: false } }
+  }
 
   return buildMetadata({
     lang: params.lang,
@@ -31,17 +37,17 @@ export async function generateMetadata({ params }) {
     description: post.excerpt,
     image: post.mainImage ? urlForImage(post.mainImage) : undefined,
     type: 'article',
+    languagePaths: getBlogLanguagePaths(params.slug),
   })
 }
 
-// Custom components for PortableText to match the theme
 const components = {
   types: {
     image: ({ value }) => {
       if (!value?.asset?._ref) {
         return null
       }
-      
+
       const ImgElement = (
         <img
           alt={value.alt || ' '}
@@ -91,41 +97,40 @@ const components = {
 export default async function BlogPostPage({ params }) {
   const { lang, slug } = params
   const dict = await getDictionary(lang)
+  const copy = dict?.blogPage
   const post = await getPost(slug, lang)
 
   if (!post) {
-    return (
-      <main className="min-h-screen bg-dark flex flex-col">
-        <Navbar dict={dict?.navbar} />
-        <div className="flex-grow flex flex-col items-center justify-center py-32 px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">Article introuvable</h1>
-          <p className="text-xl text-gray-400 mb-8 max-w-lg">
-            L'article que vous recherchez n'existe pas ou n'est pas disponible dans cette langue ({lang === 'fr' ? 'Français' : 'English'}).
-          </p>
-          <Link 
-            href={`/${lang}/blog`}
-            className="bg-primary hover:bg-secondary text-white px-8 py-4 rounded-full font-bold text-lg transition-colors flex items-center justify-center gap-2"
-          >
-            <ArrowLeft size={20} />
-            {lang === 'fr' ? 'Retour au blog' : 'Back to blog'}
-          </Link>
-        </div>
-        <Footer dict={dict?.footer} />
-      </main>
-    )
+    notFound()
   }
 
-  const date = new Date(post.publishedAt || new Date()).toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-US', { day: 'numeric', month: 'long', year: 'numeric' })
+  const date = new Date(post.publishedAt || new Date()).toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-US', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  })
+  const imageUrl = post.mainImage ? urlForImage(post.mainImage) : undefined
 
   return (
     <main className="min-h-screen bg-dark flex flex-col">
+      <JsonLd
+        data={blogPostingGraph({
+          lang,
+          slug,
+          title: post.title,
+          description: post.excerpt,
+          image: imageUrl,
+          publishedAt: post.publishedAt,
+          authorName: post.authorName,
+        })}
+      />
       <Navbar dict={dict?.navbar} />
       <article className="flex-grow pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-6">
           <Link href={`/${lang}/blog`} className="inline-flex items-center gap-2 text-primary hover:text-white transition-colors font-medium mb-12">
-            <ArrowLeft size={20} /> Retour au blog
+            <ArrowLeft size={20} /> {copy?.back}
           </Link>
-          
+
           <header className="mb-12">
             {post.categories && post.categories.length > 0 && (
               <div className="flex flex-wrap gap-2 mb-6">
@@ -144,16 +149,16 @@ export default async function BlogPostPage({ params }) {
                 <img src={urlForImage(post.authorImage)} alt={post.authorName} className="w-12 h-12 rounded-full object-cover" />
               )}
               <div>
-                <p className="font-medium text-white">{post.authorName || 'Équipe Guelichweb'}</p>
-                <p className="text-sm">Publié le {date}</p>
+                <p className="font-medium text-white">{post.authorName || copy?.authorFallback}</p>
+                <p className="text-sm">{copy?.publishedOn} {date}</p>
               </div>
             </div>
           </header>
 
           {post.mainImage && (
             <div className="w-full h-auto md:h-[500px] mb-16 rounded-3xl overflow-hidden shadow-2xl">
-              <img 
-                src={urlForImage(post.mainImage)} 
+              <img
+                src={imageUrl}
                 alt={post.title}
                 className="w-full h-full object-cover"
               />
@@ -162,9 +167,9 @@ export default async function BlogPostPage({ params }) {
 
           <div className="prose-container max-w-3xl mx-auto">
             {post.body ? (
-               <PortableText value={post.body} components={components} />
+              <PortableText value={post.body} components={components} />
             ) : (
-              <p className="text-xl text-gray-400 italic">Le contenu de cet article arrivera bientôt.</p>
+              <p className="text-xl text-gray-400 italic">{copy?.comingSoon}</p>
             )}
           </div>
         </div>

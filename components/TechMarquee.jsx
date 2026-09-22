@@ -54,7 +54,7 @@ const row2 = [
 
     // Cloud & Infra
     { name: 'Vercel', icon: SiVercel, color: '#ffffff', desc: 'Déploiement global et edge computing' },
-    { name: 'GitHub', icon: SiGithub, color: '#ffffff', desc: 'Versioning et collaboration code' },
+    { name: 'GitHub', icon: SiGithub, color: '#ffffff', desc: 'Gestion de versions et collaboration code' },
     { name: 'Docker', icon: SiDocker, color: '#2496ED', desc: 'Conteneurisation pour déploiement fiable' },
     { name: 'AWS', icon: SiAmazon, color: '#FF9900', desc: 'Infrastructure cloud leader mondial' },
 ]

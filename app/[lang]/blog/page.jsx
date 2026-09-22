@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import JsonLd from '@/components/JsonLd'
 import { getDictionary } from '@/dictionaries'
+import { translateCategory } from '@/lib/blogCategories'
 import { buildMetadata } from '@/lib/seo'
 import { webPageGraph } from '@/lib/schema'
 
@@ -87,7 +88,7 @@ export default async function BlogIndexPage({ params }) {
                             key={category}
                             className="px-3 py-1 bg-primary/20 text-primary rounded-full text-xs font-semibold tracking-wider uppercase"
                           >
-                            {category}
+                            {translateCategory(category, lang)}
                           </span>
                         ))}
                       </div>

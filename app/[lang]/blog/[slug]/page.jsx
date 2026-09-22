@@ -9,6 +9,7 @@ import Footer from '@/components/Footer'
 import JsonLd from '@/components/JsonLd'
 import { getDictionary } from '@/dictionaries'
 import { getBlogLanguagePaths } from '@/lib/blogTranslations'
+import { translateCategory } from '@/lib/blogCategories'
 import { buildMetadata } from '@/lib/seo'
 import { blogPostingGraph } from '@/lib/schema'
 
@@ -136,7 +137,7 @@ export default async function BlogPostPage({ params }) {
               <div className="flex flex-wrap gap-2 mb-6">
                 {post.categories.map((category) => (
                   <span key={category} className="px-3 py-1 bg-primary/20 text-primary rounded-full text-xs font-semibold tracking-wider uppercase">
-                    {category}
+                    {translateCategory(category, lang)}
                   </span>
                 ))}
               </div>

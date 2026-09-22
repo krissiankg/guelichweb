@@ -141,6 +141,21 @@
                 "title": "Discutons de votre projet à Abomey-Calavi",
                 "desc": "Un premier échange, un diagnostic gratuit, puis un devis clair en FCFA. Sans engagement.",
                 "button": "Demander un diagnostic gratuit"
+            },
+            "related": {
+                "title": "Continuer sur le Grand Nokoué",
+                "items": [
+                    {
+                        "href": "/creation-site-web-cotonou",
+                        "title": "Création de site web à Cotonou",
+                        "desc": "Sites, WhatsApp et automatisations pour les entreprises de Cotonou."
+                    },
+                    {
+                        "href": "/chatbot-whatsapp-n8n-benin",
+                        "title": "Chatbot WhatsApp et n8n",
+                        "desc": "Répondre aux demandes, qualifier et relancer sans ressaisie."
+                    }
+                ]
             }
         },
         "cotonou": {
@@ -284,6 +299,21 @@
                 "title": "Votre projet digital à Cotonou commence par un diagnostic",
                 "desc": "Décrivez-nous votre situation. Nous revenons sous 24 h ouvrées avec les premières pistes concrètes.",
                 "button": "Demander un diagnostic gratuit"
+            },
+            "related": {
+                "title": "Pages liées",
+                "items": [
+                    {
+                        "href": "/agence-web-abomey-calavi",
+                        "title": "Agence web à Abomey-Calavi",
+                        "desc": "Le bureau, les déplacements dans la commune et le devis en FCFA."
+                    },
+                    {
+                        "href": "/chatbot-whatsapp-n8n-benin",
+                        "title": "Chatbot WhatsApp et n8n",
+                        "desc": "L'assistant qui répond quand l'équipe n'est plus disponible."
+                    }
+                ]
             }
         },
         "whatsappN8n": {
@@ -473,6 +503,21 @@
                 "title": "Voyons si l'automatisation est rentable chez vous",
                 "desc": "Le diagnostic chiffre ce que vous coûtent les demandes non traitées. C'est gratuit et sans engagement.",
                 "button": "Demander un diagnostic gratuit"
+            },
+            "related": {
+                "title": "Où nous intervenons",
+                "items": [
+                    {
+                        "href": "/agence-web-abomey-calavi",
+                        "title": "Agence web à Abomey-Calavi",
+                        "desc": "Sites, CRM et automatisation pour les entreprises de la commune."
+                    },
+                    {
+                        "href": "/creation-site-web-cotonou",
+                        "title": "Création de site web à Cotonou",
+                        "desc": "Un site qui capte la demande, branché sur WhatsApp dès le départ."
+                    }
+                ]
             }
         }
     },
@@ -762,6 +807,27 @@
             "title": "Prêt à structurer votre croissance ?",
             "desc": "Ne laissez plus l'opérationnel freiner votre développement. Passez au niveau supérieur.",
             "button": "Planifier un appel stratégique"
+        },
+        "local": {
+            "title": "Au Bénin, sur le terrain",
+            "desc": "Trois pages pour les recherches locales : le bureau à Abomey-Calavi, les entreprises de Cotonou, et l'automatisation WhatsApp.",
+            "items": [
+                {
+                    "href": "/agence-web-abomey-calavi",
+                    "title": "Agence web à Abomey-Calavi",
+                    "desc": "Bureau dans la commune, déplacements à Godomey et Calavi, devis en FCFA."
+                },
+                {
+                    "href": "/creation-site-web-cotonou",
+                    "title": "Site web et automatisation à Cotonou",
+                    "desc": "Sites et systèmes qui répondent aux demandes avant la concurrence."
+                },
+                {
+                    "href": "/chatbot-whatsapp-n8n-benin",
+                    "title": "Chatbot WhatsApp et n8n",
+                    "desc": "Qualification, devis et relances, sans recopier les messages à la main."
+                }
+            ]
         }
     },
     "about": {

@@ -32,24 +32,53 @@ const entry = ({ path, priority, changeFrequency, lastModified }) =>
         alternates: { languages: languageAlternates(path) },
     }))
 
+export const revalidate = 3600
+
+const POSTS_TIMEOUT_MS = 4000
+
+function withTimeout(promise, ms) {
+    return new Promise((resolve, reject) => {
+        const timer = setTimeout(() => reject(new Error(`timeout ${ms}ms`)), ms)
+        promise.then(
+            (value) => {
+                clearTimeout(timer)
+                resolve(value)
+            },
+            (error) => {
+                clearTimeout(timer)
+                reject(error)
+            }
+        )
+    })
+}
+
 async function getPostRoutes() {
     try {
-        const posts = await sanityFetch(
-            `*[_type == "post" && defined(slug.current)]{ "slug": slug.current, language, _updatedAt }`,
-            {},
-            { revalidate: 60 }
+        const posts = await withTimeout(
+            sanityFetch(
+                `*[_type == "post" && defined(slug.current)]{ "slug": slug.current, language, _updatedAt }`,
+                {},
+                { revalidate: 3600 }
+            ),
+            POSTS_TIMEOUT_MS
         )
 
+        if (!Array.isArray(posts)) return []
+
         return posts
-            .filter((post) => LOCALES.includes(post.language))
-            .map((post) => ({
-                url: `${SITE_URL}/${post.language}/blog/${post.slug}`,
-                lastModified: new Date(post._updatedAt),
-                changeFrequency: 'monthly',
-                priority: 0.6,
-            }))
-    } catch {
-        // Sanity unreachable at build time: ship the static part of the sitemap anyway.
+            .filter((post) => LOCALES.includes(post.language) && post.slug)
+            .map((post) => {
+                const updated = new Date(post._updatedAt)
+                return {
+                    url: `${SITE_URL}/${post.language}/blog/${post.slug}`,
+                    lastModified: Number.isNaN(updated.getTime()) ? new Date() : updated,
+                    changeFrequency: 'monthly',
+                    priority: 0.6,
+                }
+            })
+    } catch (error) {
+        // A slow or failed Sanity call must not turn the sitemap into a 500.
+        console.error('[sitemap] articles Sanity indisponibles, index statique servi:', error?.message || error)
         return []
     }
 }

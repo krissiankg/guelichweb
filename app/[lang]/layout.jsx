@@ -12,6 +12,10 @@ export async function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }))
 }
 
+// Unknown first segments (for example /sitemap_index.xml) must 404,
+// not render the homepage as HTML.
+export const dynamicParams = false
+
 // Home page metadata. Child segments override it with their own.
 export async function generateMetadata({ params: { lang } }) {
   const dict = await getDictionary(lang)

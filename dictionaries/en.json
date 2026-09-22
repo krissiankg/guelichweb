@@ -141,6 +141,21 @@
                 "title": "Let's talk about your project in Abomey-Calavi",
                 "desc": "A first conversation, a free diagnostic, then a clear quote in FCFA. No commitment.",
                 "button": "Request a free diagnostic"
+            },
+            "related": {
+                "title": "Continue across Greater Nokoué",
+                "items": [
+                    {
+                        "href": "/creation-site-web-cotonou",
+                        "title": "Website creation in Cotonou",
+                        "desc": "Websites, WhatsApp and automation for businesses in Cotonou."
+                    },
+                    {
+                        "href": "/chatbot-whatsapp-n8n-benin",
+                        "title": "WhatsApp chatbot and n8n",
+                        "desc": "Answer requests, qualify them and follow up without retyping."
+                    }
+                ]
             }
         },
         "cotonou": {
@@ -284,6 +299,21 @@
                 "title": "Your digital project in Cotonou starts with a diagnostic",
                 "desc": "Describe your situation. We come back within 24 business hours with concrete first steps.",
                 "button": "Request a free diagnostic"
+            },
+            "related": {
+                "title": "Related pages",
+                "items": [
+                    {
+                        "href": "/agence-web-abomey-calavi",
+                        "title": "Web agency in Abomey-Calavi",
+                        "desc": "The office, visits across the commune, and quotes in FCFA."
+                    },
+                    {
+                        "href": "/chatbot-whatsapp-n8n-benin",
+                        "title": "WhatsApp chatbot and n8n",
+                        "desc": "The assistant that answers when the team is no longer available."
+                    }
+                ]
             }
         },
         "whatsappN8n": {
@@ -473,6 +503,21 @@
                 "title": "Let's see whether automation pays off in your case",
                 "desc": "The diagnostic quantifies what unprocessed requests cost you. It's free and without commitment.",
                 "button": "Request a free diagnostic"
+            },
+            "related": {
+                "title": "Where we work",
+                "items": [
+                    {
+                        "href": "/agence-web-abomey-calavi",
+                        "title": "Web agency in Abomey-Calavi",
+                        "desc": "Websites, CRM and automation for businesses in the commune."
+                    },
+                    {
+                        "href": "/creation-site-web-cotonou",
+                        "title": "Website creation in Cotonou",
+                        "desc": "A site that captures demand, connected to WhatsApp from day one."
+                    }
+                ]
             }
         }
     },
@@ -762,6 +807,27 @@
             "title": "Ready to Structure Your Growth?",
             "desc": "Stop letting operational tasks hinder your development. Move to the next level.",
             "button": "Schedule a Strategic Call"
+        },
+        "local": {
+            "title": "In Benin, on the ground",
+            "desc": "Three pages for local searches: the office in Abomey-Calavi, businesses in Cotonou, and WhatsApp automation.",
+            "items": [
+                {
+                    "href": "/agence-web-abomey-calavi",
+                    "title": "Web agency in Abomey-Calavi",
+                    "desc": "An office in the commune, visits to Godomey and Calavi, quotes in FCFA."
+                },
+                {
+                    "href": "/creation-site-web-cotonou",
+                    "title": "Website and automation in Cotonou",
+                    "desc": "Sites and systems that answer requests before competitors do."
+                },
+                {
+                    "href": "/chatbot-whatsapp-n8n-benin",
+                    "title": "WhatsApp chatbot and n8n",
+                    "desc": "Qualification, quotes and follow-ups, without copying messages by hand."
+                }
+            ]
         }
     },
     "about": {

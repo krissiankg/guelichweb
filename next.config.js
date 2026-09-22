@@ -10,6 +10,13 @@ const nextConfig = {
       },
     ]
   },
+  async rewrites() {
+    return {
+      beforeFiles: [
+        { source: '/sitemap_index.xml', destination: '/api/sitemap-index' },
+      ],
+    }
+  },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com' },

@@ -12,9 +12,9 @@ export function middleware(request) {
 
     if (pathnameHasLocale) return
 
-    // Redirect if there is no locale
+    // Permanent redirect. 308 keeps the request method, unlike a 301.
     request.nextUrl.pathname = `/${defaultLocale}${pathname}`
-    return NextResponse.redirect(request.nextUrl)
+    return NextResponse.redirect(request.nextUrl, 308)
 }
 
 export const config = {

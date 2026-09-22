@@ -26,7 +26,8 @@ import {
   GraduationCap,
   Users,
   Bot,
-  ArrowRight
+  ArrowRight,
+  MapPin
 } from 'lucide-react'
 import Link from 'next/link'
 import { useDictionary } from '@/components/DictionaryProvider'
@@ -248,6 +249,34 @@ export default function Home({ params: { lang } }) {
                 <div className="text-xl font-bold text-primary mb-2">{stat.label}</div>
                 <p className="text-gray-400 text-sm">{stat.desc}</p>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 px-6 border-b border-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">{home?.local?.title}</h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">{home?.local?.desc}</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {home?.local?.items?.map((item) => (
+              <Link
+                key={item.href}
+                href={`/${lang}${item.href}`}
+                className="group p-8 rounded-3xl bg-card border border-white/5 hover:border-primary/40 transition-colors"
+              >
+                <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-5">
+                  <MapPin size={22} />
+                </div>
+                <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">{item.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-6">{item.desc}</p>
+                <span className="inline-flex items-center gap-2 text-sm font-bold text-primary">
+                  {lang === 'fr' ? 'Voir la page' : 'View page'}
+                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Link>
             ))}
           </div>
         </div>

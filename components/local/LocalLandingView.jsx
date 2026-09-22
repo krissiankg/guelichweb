@@ -237,6 +237,33 @@ export default function LocalLandingView({ pageKey }) {
                     </div>
                 </section>
 
+                {/* RELATED */}
+                {page?.related?.items?.length > 0 && (
+                    <section className="pb-8 px-6">
+                        <div className="max-w-7xl mx-auto">
+                            <SectionHeading title={page.related.title} />
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {page.related.items.map((item) => (
+                                    <Link
+                                        key={item.href}
+                                        href={`/${lang}${item.href}`}
+                                        className="group p-8 rounded-3xl bg-card border border-white/5 hover:border-primary/40 transition-colors"
+                                    >
+                                        <h3 className="font-display font-bold text-xl mb-3 group-hover:text-primary transition-colors">
+                                            {item.title}
+                                        </h3>
+                                        <p className="text-gray-400 leading-relaxed mb-6">{item.desc}</p>
+                                        <span className="inline-flex items-center gap-2 text-sm font-bold text-primary">
+                                            {lang === 'fr' ? 'Voir la page' : 'View page'}
+                                            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                                        </span>
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+                )}
+
                 {/* FAQ */}
                 <section className="py-24 px-6">
                     <div className="max-w-4xl mx-auto">

@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import { SparkleIcon } from '@sanity/icons'
+import { useClient } from 'sanity'
 import { Dialog, Box, Text, TextArea, Stack, Button, Flex } from '@sanity/ui'
+import { studioActionHasCredential, studioActionHeaders } from '../lib/actionAuth'
 
 export function GenerateAction(props) {
   const { published, draft, type, onComplete } = props
   const [isGenerating, setIsGenerating] = useState(false)
+  const client = useClient({ apiVersion: '2024-03-13' })
   const [isDialogOpen, setIsDialogOpen] = useState(false)
   const [userInstruction, setUserInstruction] = useState('')
 
@@ -20,11 +23,14 @@ export function GenerateAction(props) {
     setIsGenerating(true)
     
     try {
+      const headers = studioActionHeaders(client)
+      if (!studioActionHasCredential(headers)) {
+        throw new Error('Session Studio introuvable. Reconnecte-toi, ou définis STUDIO_ACTION_SECRET.')
+      }
+
       const response = await fetch('/api/generate-post', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers,
         body: JSON.stringify({ 
           documentId,
           instruction: userInstruction 

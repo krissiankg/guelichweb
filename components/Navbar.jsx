@@ -7,11 +7,26 @@ import Link from "next/link";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { usePathname } from "next/navigation";
 
-export default function Navbar({ dict }) {
+function NavItem({ href, className, children, hardNavigate, onClick }) {
+  if (hardNavigate) {
+    return (
+      <a href={href} className={className} onClick={onClick}>
+        {children}
+      </a>
+    );
+  }
+  return (
+    <Link href={href} className={className} onClick={onClick}>
+      {children}
+    </Link>
+  );
+}
+
+export default function Navbar({ dict, hardNavigate = false }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
-  const currentLang = pathname.split('/')[1] || 'fr';
+  const pathname = usePathname() || "/fr";
+  const currentLang = pathname.split("/")[1] === "en" ? "en" : "fr";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,45 +52,49 @@ export default function Navbar({ dict }) {
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-nowrap justify-between items-center gap-4">
-        <Link
+        <NavItem
           href={`/${currentLang}`}
+          hardNavigate={hardNavigate}
           className="text-lg xl:text-2xl font-display font-bold tracking-tighter flex items-center gap-2 text-white shrink-0"
         >
           <div className="relative w-9 h-9 xl:w-10 xl:h-10 shrink-0">
             <img src="/logo.png" alt="Guelichweb Logo" className="object-contain w-full h-full" />
           </div>
           <span className="whitespace-nowrap">GUELICHWEB</span>
-        </Link>
+        </NavItem>
         <div className="hidden lg:flex items-center gap-4 xl:gap-8 min-w-0">
-          <Link
+          <NavItem
             href={`/${currentLang}`}
+            hardNavigate={hardNavigate}
             className={`text-sm uppercase tracking-wide xl:tracking-wider font-medium whitespace-nowrap transition-colors ${pathname === `/${currentLang}` ? "text-primary" : "text-gray-300 hover:text-white"
               }`}
           >
             {dict?.home || "Accueil"}
-          </Link>
+          </NavItem>
           {navLinks.map((link) => (
-            <Link
+            <NavItem
               key={link.name}
               href={link.href}
+              hardNavigate={hardNavigate}
               className={`text-sm uppercase tracking-wide xl:tracking-wider font-medium whitespace-nowrap transition-colors ${pathname === link.href
                 ? "text-primary"
                 : "text-gray-300 hover:text-white"
                 }`}
             >
               {link.name}
-            </Link>
+            </NavItem>
           ))}
         </div>
 
         <div className="hidden lg:flex items-center gap-3 xl:gap-4 shrink-0">
-          <LanguageSwitcher />
-          <Link
+          <LanguageSwitcher hardNavigate={hardNavigate} />
+          <NavItem
             href={`/${currentLang}/contact`}
+            hardNavigate={hardNavigate}
             className="bg-primary hover:bg-secondary text-white px-4 xl:px-6 py-2.5 rounded-full text-sm font-semibold transition-colors inline-block whitespace-nowrap"
           >
             {dict?.startProject || "Démarrer un projet"}
-          </Link>
+          </NavItem>
         </div>
 
         <button
@@ -98,36 +117,39 @@ export default function Navbar({ dict }) {
             className="absolute top-full left-0 w-full bg-dark border-b border-white/10 p-6 lg:hidden shadow-2xl"
           >
             <div className="flex flex-col gap-6">
-              <Link
+              <NavItem
                 href={`/${currentLang}`}
+                hardNavigate={hardNavigate}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`text-lg font-display font-medium text-left ${pathname === `/${currentLang}` ? "text-primary" : "text-white"
                   }`}
               >
                 {dict?.home || "Accueil"}
-              </Link>
+              </NavItem>
               {navLinks.map((link) => (
-                <Link
+                <NavItem
                   key={link.name}
                   href={link.href}
+                  hardNavigate={hardNavigate}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`text-lg font-display font-medium ${pathname === link.href ? "text-primary" : "text-white"
                     }`}
                 >
                   {link.name}
-                </Link>
+                </NavItem>
               ))}
-              <Link
+              <NavItem
                 href={`/${currentLang}/contact`}
+                hardNavigate={hardNavigate}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-full text-center font-semibold mt-4"
               >
                 {dict?.startProject || "Démarrer un projet"}
-              </Link>
+              </NavItem>
 
               <div className="flex flex-col items-start mt-2 border-t border-white/10 pt-4">
                 <span className="text-gray-400 text-sm mb-2 uppercase tracking-wider">{dict?.language || "Langue"}</span>
-                <LanguageSwitcher />
+                <LanguageSwitcher hardNavigate={hardNavigate} />
               </div>
 
               {/* Réseaux sociaux Mobile */}

@@ -26,6 +26,28 @@ export const postType = {
       initialValue: 'fr',
     },
     {
+      name: 'translation',
+      title: 'Version traduite (FR ↔ EN)',
+      type: 'reference',
+      to: [{type: 'post'}],
+      description:
+        'Article équivalent dans l’autre langue. Le nom du champ est « translation ». Le remplir sur une seule des deux versions suffit.',
+      validation: (Rule) =>
+        Rule.custom(async (value, context) => {
+          if (!value?._ref) return true
+          const currentLanguage = context.document?.language
+          const id = value._ref.replace(/^drafts\./, '')
+          const language = await context.getClient({apiVersion: '2024-03-13'}).fetch(
+            `*[_id in [$id, $draftId]][0].language`,
+            {id, draftId: `drafts.${id}`}
+          )
+          if (language && currentLanguage && language === currentLanguage) {
+            return 'Choisis l’article dans l’autre langue.'
+          }
+          return true
+        }),
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -97,14 +119,16 @@ export const postType = {
   preview: {
     select: {
       title: 'title',
+      language: 'language',
       author: 'author.name',
       media: 'mainImage',
     },
     prepare(selection) {
-      const {author} = selection
-      return Object.assign({}, selection, {
-        subtitle: author && `by ${author}`,
-      })
+      const {author, language} = selection
+      const subtitle = [language && language.toUpperCase(), author && `by ${author}`]
+        .filter(Boolean)
+        .join(' · ')
+      return Object.assign({}, selection, {subtitle})
     },
   },
 }

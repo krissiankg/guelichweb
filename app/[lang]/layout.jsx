@@ -2,6 +2,8 @@ import '../globals.css'
 import FloatingWhatsApp from '@/components/FloatingWhatsApp'
 import SmartPopup from '@/components/SmartPopup'
 import DictionaryProvider from '@/components/DictionaryProvider'
+import BlogTranslationProvider from '@/components/BlogTranslationProvider'
+import { getBlogTranslationMap } from '@/lib/getBlogTranslations'
 import JsonLd from '@/components/JsonLd'
 import { getDictionary } from '@/dictionaries'
 import { LOCALES, SITE_URL } from '@/lib/site'
@@ -29,17 +31,22 @@ export async function generateMetadata({ params: { lang } }) {
 }
 
 export default async function RootLayout({ children, params: { lang } }) {
-  const dictionary = await getDictionary(lang)
+  const [dictionary, translations] = await Promise.all([
+    getDictionary(lang),
+    getBlogTranslationMap(),
+  ])
 
   return (
     <html lang={lang} className="scroll-smooth">
       <body className="antialiased">
         <JsonLd data={organizationGraph(dictionary, lang)} />
-        <DictionaryProvider dictionary={dictionary}>
-          {children}
-          <FloatingWhatsApp />
-          <SmartPopup />
-        </DictionaryProvider>
+        <BlogTranslationProvider translations={translations}>
+          <DictionaryProvider dictionary={dictionary}>
+            {children}
+            <FloatingWhatsApp />
+            <SmartPopup />
+          </DictionaryProvider>
+        </BlogTranslationProvider>
       </body>
     </html>
   )

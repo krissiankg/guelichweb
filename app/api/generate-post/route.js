@@ -1,5 +1,6 @@
 import { createClient } from 'next-sanity'
 import { NextResponse } from 'next/server'
+import { isStudioActionAuthorized, unauthorizedResponse } from '@/lib/studioActionAuth'
 
 // Use the secure token and standard Sanity client
 const sanityClient = createClient({
@@ -11,6 +12,10 @@ const sanityClient = createClient({
 })
 
 export async function POST(req) {
+  if (!(await isStudioActionAuthorized(req))) {
+    return unauthorizedResponse()
+  }
+
   try {
     const body = await req.json()
     const { documentId, instruction } = body

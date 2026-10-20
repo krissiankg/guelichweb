@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react'
-import { useDocumentOperation } from 'sanity'
+import { useState } from 'react'
+import { useClient } from 'sanity'
+import { studioActionHasCredential, studioActionHeaders } from '../lib/actionAuth'
 
 export function TranslateAction(props) {
   const { id, type, draft, published } = props
   const [isTranslating, setIsTranslating] = useState(false)
+  const client = useClient({ apiVersion: '2024-03-13' })
   
   // Only show this button for posts
   if (type !== 'post') {
@@ -22,11 +24,14 @@ export function TranslateAction(props) {
     setIsTranslating(true)
     try {
       // Call our Next.js backend to keep the token secure
+      const headers = studioActionHeaders(client)
+      if (!studioActionHasCredential(headers)) {
+        throw new Error('Session Studio introuvable. Reconnecte-toi, ou définis STUDIO_ACTION_SECRET.')
+      }
+
       const response = await fetch('/api/translate-post', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers,
         body: JSON.stringify({ documentId: id }),
       })
 

@@ -8,7 +8,8 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import JsonLd from '@/components/JsonLd'
 import { getDictionary } from '@/dictionaries'
-import { getBlogLanguagePaths } from '@/lib/blogTranslations'
+import { getBlogTranslationMap } from '@/lib/getBlogTranslations'
+import { languagePathsForSlug } from '@/lib/blogTranslations'
 import { translateCategory } from '@/lib/blogCategories'
 import { buildMetadata } from '@/lib/seo'
 import { blogPostingGraph } from '@/lib/schema'
@@ -31,6 +32,11 @@ export async function generateMetadata({ params }) {
     return { title: 'Not found | Guelichweb', robots: { index: false, follow: false } }
   }
 
+  const translations = await getBlogTranslationMap()
+  const languagePaths = languagePathsForSlug(params.slug, translations) || {
+    [params.lang]: `/${params.lang}/blog/${params.slug}`,
+  }
+
   return buildMetadata({
     lang: params.lang,
     path: `/blog/${params.slug}`,
@@ -38,7 +44,7 @@ export async function generateMetadata({ params }) {
     description: post.excerpt,
     image: post.mainImage ? urlForImage(post.mainImage) : undefined,
     type: 'article',
-    languagePaths: getBlogLanguagePaths(params.slug),
+    languagePaths,
   })
 }
 

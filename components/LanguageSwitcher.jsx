@@ -5,10 +5,12 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { translateBlogPathname } from "@/lib/blogTranslations";
+import { useBlogTranslations } from "@/components/BlogTranslationProvider";
 
-export default function LanguageSwitcher() {
-    const pathname = usePathname();
+export default function LanguageSwitcher({ hardNavigate = false }) {
+    const pathname = usePathname() || "/fr";
     const router = useRouter();
+    const translations = useBlogTranslations();
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
 
@@ -24,10 +26,17 @@ export default function LanguageSwitcher() {
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
 
+    const hrefFor = (lang) => translateBlogPathname(pathname, lang, translations);
+
     const switchLang = (lang) => {
-        if (lang === currentLang) return;
-        router.push(translateBlogPathname(pathname, lang));
+        const next = hrefFor(lang);
         setIsOpen(false);
+        if (!next || next === pathname) return;
+        if (hardNavigate) {
+            window.location.assign(next);
+            return;
+        }
+        router.push(next);
     };
 
     const languages = [
@@ -55,14 +64,26 @@ export default function LanguageSwitcher() {
                         className="absolute top-full right-0 mt-2 bg-dark/95 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden shadow-2xl min-w-[80px] z-50"
                     >
                         {languages.map((l) => (
-                            <button
-                                key={l.code}
-                                onClick={() => switchLang(l.code)}
-                                className={`w-full text-left px-4 py-2 text-sm font-medium transition-colors ${currentLang === l.code ? "bg-primary/20 text-primary" : "text-gray-300 hover:bg-white/5 hover:text-white"
-                                    }`}
-                            >
-                                {l.label}
-                            </button>
+                            hardNavigate ? (
+                                <a
+                                    key={l.code}
+                                    href={hrefFor(l.code)}
+                                    className={`block w-full text-left px-4 py-2 text-sm font-medium transition-colors ${currentLang === l.code ? "bg-primary/20 text-primary" : "text-gray-300 hover:bg-white/5 hover:text-white"
+                                        }`}
+                                >
+                                    {l.label}
+                                </a>
+                            ) : (
+                                <button
+                                    key={l.code}
+                                    type="button"
+                                    onClick={() => switchLang(l.code)}
+                                    className={`w-full text-left px-4 py-2 text-sm font-medium transition-colors ${currentLang === l.code ? "bg-primary/20 text-primary" : "text-gray-300 hover:bg-white/5 hover:text-white"
+                                        }`}
+                                >
+                                    {l.label}
+                                </button>
+                            )
                         ))}
                     </motion.div>
                 )}

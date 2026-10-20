@@ -1,8 +1,7 @@
 import { projects } from '@/lib/projectsData'
-import { BLOG_SLUG_PAIRS } from '@/lib/blogTranslations'
+import { getBlogTranslationIndex } from '@/lib/getBlogTranslations'
 import { DEFAULT_LOCALE, LOCALES, SITE_URL } from '@/lib/site'
 
-// Fully static sitemap: no Sanity call. Avoids timeouts/500 for slow or picky fetchers.
 const STATIC_ROUTES = [
     { path: '', priority: 1, changeFrequency: 'weekly' },
     { path: '/offres', priority: 0.9, changeFrequency: 'weekly' },
@@ -39,32 +38,45 @@ const entry = ({ path, priority, changeFrequency, lastModified }) =>
         alternates: { languages: languageAlternates(path) },
     }))
 
-function blogAlternates(pair) {
-    return {
-        fr: `${SITE_URL}/fr/blog/${pair.fr}`,
-        en: `${SITE_URL}/en/blog/${pair.en}`,
-        'x-default': `${SITE_URL}/fr/blog/${pair.fr}`,
+export function blogSitemapEntries(index) {
+    const seen = new Set()
+    const entries = []
+
+    for (const pair of index.values()) {
+        const key = `${pair.fr || ''}|${pair.en || ''}`
+        if (seen.has(key)) continue
+        seen.add(key)
+
+        const languages = {}
+        if (pair.fr) languages.fr = `${SITE_URL}/fr/blog/${pair.fr}`
+        if (pair.en) languages.en = `${SITE_URL}/en/blog/${pair.en}`
+        languages['x-default'] = languages.fr || languages.en
+
+        for (const locale of LOCALES) {
+            const slug = pair[locale]
+            if (!slug) continue
+            const updated = locale === 'fr' ? pair.frUpdated : pair.enUpdated
+            entries.push({
+                url: `${SITE_URL}/${locale}/blog/${slug}`,
+                lastModified: updated ? new Date(updated) : new Date(),
+                changeFrequency: 'monthly',
+                priority: 0.6,
+                alternates: { languages },
+            })
+        }
     }
+
+    return entries
 }
 
-function blogEntries() {
-    return BLOG_SLUG_PAIRS.flatMap((pair) =>
-        LOCALES.map((locale) => ({
-            url: `${SITE_URL}/${locale}/blog/${pair[locale]}`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.6,
-            alternates: { languages: blogAlternates(pair) },
-        }))
-    )
-}
-
-export default function sitemap() {
+export default async function sitemap() {
     const staticEntries = STATIC_ROUTES.flatMap(entry)
 
     const projectEntries = projects.flatMap((project) =>
         entry({ path: `/project/${project.slug}`, priority: 0.6, changeFrequency: 'monthly' })
     )
 
-    return [...staticEntries, ...projectEntries, ...blogEntries()]
+    const blogIndex = await getBlogTranslationIndex()
+
+    return [...staticEntries, ...projectEntries, ...blogSitemapEntries(blogIndex)]
 }

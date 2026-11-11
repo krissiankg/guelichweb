@@ -622,19 +622,20 @@
     },
     "home": {
         "hero": {
-            "badge": "Digital Transformation & AI Agency",
-            "title1": "We transform businesses into ",
-            "titleHighlight": "intelligent systems.",
-            "desc": "Strategic auditing, AI automation, and digital infrastructures to accelerate your growth.",
-            "ctaPrimary": "Request a Strategic Audit",
-            "ctaSecondary": "View Our Solutions",
+            "badge": "Abomey-Calavi • Cotonou • All of Benin",
+            "title1": "Stop losing customers ",
+            "titleHighlight": "on WhatsApp.",
+            "desc": "Professional website, automatic WhatsApp replies and customer follow-up for schools, training centres, SMEs and NGOs in Benin. Professional website from 125,000 FCFA.",
+            "ctaPrimary": "Message us on WhatsApp",
+            "ctaSecondary": "See prices",
             "indicators": [
-                "Strategic Approach",
-                "Intelligent Automation",
-                "Measurable Results"
+                "Prices shown in FCFA",
+                "Mobile Money payment",
+                "30 days of free corrections"
             ],
             "portfolio": "See our work",
-            "scroll": "Scroll"
+            "scroll": "Scroll",
+            "whatsappMessage": "Hello Guelichweb, I would like to discuss my project."
         },
         "work": {
             "title": "Selected work",
@@ -692,7 +693,7 @@
             ],
             "ctaTitle": "What if your business ran automatically?",
             "ctaDesc": "We analyze your processes and build AI solutions adapted to your reality.",
-            "ctaButton": "Request a Strategic Audit"
+            "ctaButton": "See our solutions"
         },
         "problem": {
             "title1": "Your business is running…",
@@ -819,7 +820,7 @@
         "cta": {
             "title": "Ready to Structure Your Growth?",
             "desc": "Stop letting operational tasks hinder your development. Move to the next level.",
-            "button": "Schedule a Strategic Call"
+            "button": "Message us on WhatsApp"
         },
         "local": {
             "title": "In Benin, on the ground",
@@ -841,6 +842,66 @@
                     "desc": "Qualification, quotes and follow-ups, without copying messages by hand."
                 }
             ]
+        },
+        "starter": {
+            "badge": "Pricing",
+            "title": "Clear prices, shown in FCFA",
+            "desc": "Two offers to get started quickly. Everything else is quoted after a free conversation.",
+            "from": "From",
+            "popular": "Most requested",
+            "cta": "Order on WhatsApp",
+            "items": [
+                {
+                    "title": "Professional website",
+                    "price": "125,000 FCFA",
+                    "desc": "For a school, a training centre, an SME or an NGO that wants to be found and contacted.",
+                    "features": [
+                        "Mobile-friendly professional website",
+                        "WhatsApp button on every page",
+                        "Google Business listing (Google Maps)",
+                        "You own every account and access"
+                    ],
+                    "message": "Hello Guelichweb, I am interested in the professional website at 125,000 FCFA."
+                },
+                {
+                    "title": "Online store",
+                    "price": "150,000 FCFA",
+                    "desc": "To sell your products online and receive orders directly.",
+                    "features": [
+                        "Online store with 20 products",
+                        "Ordering through WhatsApp",
+                        "Mobile-friendly",
+                        "Google Business listing (Google Maps)"
+                    ],
+                    "message": "Hello Guelichweb, I am interested in the online store at 150,000 FCFA."
+                }
+            ],
+            "hosting": {
+                "title": "Domain name + hosting",
+                "price": "45,000 FCFA",
+                "desc": "In addition to the two offers above. Accounts are created in your name."
+            },
+            "custom": {
+                "title": "WhatsApp chatbot, CRM, automatic quotes and follow-ups",
+                "desc": "Quoted after a free diagnostic of your needs.",
+                "cta": "Request a quote",
+                "message": "Hello Guelichweb, I would like a quote for a WhatsApp chatbot or a customer follow-up system."
+            },
+            "terms": [
+                {
+                    "title": "Payment",
+                    "desc": "75% when you order, the balance on delivery. By Mobile Money, no cheques."
+                },
+                {
+                    "title": "Guarantee",
+                    "desc": "30 days of free corrections after launch."
+                }
+            ]
+        },
+        "testimonials": {
+            "title": "What our clients say",
+            "desc": "Organisations in Benin that trusted us with their website.",
+            "items": []
         }
     },
     "about": {
@@ -1194,8 +1255,8 @@
             }
         ],
         "pricingNote": {
-            "title": "What about the budget?",
-            "desc": "We don't publish fixed prices: the cost depends on how many processes need automating and which tools you already run. The diagnostic ends with a detailed quote in FCFA, with no commitment.",
+            "title": "What about automation?",
+            "desc": "The professional website and the online store have a fixed price, shown above. For the WhatsApp chatbot, CRM, automatic quotes and follow-ups, the cost depends on the number of processes and the tools you already use: the free diagnostic leads to a detailed quote in FCFA, with no commitment.",
             "cta": "Get my quote after the diagnostic"
         },
         "scenarios": {

@@ -622,19 +622,20 @@
     },
     "home": {
         "hero": {
-            "badge": "Agence de Transformation Digitale & IA",
-            "title1": "Nous transformons les entreprises en ",
-            "titleHighlight": "systèmes intelligents.",
-            "desc": "Audit stratégique, automatisation IA et infrastructures digitales pour accélérer votre croissance.",
-            "ctaPrimary": "Demander un diagnostic stratégique",
-            "ctaSecondary": "Voir nos solutions",
+            "badge": "Abomey-Calavi • Cotonou • Tout le Bénin",
+            "title1": "Ne perdez plus un seul client ",
+            "titleHighlight": "sur WhatsApp.",
+            "desc": "Site professionnel, réponse automatique WhatsApp et suivi client pour les écoles, centres de formation, PME et ONG du Bénin. Site professionnel à partir de 125 000 FCFA.",
+            "ctaPrimary": "Écrire sur WhatsApp",
+            "ctaSecondary": "Voir les prix",
             "indicators": [
-                "Approche stratégique",
-                "Automatisation intelligente",
-                "Résultats mesurables"
+                "Prix affichés en FCFA",
+                "Paiement par Mobile Money",
+                "30 jours de corrections offertes"
             ],
             "portfolio": "Découvrir nos réalisations",
-            "scroll": "Défiler"
+            "scroll": "Défiler",
+            "whatsappMessage": "Bonjour Guelichweb, je souhaite parler de mon projet."
         },
         "work": {
             "title": "Réalisations sélectionnées",
@@ -665,7 +666,7 @@
                     "result": "Réponses instantanées 24/7 et -60% de tickets."
                 },
                 {
-                    "problem": "Devis manuels errors",
+                    "problem": "Devis manuels et erreurs",
                     "solution": "Génération automatique PDF via formulaire.",
                     "result": "Devis envoyés en moins de 2 minutes."
                 },
@@ -692,7 +693,7 @@
             ],
             "ctaTitle": "Et si votre entreprise fonctionnait automatiquement ?",
             "ctaDesc": "Nous analysons vos processus et construisons des solutions IA adaptées à votre réalité.",
-            "ctaButton": "Demander un diagnostic stratégique"
+            "ctaButton": "Voir nos solutions"
         },
         "problem": {
             "title1": "Votre entreprise fonctionne…",
@@ -819,7 +820,7 @@
         "cta": {
             "title": "Prêt à structurer votre croissance ?",
             "desc": "Ne laissez plus l'opérationnel freiner votre développement. Passez au niveau supérieur.",
-            "button": "Planifier un appel stratégique"
+            "button": "Écrire sur WhatsApp"
         },
         "local": {
             "title": "Au Bénin, sur le terrain",
@@ -841,6 +842,66 @@
                     "desc": "Qualification, devis et relances, sans recopier les messages à la main."
                 }
             ]
+        },
+        "starter": {
+            "badge": "Tarifs",
+            "title": "Des prix clairs, affichés en FCFA",
+            "desc": "Deux offres pour démarrer vite. Le reste se chiffre après un échange gratuit.",
+            "from": "À partir de",
+            "popular": "Le plus demandé",
+            "cta": "Commander sur WhatsApp",
+            "items": [
+                {
+                    "title": "Site professionnel",
+                    "price": "125 000 FCFA",
+                    "desc": "Pour une école, un centre de formation, une PME ou une ONG qui veut être trouvée et contactée.",
+                    "features": [
+                        "Site professionnel adapté au mobile",
+                        "Bouton WhatsApp sur chaque page",
+                        "Fiche Google Business (Google Maps)",
+                        "Vous restez propriétaire de tous les accès"
+                    ],
+                    "message": "Bonjour Guelichweb, je suis intéressé par le site professionnel à 125 000 FCFA."
+                },
+                {
+                    "title": "Boutique en ligne",
+                    "price": "150 000 FCFA",
+                    "desc": "Pour vendre vos produits en ligne et recevoir les commandes directement.",
+                    "features": [
+                        "Boutique en ligne avec 20 produits",
+                        "Commande par WhatsApp",
+                        "Adaptée au mobile",
+                        "Fiche Google Business (Google Maps)"
+                    ],
+                    "message": "Bonjour Guelichweb, je suis intéressé par la boutique en ligne à 150 000 FCFA."
+                }
+            ],
+            "hosting": {
+                "title": "Nom de domaine + hébergement",
+                "price": "45 000 FCFA",
+                "desc": "En supplément des deux offres ci-dessus. Les accès sont créés à votre nom."
+            },
+            "custom": {
+                "title": "Chatbot WhatsApp, CRM, devis et relances automatiques",
+                "desc": "Sur devis, après un diagnostic gratuit de vos besoins.",
+                "cta": "Demander un devis",
+                "message": "Bonjour Guelichweb, je souhaite un devis pour un chatbot WhatsApp ou un système de suivi client."
+            },
+            "terms": [
+                {
+                    "title": "Paiement",
+                    "desc": "75 % à la commande, le solde à la livraison. Par Mobile Money, pas de chèque."
+                },
+                {
+                    "title": "Garantie",
+                    "desc": "30 jours de corrections offertes après la mise en ligne."
+                }
+            ]
+        },
+        "testimonials": {
+            "title": "Ce que disent nos clients",
+            "desc": "Des organisations béninoises qui nous ont confié leur site.",
+            "items": []
         }
     },
     "about": {
@@ -1194,8 +1255,8 @@
             }
         ],
         "pricingNote": {
-            "title": "Et le budget ?",
-            "desc": "Nous n'affichons pas de tarif figé : le coût dépend du nombre de processus à automatiser et des outils déjà en place chez vous. Le diagnostic aboutit à un devis chiffré en FCFA, détaillé et sans engagement.",
+            "title": "Et pour l'automatisation ?",
+            "desc": "Le site professionnel et la boutique en ligne ont un prix fixe, affiché ci-dessus. Pour le chatbot WhatsApp, le CRM, les devis et les relances automatiques, le coût dépend du nombre de processus et des outils déjà en place chez vous : le diagnostic gratuit aboutit à un devis détaillé en FCFA, sans engagement.",
             "cta": "Obtenir mon devis après diagnostic"
         },
         "scenarios": {

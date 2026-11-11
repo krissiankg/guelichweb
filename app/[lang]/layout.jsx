@@ -5,6 +5,7 @@ import DictionaryProvider from '@/components/DictionaryProvider'
 import BlogTranslationProvider from '@/components/BlogTranslationProvider'
 import { getBlogTranslationMap } from '@/lib/getBlogTranslations'
 import JsonLd from '@/components/JsonLd'
+import Analytics from '@/components/Analytics'
 import { getDictionary } from '@/dictionaries'
 import { LOCALES, SITE_URL } from '@/lib/site'
 import { buildMetadata } from '@/lib/seo'
@@ -40,6 +41,7 @@ export default async function RootLayout({ children, params: { lang } }) {
     <html lang={lang} className="scroll-smooth">
       <body className="antialiased">
         <JsonLd data={organizationGraph(dictionary, lang)} />
+        <Analytics />
         <BlogTranslationProvider translations={translations}>
           <DictionaryProvider dictionary={dictionary}>
             {children}

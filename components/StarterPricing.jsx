@@ -66,7 +66,7 @@ export default function StarterPricing({ className = 'bg-card' }) {
                   href={whatsappLink(item.message)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3.5 rounded-lg font-bold text-center transition-colors bg-[#25D366] hover:bg-[#128C7E] text-white flex items-center justify-center gap-2"
+                  className="w-full py-3.5 rounded-lg font-bold text-center transition-colors bg-[#128C7E] hover:bg-[#075E54] text-white flex items-center justify-center gap-2"
                 >
                   <MessageCircle size={18} />
                   {starter.cta}

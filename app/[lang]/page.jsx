@@ -299,7 +299,7 @@ export default function Home({ params: { lang } }) {
             href={whatsappLink(home?.hero?.whatsappMessage)}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-4 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full font-bold text-lg transition-all shadow-lg"
+            className="inline-block px-8 py-4 bg-[#128C7E] hover:bg-[#075E54] text-white rounded-full font-bold text-lg transition-all shadow-lg"
           >
             {home?.cta?.button}
           </a>

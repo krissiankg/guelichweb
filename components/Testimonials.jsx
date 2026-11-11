@@ -18,8 +18,8 @@ export default function Testimonials() {
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">{testimonials.desc}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.items.map((item) => (
-            <figure key={item.company} className="p-8 rounded-3xl bg-dark border border-white/10 flex flex-col">
+          {testimonials.items.map((item, index) => (
+            <figure key={`${item.company}-${index}`} className="p-8 rounded-3xl bg-dark border border-white/10 flex flex-col">
               <Quote size={28} className="text-primary mb-5" />
               <blockquote className="text-gray-300 leading-relaxed flex-grow">{item.quote}</blockquote>
               <figcaption className="mt-6 pt-6 border-t border-white/10">

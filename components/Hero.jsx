@@ -59,7 +59,7 @@ export default function Hero() {
               href={whatsappLink(dict?.home?.hero?.whatsappMessage)}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#25D366]/25"
+              className="px-8 py-4 bg-[#128C7E] hover:bg-[#075E54] text-white rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#128C7E]/25"
             >
               <MessageCircle size={20} />
               {dict?.home?.hero?.ctaPrimary}

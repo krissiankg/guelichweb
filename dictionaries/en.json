@@ -859,7 +859,7 @@
                         "Mobile-friendly professional website",
                         "WhatsApp button on every page",
                         "Google Business listing (Google Maps)",
-                        "You own every account and access"
+                        "You own all accounts and access credentials"
                     ],
                     "message": "Hello Guelichweb, I am interested in the professional website at 125,000 FCFA."
                 },
@@ -1256,7 +1256,7 @@
         ],
         "pricingNote": {
             "title": "What about automation?",
-            "desc": "The professional website and the online store have a fixed price, shown above. For the WhatsApp chatbot, CRM, automatic quotes and follow-ups, the cost depends on the number of processes and the tools you already use: the free diagnostic leads to a detailed quote in FCFA, with no commitment.",
+            "desc": "The professional website and the online store have a starting price, shown above. For the WhatsApp chatbot, CRM, automatic quotes and follow-ups, the cost depends on the number of processes and the tools you already use: the free diagnostic leads to a detailed quote in FCFA, with no commitment.",
             "cta": "Get my quote after the diagnostic"
         },
         "scenarios": {

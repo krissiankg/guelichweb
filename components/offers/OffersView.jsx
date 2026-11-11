@@ -251,7 +251,7 @@ export default function OffersView() {
                     </div>
                 </section>
 
-                <StarterPricing />
+                <StarterPricing className="" />
 
                 {/* MAIN OFFERS */}
                 <section id="offres" className="py-24 px-6">

@@ -1256,7 +1256,7 @@
         ],
         "pricingNote": {
             "title": "Et pour l'automatisation ?",
-            "desc": "Le site professionnel et la boutique en ligne ont un prix fixe, affiché ci-dessus. Pour le chatbot WhatsApp, le CRM, les devis et les relances automatiques, le coût dépend du nombre de processus et des outils déjà en place chez vous : le diagnostic gratuit aboutit à un devis détaillé en FCFA, sans engagement.",
+            "desc": "Le site professionnel et la boutique en ligne ont un prix de départ, affiché ci-dessus. Pour le chatbot WhatsApp, le CRM, les devis et les relances automatiques, le coût dépend du nombre de processus et des outils déjà en place chez vous : le diagnostic gratuit aboutit à un devis détaillé en FCFA, sans engagement.",
             "cta": "Obtenir mon devis après diagnostic"
         },
         "scenarios": {

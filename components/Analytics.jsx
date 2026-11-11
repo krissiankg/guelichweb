@@ -122,27 +122,27 @@ export default function Analytics() {
         <div
           role="dialog"
           aria-label={t.label}
-          className="fixed bottom-0 inset-x-0 z-[60] p-4"
+          className="fixed bottom-4 left-4 z-[70] w-[calc(100%-6.5rem)] max-w-sm"
         >
-          <div className="max-w-4xl mx-auto bg-card border border-white/10 rounded-2xl shadow-2xl p-5 flex flex-col md:flex-row md:items-center gap-4">
-            <p className="text-sm text-gray-300 leading-relaxed flex-grow">
+          <div className="bg-card border border-white/10 rounded-2xl shadow-2xl p-4 flex flex-col gap-3">
+            <p className="text-sm text-gray-300 leading-relaxed">
               {t.message}{' '}
               <Link href={`/${lang}/politique-cookies`} className="text-primary underline underline-offset-2">
                 {t.policy}
               </Link>
             </p>
-            <div className="flex gap-3 shrink-0">
+            <div className="flex gap-2">
               <button
                 type="button"
                 onClick={() => choose('denied')}
-                className="px-5 py-2.5 rounded-lg font-bold text-sm bg-white/10 hover:bg-white/20 text-white transition-colors"
+                className="flex-1 px-3 py-2 rounded-lg font-bold text-xs bg-white/10 hover:bg-white/20 text-white transition-colors"
               >
                 {t.refuse}
               </button>
               <button
                 type="button"
                 onClick={() => choose('granted')}
-                className="px-5 py-2.5 rounded-lg font-bold text-sm bg-primary hover:bg-secondary text-white transition-colors"
+                className="flex-1 px-3 py-2 rounded-lg font-bold text-xs bg-primary hover:bg-secondary text-white transition-colors"
               >
                 {t.accept}
               </button>

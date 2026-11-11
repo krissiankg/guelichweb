@@ -900,8 +900,29 @@
         },
         "testimonials": {
             "title": "Ce que disent nos clients",
-            "desc": "Des organisations béninoises qui nous ont confié leur site.",
-            "items": []
+            "desc": "Des organisations béninoises qui nous confient leur site et leurs outils numériques.",
+            "items": [
+                {
+                    "name": "BUSCORD",
+                    "role": "Bureau d'études et de contrôle",
+                    "quote": "GUELICHWEB a su comprendre nos besoins et proposer des solutions numériques adaptées à nos activités. Nous avons particulièrement apprécié la qualité du travail, la réactivité et l'accompagnement tout au long du projet. Une collaboration professionnelle et efficace."
+                },
+                {
+                    "name": "OPENWAY",
+                    "role": "Centre d'orientation académique",
+                    "quote": "Grâce à GUELICHWEB, nous bénéficions d'un accompagnement technique fiable pour notre site internet et nos services d'hébergement. Les interventions sont réalisées avec professionnalisme, et les solutions proposées facilitent la gestion quotidienne de notre présence en ligne."
+                },
+                {
+                    "name": "Spass Mit Deutsch Bénin",
+                    "role": "Centre de formation et d'examens",
+                    "quote": "GUELICHWEB nous accompagne dans la digitalisation de nos services, notamment la gestion des inscriptions en ligne et notre communication digitale. Son expertise nous permet de simplifier nos processus, de mieux informer nos candidats et d'améliorer leur expérience. Un partenaire disponible et à l'écoute."
+                },
+                {
+                    "name": "SNB",
+                    "role": "Organisation scientifique",
+                    "quote": "L'accompagnement de GUELICHWEB dans la gestion de notre plateforme événementielle et de nos outils numériques contribue à une meilleure organisation de nos activités scientifiques. Nous apprécions particulièrement sa maîtrise technique, sa disponibilité et sa capacité à répondre à nos besoins spécifiques."
+                }
+            ]
         }
     },
     "about": {

@@ -900,8 +900,29 @@
         },
         "testimonials": {
             "title": "What our clients say",
-            "desc": "Organisations in Benin that trusted us with their website.",
-            "items": []
+            "desc": "Organisations in Benin that trust us with their website and digital tools.",
+            "items": [
+                {
+                    "name": "BUSCORD",
+                    "role": "Engineering and inspection firm",
+                    "quote": "GUELICHWEB understood our needs and proposed digital solutions suited to our activities. We particularly appreciated the quality of the work, the responsiveness and the support throughout the project. A professional and efficient collaboration."
+                },
+                {
+                    "name": "OPENWAY",
+                    "role": "Academic orientation centre",
+                    "quote": "Thanks to GUELICHWEB, we have reliable technical support for our website and our hosting services. The work is carried out professionally, and the solutions proposed make it easier to manage our online presence day to day."
+                },
+                {
+                    "name": "Spass Mit Deutsch Bénin",
+                    "role": "Training and examination centre",
+                    "quote": "GUELICHWEB supports us in digitising our services, in particular online registrations and our digital communication. Their expertise lets us simplify our processes, keep our candidates better informed and improve their experience. An available partner who listens."
+                },
+                {
+                    "name": "SNB",
+                    "role": "Scientific organisation",
+                    "quote": "GUELICHWEB's support in running our event platform and our digital tools helps us organise our scientific activities better. We particularly value their technical skill, their availability and their ability to meet our specific needs."
+                }
+            ]
         }
     },
     "about": {

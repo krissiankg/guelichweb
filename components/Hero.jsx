@@ -1,10 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, CheckCircle2 } from 'lucide-react'
+import { ArrowRight, CheckCircle2, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
 import { useDictionary } from '@/components/DictionaryProvider'
+import { whatsappLink } from '@/lib/site'
 
 export default function Hero() {
   const dict = useDictionary()
@@ -34,7 +35,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6 tracking-tight"
+            className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 tracking-tight"
           >
             {dict?.home?.hero?.title1} <span className="text-gradient">{dict?.home?.hero?.titleHighlight}</span>
           </motion.h1>
@@ -54,18 +55,21 @@ export default function Hero() {
             transition={{ delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 mb-16"
           >
-            <Link
-              href={`/${lang}/contact#diagnostic`}
-              className="px-8 py-4 bg-primary hover:bg-secondary text-white rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/25 hover:shadow-primary/40"
+            <a
+              href={whatsappLink(dict?.home?.hero?.whatsappMessage)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-[#128C7E] hover:bg-[#075E54] text-white rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#128C7E]/25"
             >
+              <MessageCircle size={20} />
               {dict?.home?.hero?.ctaPrimary}
-              <ArrowRight size={20} />
-            </Link>
+            </a>
             <Link
-              href={`/${lang}/offres`}
-              className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full font-bold text-lg transition-all flex items-center justify-center"
+              href={`/${lang}#tarifs`}
+              className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2"
             >
               {dict?.home?.hero?.ctaSecondary}
+              <ArrowRight size={20} />
             </Link>
           </motion.div>
 

@@ -4,6 +4,8 @@ import Hero from '@/components/Hero'
 import TechMarquee from '@/components/TechMarquee'
 import UseCases from '@/components/UseCases'
 import Work from '@/components/Work'
+import StarterPricing from '@/components/StarterPricing'
+import Testimonials from '@/components/Testimonials'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { motion } from 'framer-motion'
@@ -31,6 +33,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import { useDictionary } from '@/components/DictionaryProvider'
+import { whatsappLink } from '@/lib/site'
 
 const problemIcons = [Clock, Database, LayoutGrid, EyeOff]
 const offerIcons = [Target, Zap, TrendingUp]
@@ -44,6 +47,7 @@ export default function Home({ params: { lang } }) {
     <div className="bg-dark text-white font-sans selection:bg-primary selection:text-white">
       <Navbar dict={dict?.navbar} />
       <Hero />
+      <StarterPricing />
       <TechMarquee />
       <UseCases />
 
@@ -229,6 +233,7 @@ export default function Home({ params: { lang } }) {
       </section>
 
       <Work />
+      <Testimonials />
 
       {/* RESULTS SECTION */}
       <section className="py-24 px-6 border-b border-white/5">
@@ -290,12 +295,14 @@ export default function Home({ params: { lang } }) {
           <p className="text-xl text-gray-300 mb-12">
             {home?.cta?.desc}
           </p>
-          <Link
-            href={`/${lang}/contact#diagnostic`}
-            className="px-8 py-4 bg-primary hover:bg-secondary text-white rounded-full font-bold text-lg transition-all shadow-lg hover:shadow-primary/50"
+          <a
+            href={whatsappLink(home?.hero?.whatsappMessage)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-8 py-4 bg-[#128C7E] hover:bg-[#075E54] text-white rounded-full font-bold text-lg transition-all shadow-lg"
           >
             {home?.cta?.button}
-          </Link>
+          </a>
         </div>
       </section>
 

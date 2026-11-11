@@ -40,6 +40,7 @@ import SectionHeading, { fadeUp } from '@/components/ui/SectionHeading'
 import FaqAccordion from '@/components/ui/FaqAccordion'
 import { useDictionary } from '@/components/DictionaryProvider'
 import { CONTACT, whatsappLink } from '@/lib/site'
+import StarterPricing from '@/components/StarterPricing'
 
 const offerIcons = [Target, Zap, TrendingUp]
 const commIcons = [Smartphone, Palette, Video, Sparkles]
@@ -249,6 +250,8 @@ export default function OffersView() {
                         </div>
                     </div>
                 </section>
+
+                <StarterPricing className="" />
 
                 {/* MAIN OFFERS */}
                 <section id="offres" className="py-24 px-6">

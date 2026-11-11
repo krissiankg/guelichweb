@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react'
 import { useParams } from 'next/navigation'
 import { useDictionary } from '@/components/DictionaryProvider'
+import { HAS_TRACKING, REOPEN_EVENT } from '@/components/Analytics'
 
 export default function Footer() {
   const dict = useDictionary()?.footer;
@@ -95,6 +96,15 @@ export default function Footer() {
             <Link href={`/${lang}/conditions-generales`} className="hover:text-white transition-colors">{dict?.bottomLinks?.terms}</Link>
             <Link href={`/${lang}/politique-confidentialite`} className="hover:text-white transition-colors">{dict?.bottomLinks?.privacy}</Link>
             <Link href={`/${lang}/politique-cookies`} className="hover:text-white transition-colors">{dict?.bottomLinks?.cookies}</Link>
+            {HAS_TRACKING && (
+              <button
+                type="button"
+                onClick={() => window.dispatchEvent(new Event(REOPEN_EVENT))}
+                className="hover:text-white transition-colors"
+              >
+                {lang === 'en' ? 'Manage cookies' : 'Gérer les cookies'}
+              </button>
+            )}
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Script from 'next/script'
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
@@ -13,17 +13,20 @@ const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 const HAS_TRACKING = Boolean(PIXEL_ID || GA_ID)
 const CONSENT_KEY = 'gw-cookie-consent'
+// Dispatched by the footer's "manage cookies" link to show the banner again.
+export const REOPEN_EVENT = 'gw-cookie-consent-reopen'
+export { HAS_TRACKING }
 
 const TEXT = {
   fr: {
-    message: 'Nous utilisons des cookies de mesure d’audience (Meta, Google Analytics) pour améliorer ce site. Vous pouvez les accepter ou les refuser.',
+    message: 'Nous utilisons des cookies de mesure d’audience pour améliorer ce site. Vous pouvez les accepter ou les refuser.',
     policy: 'Politique de cookies',
     accept: 'Accepter',
     refuse: 'Refuser',
     label: 'Consentement aux cookies',
   },
   en: {
-    message: 'We use audience measurement cookies (Meta, Google Analytics) to improve this site. You can accept or refuse them.',
+    message: 'We use audience measurement cookies to improve this site. You can accept or refuse them.',
     policy: 'Cookie policy',
     accept: 'Accept',
     refuse: 'Refuse',
@@ -54,7 +57,14 @@ export default function Analytics() {
       // Storage unavailable (private mode): ask again on each visit.
     }
     setConsent(stored === 'granted' || stored === 'denied' ? stored : 'unset')
+
+    const reopen = () => setConsent('unset')
+    window.addEventListener(REOPEN_EVENT, reopen)
+    return () => window.removeEventListener(REOPEN_EVENT, reopen)
   }, [])
+
+  // Once trackers have loaded on this page, only a reload can stop them.
+  const trackersLoaded = useRef(false)
 
   const choose = (value) => {
     try {
@@ -62,10 +72,16 @@ export default function Analytics() {
     } catch {
       // Keep the choice for this page view only.
     }
+    if (value === 'denied' && trackersLoaded.current) {
+      window.location.reload()
+      return
+    }
     setConsent(value)
   }
 
-  const granted = consent === 'granted'
+  // Keep the trackers mounted while the banner is reopened after an accept.
+  if (consent === 'granted') trackersLoaded.current = true
+  const granted = consent === 'granted' || (consent === 'unset' && trackersLoaded.current)
 
   // Count every click on a WhatsApp or phone link as a conversion.
   useEffect(() => {
